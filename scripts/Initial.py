@@ -29,9 +29,7 @@ class Initializer(WindAPIConfig):
 
         logger.debug(f"Speed shape: {speed.shape}, Direction shape: {direction.shape}")
 
-        wind = pd.merge(
-            speed, direction,
-            on="time", suffixes=("", "_dir")
+        wind = (speed.merge(direction, on="time")
         )[["time", "wind_speed", "wind_dir"]]
         logger.debug(f"Merged wind shape: {wind.shape}")
         return wind

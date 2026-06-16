@@ -8,7 +8,7 @@ class WindAPIConfig:
     def fetch_var(self, var):
         url = f"{self.base}/json/query/{self.station}"
         params = {"key": self.key, "sd": self.sd, "ed": self.ed, "var": var}
-        logger.debug(f"Fetching {var} for station {self.station} from {self.sd} to {self.ed}")
+        logger.debug(f"Fetching {var} for station {self.station} from {self.sd} to {self.ed}") 
         r = requests.get(url, params=params, timeout=30)
         r.raise_for_status()
         data = r.json()
