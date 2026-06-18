@@ -22,17 +22,22 @@ class Initializer(WindAPIConfig):
     def getData(self):
         logger.info(f"Fetching data for station {self.station}")
         speed = self.fetch_var("wind_speed")
+        gust = self.fetch_var("wind_speed_of_gust")
         direction = self.fetch_var("wind_from_direction")
 
-        speed = speed.rename(columns={"value": "wind_speed"})
-        direction = direction.rename(columns={"value": "wind_dir"})
+        speed = speed.rename(columns={"value": "wind_speed", "qa": "wind_speed_qa"})
+        direction = direction.rename(columns={"value": "wind_dir", "qa": "wind_dir_qa"})
+        gust = gust.rename(columns={"value": "wind_gust", "qa": "wind_gust_qa"})
 
-        logger.debug(f"Speed shape: {speed.shape}, Direction shape: {direction.shape}")
+        logger.debug(f"Speed shape: {speed.shape}, Gust shape:{gust.shape} Direction shape: {direction.shape}")
 
-        wind = (speed.merge(direction, on="time")
-        )[["time", "wind_speed", "wind_dir"]]
-        logger.debug(f"Merged wind shape: {wind.shape}")
-        return wind
+        df = pd.merge(speed, gust, on="epoch", how="outer")
+        df = pd.merge(df, direction, on="epoch", how="outer")
+
+        df = df.sort_values("epoch").reset_index(drop=True)
+
+        logger.debug(f"Merged wind shape: {df.shape}")
+        return df
 
     def Bins(self, wind):
         wind["dir_bin"] = pd.cut(

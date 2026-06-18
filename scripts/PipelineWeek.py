@@ -3,6 +3,7 @@ logger = logging.getLogger(__name__)
 from cfg.loggingconfig import setup_logging
 from datetime import datetime, timedelta, timezone
 from scripts.WindRosePlot import WindPlot
+from cfg.databaseconfig import database
 
 setup_logging()
 
@@ -14,6 +15,7 @@ class PipelineWeek(WindPlot):
 
         logger.info(f"[24hr] Fetching {self.sd} - {self.ed}")
         wind = self.getData()
+        df = database(self, wind)
         grouped = self.Bins(wind)
         fig = self.plot(
             grouped,

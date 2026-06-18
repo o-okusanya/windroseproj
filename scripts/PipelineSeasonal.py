@@ -4,6 +4,7 @@ from cfg.loggingconfig import setup_logging
 from scripts.WindRosePlot import WindPlot
 from datetime import datetime, timedelta, timezone
 from cfg.seasonconfig import lastseason
+from cfg.databaseconfig import database
 
 setup_logging()
 
@@ -15,6 +16,7 @@ class PipelineSeasonal(WindPlot):
         logger.info(f"[season] {season.title()} {year} -- {self.sd} -> {self.ed}")
 
         wind = self.getData()
+        df = database(self, wind)
         grouped = self.Bins(wind)
         self.plot(
             grouped,
