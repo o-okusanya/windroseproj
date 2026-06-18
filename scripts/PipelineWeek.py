@@ -17,11 +17,10 @@ class PipelineWeek(WindPlot):
         wind = self.getData()
         df = database(self, wind)
         grouped = self.Bins(wind)
-        fig = self.plot(
+        self.plot(
             grouped,
             fname=f"wind_rose_24hr_{self.station} (Previous 7 Days)"
         )
-        return fig
 
 if __name__ == "__main__":
     station_codes = {

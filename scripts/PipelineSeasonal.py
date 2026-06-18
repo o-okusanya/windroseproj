@@ -2,7 +2,6 @@ import logging
 logger = logging.getLogger(__name__)
 from cfg.loggingconfig import setup_logging
 from scripts.WindRosePlot import WindPlot
-from datetime import datetime, timedelta, timezone
 from cfg.seasonconfig import lastseason
 from cfg.databaseconfig import database
 
