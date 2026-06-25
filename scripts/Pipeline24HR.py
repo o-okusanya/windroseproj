@@ -8,48 +8,40 @@ from cfg.databaseconfig import database
 setup_logging()
 
 class Pipeline24HR(WindPlot):
-    def run24hr(self):
+    def run24hr(self, stations):
         now = datetime.now(timezone.utc)
         self.ed = now.strftime("%Y-%m-%dT%H:%M:%SZ")
         self.sd = (now - timedelta(hours=24)).strftime("%Y-%m-%dT%H:%M:%SZ")
 
-        logger.info(f"[24hr] Fetching {self.sd} - {self.ed}")
-        wind = self.getData()
-        df = database(self, wind)
-        grouped = self.Bins(wind)
-        self.plot(
-            grouped,
-            fname=f"wind_rose_24hr_{self.station}"
-        )
+        results = {}
+        for station in stations:
+            logger.info(f"Running[24hr] {self.sd} -> {self.ed} for {station}")
+            self.setupParameters(
+                station=station,
+                sd=self.sd,
+                ed=self.ed,
+            )
+            try:
+                wind = self.getData()
+                if wind is None or wind.empty:
+                    logger.warning(f"No data for {station}, skipping")
+                    continue
+                database(self, wind)
+                results[station] = self.Bins(wind)
+            except Exception as e:
+                logger.error(f"Skipping {station}: {e}")
+        if not results:
+            logger.error("No stations returned data; nothing to plot")
+            return
+
+        display_title = f"24HR Wind Roses — {self.sd} to {self.ed}"
+        out_name = f"wind_rose_24hr_ALL"
+
+        fig = self.buildGrid(results, fname=display_title)
+        self.save(fig, fname=out_name)
 
 if __name__ == "__main__":
-    station_codes = {
-        "Annapolis":      "AN",
-        "Stingray Point": "SR",
-        "Potomac":        "PL",
-        "Upper Potomac":  "UP",
-        "Gooses Reef":    "GR",
-    }
-
-    print("Select a station:")
-    for name, code in station_codes.items():
-        print(f"  {name} ({code})")
-
-    user_input = input("Station code(s): ")
-    selected = [s.strip().upper() for s in user_input.split(",")]
-
-    for station in selected:
-        if station not in station_codes.values():
-            print(f"Station not found: {station}")
-            continue
-        logger.info(f"Running 24hr for {station}")
-        pipeline = Pipeline24HR()
-        pipeline.setupParameters(
-            station=station,
-            sd=None,
-            ed=None
-        )
-        try:
-            pipeline.run24hr()
-        except Exception as e:
-            logger.error(f"Skipping {station}: {e}")
+    if __name__ == "__main__":
+        stations = ['AN', 'SR', 'PL', 'UP', 'GR']
+        logger.info(f"Running Seasonal for {stations}")
+        Pipeline24HR().run24hr(stations)

@@ -29,6 +29,10 @@ class Initializer(WindAPIConfig):
         direction = direction.rename(columns={"value": "wind_dir", "qa": "wind_dir_qa"})
         gust = gust.rename(columns={"value": "wind_gust", "qa": "wind_gust_qa"})
 
+        speed = speed.drop_duplicates(subset="epoch")
+        gust = gust.drop_duplicates(subset="epoch")
+        direction = direction.drop_duplicates(subset="epoch")
+
         logger.debug(f"Speed shape: {speed.shape}, Gust shape:{gust.shape} Direction shape: {direction.shape}")
 
         df = pd.merge(speed, gust, on="epoch", how="outer")
