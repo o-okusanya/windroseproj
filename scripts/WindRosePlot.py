@@ -8,8 +8,19 @@ import plotly.express as px
 from scripts.Initial import Initializer, spd_labels, dir_labels
 from plotly.subplots import make_subplots
 
-SPEED_COLORS = dict(zip(spd_labels, ["#AED6F1", "#2E86C1", "#1A5276", "#E67E22", "#C0392B"]))
-STATION_NAMES = {
+howtoread = """
+<b>How to Read the Wind Rose</b><br><br>
+<b>Direction:</b> Each spoke points in the direction the wind is coming FROM. 
+North (top) means wind blowing southward. The plot is oriented clockwise.<br><br>
+<b>Length:</b> The longer the spoke, the more frequently wind came from 
+that direction.<br><br>
+<b>Color:</b> Each color band represents a wind speed range (m/s). 
+Lighter blue = calm winds, dark navy = strong winds, 
+orange/red = highest speeds.<br><br>
+"""
+
+spd_colors = dict(zip(spd_labels, ["#AED6F1", "#2E86C1", "#1A5276", "#E67E22", "#C0392B"]))
+station_names = {
     "AN": "Annapolis",
     "SR": "Susquehanna River",
     "PL": "Patapsco",
@@ -21,7 +32,7 @@ STATION_NAMES = {
 class WindPlot(Initializer):
     def buildGrid(self, results, fname, rows=3, cols=2):
         stations = list(results.keys())
-        titles = [STATION_NAMES.get(st, st) for st in stations]
+        titles = [station_names.get(st, st) for st in stations]
 
         fig = make_subplots(
             rows=rows, cols=cols,
@@ -42,7 +53,7 @@ class WindPlot(Initializer):
                 category_orders={
                     "dir_bin": dir_labels,
                     "spd_bin": spd_labels},
-                color_discrete_map=SPEED_COLORS,
+                color_discrete_map=spd_colors,
             )
             for tr in sub.data:
                 tr.showlegend = tr.name not in seen
@@ -61,13 +72,13 @@ class WindPlot(Initializer):
 
         fig.update_layout(
             title = dict(
-                text=fname,
+                text=f"{fname}<br><sup>{howtoread}</sup>",
                 x = 0.5,
                 xanchor="center",
                 y= 0.98,
                 yanchor="top",
             ),
-            margin = dict(t=120),
+            margin = dict(t=280),
             legend_title_text = "Wind Speed (m/s)",
             template = "plotly_white",
             width = 900, height = 1200,

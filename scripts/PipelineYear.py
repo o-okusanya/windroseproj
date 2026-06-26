@@ -41,7 +41,7 @@ class PipelineYear(WindPlot):
             return
 
         display_title = f"Yearly Wind Roses — {formatedyear}"
-        out_name = f"wind_rose_week_year{formatedyear}_ALL"
+        out_name = f"wind_rose_year{formatedyear}_ALL"
 
         fig = self.buildGrid(results, fname=display_title)
         self.save(fig, fname=out_name)
@@ -49,5 +49,5 @@ class PipelineYear(WindPlot):
 
 if __name__ == "__main__":
     stations = ['AN', 'SR', 'PL', 'UP', 'GR']
-    logger.info(f"Running Seasonal for {stations}")
+    logger.info(f"Running Yearly for {stations}")
     PipelineYear().runyear(stations)
