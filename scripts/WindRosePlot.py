@@ -72,7 +72,7 @@ class WindPlot(Initializer):
 
         fig.update_layout(
             title = dict(
-                text=f"{fname}<br><sup>{howtoread}</sup>",
+                text=f"{fname}<br><br><sup>{howtoread}</sup>",
                 x = 0.5,
                 xanchor="center",
                 y= 0.98,
