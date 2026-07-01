@@ -22,8 +22,8 @@ orange/red = highest speeds.<br><br>
 spd_colors = dict(zip(spd_labels, ["#AED6F1", "#2E86C1", "#1A5276", "#E67E22", "#C0392B"]))
 station_names = {
     "AN": "Annapolis",
-    "SR": "Susquehanna River",
-    "PL": "Patapsco",
+    "SR": "Sting Ray",
+    "PL": "Point Lookout",
     "BH": "Baltimore Harbor",
     "GR": "Gooses Reef",
     "YS": "York Spit"

@@ -35,8 +35,8 @@ class PipelineSeasonal(WindPlot):
             logger.error("No stations returned data; nothing to plot")
             return
 
-        display_title = f"Seasonal Wind Roses — {self.sd[:10]} to {self.ed[:10]}"
-        out_name = f"wind_rose_{season}_{year}_ALL"
+        display_title = f"Seasonal Wind Roses — {sd[:10]} to {ed[:10]}"
+        out_name = f"wind_rose_{season}_{year}"
 
         fig = self.buildGrid(results, fname=display_title)
         self.save(fig, fname=out_name)

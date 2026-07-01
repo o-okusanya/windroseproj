@@ -12,7 +12,6 @@ class PipelineYear(WindPlot):
         now = datetime.now(timezone.utc)
         year = now.year
         sddt = datetime(year, 1, 1, tzinfo=timezone.utc)
-        formatedyear = f"{year:04d}"
 
         self.sd = sddt.strftime("%Y-%m-%dT%H:%M:%SZ")
         self.ed = now.strftime("%Y-%m-%dT%H:%M:%SZ")
@@ -40,8 +39,8 @@ class PipelineYear(WindPlot):
             logger.error("No stations returned data; nothing to plot")
             return
 
-        display_title = f"Yearly Wind Roses — {formatedyear}"
-        out_name = f"wind_rose_year{formatedyear}_ALL"
+        display_title = f"Yearly Wind Roses — {self.ed[:4]}"
+        out_name = f"wind_rose_year{self.ed[:4]}"
 
         fig = self.buildGrid(results, fname=display_title)
         self.save(fig, fname=out_name)

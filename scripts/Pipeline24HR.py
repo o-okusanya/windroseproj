@@ -34,8 +34,8 @@ class Pipeline24HR(WindPlot):
             logger.error("No stations returned data; nothing to plot")
             return
 
-        display_title = f"24HR Wind Roses — {self.sd} to {self.ed}"
-        out_name = f"wind_rose_24hr_ALL"
+        display_title = f"24HR Wind Roses — {self.sd[:10]} to {self.ed[:10]}"
+        out_name = f"wind_rose_24hr_{self.sd[:10]}_to_{self.ed[:10]}"
 
         fig = self.buildGrid(results, fname=display_title)
         self.save(fig, fname=out_name)
