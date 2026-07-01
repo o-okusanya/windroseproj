@@ -17,14 +17,14 @@ class Initializer(WindAPIConfig):
         chunks = []
         currentsd = sd
         while currentsd <= ed:
-            currented = currentsd + timedelta(days=13)
+            currented = currentsd + timedelta(days=20)
             if currented > ed:
                 currented = ed
             chunks.append({
                 "start": currentsd.strftime("%Y-%m-%d"),
                 "end": currented.strftime("%Y-%m-%d"),
             })
-            currentsd = currentsd + timedelta(days=14)
+            currentsd = currentsd + timedelta(days=21)
         return chunks
 
     def setupParameters(self, station, sd, ed):
