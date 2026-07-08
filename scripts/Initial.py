@@ -26,11 +26,12 @@ class Initializer(WindAPIConfig):
         return chunks
 
     def setupParameters(self, station, sd, ed):
-        self.base    = "https://mw.buoybay.noaa.gov/api/v1"
-        self.key     = "f159959c117f473477edbdf3245cc2a4831ac61f"
+        self.base = "https://mw.buoybay.noaa.gov/api/v1"
+        self.key = "f159959c117f473477edbdf3245cc2a4831ac61f"
         self.station = station
-        self.sd      = sd
-        self.ed      = ed
+        self.sd = sd
+        self.ed = ed
+        self.rootDir = r"C:\Users\ncbof\hypoxia\windroseproj"
         logger.info(f"Parameters set for station {self.station} ({self.sd} to {self.ed})")
         return self
 

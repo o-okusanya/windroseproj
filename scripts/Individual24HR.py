@@ -1,9 +1,9 @@
 import logging
 logger = logging.getLogger(__name__)
-from cfg.loggingconfig import setup_logging
 from datetime import datetime, timedelta, timezone
 from scripts.IndividualWindRosePlot import WindPlotIndividual
 from cfg.databaseconfig import database
+from cfg.loggingconfig import setup_logging
 
 setup_logging()
 

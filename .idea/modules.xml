@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../cbibsbaseproj/.idea/cbibsbaseproj.iml" filepath="$PROJECT_DIR$/../cbibsbaseproj/.idea/cbibsbaseproj.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/windroseproj.iml" filepath="$PROJECT_DIR$/.idea/windroseproj.iml" />
     </modules>
   </component>

@@ -1,43 +1,51 @@
-import os
-import sqlite3
+import sys
+sys.path.append(r"C:\Users\ncbof\hypoxia\cbibsbaseproj\cbibsbase")
+
 import logging
+import os
 logger = logging.getLogger(__name__)
 
+from src.slDb.DBWindMgr import DBWindMgr
+
+DB_DIR = r"C:\Users\ncbof\hypoxia\windroseproj\dataOutput\db"
+
 def database(self, df):
-    db_path = r"C:\Users\ncbof\hypoxia\windroseproj\dataOutput\windbuoydata.db"
-    os.makedirs(os.path.dirname(db_path), exist_ok=True)
-    conn = sqlite3.connect(db_path)
+    """Save wind dataframe to SQLite via DBWindMgr from cbibsbaseproj."""
+    os.makedirs(DB_DIR, exist_ok=True)
 
-    cursor = conn.cursor()
+    mgr  = DBWindMgr(self.station)
+    conn = mgr.getSqlLiteConnection(DB_DIR)
 
-    cursor.execute("""
-                   CREATE TABLE IF NOT EXISTS wind_data(
-                       epoch                INTEGER,
-                       wind_speed           REAL,
-                       wind_speed_qa        TEXT,
-                       wind_gust            REAL,
-                       wind_gust_qa         TEXT,
-                       wind_direction       REAL,
-                       wind_direction_qa    TEXT,
-                       station              TEXT,
-                       UNIQUE(epoch, station)
-                       )
-                   """)
+    begin = int(df["epoch"].min())
+    end   = int(df["epoch"].max())
 
+    # Delete existing rows in this range to avoid duplicates
+    cur = conn.cursor()
+    cur.execute("BEGIN TRANSACTION")
+    cur.execute(
+        "DELETE FROM wind WHERE obs_time BETWEEN ? AND ?",
+        (begin, end)
+    )
+    cur.execute("COMMIT")
+
+    # Insert new rows
+    cur.execute("BEGIN TRANSACTION")
     for _, row in df.iterrows():
-        cursor.execute("""
-                       INSERT
-                       OR IGNORE INTO wind_data
-                VALUES (?,?,?,?,?,?,?,?)
-                       """, (
-                           row["epoch"],
-                           row.get("wind_speed"), row.get("wind_speed_qa"),
-                           row.get("wind_gust"), row.get("wind_gust_qa"),
-                           row.get("wind_direction"), row.get("wind_direction_qa"),
-                           self.station
-                       ))
-
+        cur.execute(
+            "INSERT OR IGNORE INTO wind "
+            "(obs_time, ws, ws_unit, wd, wd_unit, u, v, wind_qc) "
+            "VALUES (?,?,?,?,?,?,?,?)",
+            (
+                int(row["epoch"]),
+                row.get("wind_speed"),
+                "m/s",
+                row.get("wind_dir"),
+                "degrees",
+                None,   # u vector — not computed
+                None,   # v vector — not computed
+                row.get("wind_speed_qa")
+            )
+        )
     conn.commit()
     conn.close()
-
-    logger.info(f"Saved {len(df)} rows for station {self.station} to the database.")
+    logger.info(f"Saved {len(df)} wind rows for {self.station} to {DB_DIR}")
