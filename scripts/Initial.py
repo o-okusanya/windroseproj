@@ -8,8 +8,10 @@ from cfg.apiconfig import WindAPIConfig
 
 dir_bins   = np.arange(0, 361, 45)
 dir_labels = ["N", "NE", "E", "SE", "S", "SW", "W", "NW"]
-spd_bins   = [0, 5, 10, 15, 30]
-spd_labels = ["0-5", "5-10", "10-15", "15-30"]
+spd_bins   = [0, 5, 10, 15, 20, 999]
+spd_labels = ["0-5", "5-10", "10-15", "15-20", "20+"]
+
+ms_to_knots = 1.94384
 
 class Initializer(WindAPIConfig):
 
@@ -57,6 +59,9 @@ class Initializer(WindAPIConfig):
         speed     = speed.rename(columns={"value": "wind_speed",    "qa": "wind_speed_qa"})
         gust      = gust.rename(columns={"value": "wind_gust",      "qa": "wind_gust_qa"})
         direction = direction.rename(columns={"value": "wind_dir",   "qa": "wind_dir_qa"})
+
+        speed["wind_speed"] = speed["wind_speed"] * ms_to_knots
+        gust["wind_gust"] = gust["wind_gust"] * ms_to_knots
 
         df = pd.merge(speed,  gust,      on="epoch", how="outer")
         df = pd.merge(df,     direction, on="epoch", how="outer")
@@ -107,10 +112,16 @@ class Initializer(WindAPIConfig):
             labels=spd_labels,
             include_lowest=True
         )
+
         grouped = (
             wind.groupby(["dir_bin", "spd_bin"], observed=True)
-                .size()
-                .reset_index(name="count")
+            .size()
+            .reset_index(name="count")
         )
+
+        # Percentage within each direction sector — for hover label only
+        dir_totals = grouped.groupby("dir_bin", observed=True)["count"].transform("sum")
+        grouped["pct"] = (grouped["count"] / dir_totals * 100).round(1)
+
         logger.debug(f"Grouped shape: {grouped.shape}")
         return grouped

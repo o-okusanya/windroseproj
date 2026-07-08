@@ -1,6 +1,5 @@
 import logging
 import os
-from matplotlib import pyplot as plt
 
 logger = logging.getLogger(__name__)
 
@@ -14,12 +13,12 @@ howtoread = """
 North (top) means wind blowing southward. The plot is oriented clockwise.<br><br>
 <b>Length:</b> The longer the spoke, the more frequently wind came from 
 that direction.<br><br>
-<b>Color:</b> Each color band represents a wind speed range (m/s). 
+<b>Color:</b> Each color band represents a wind speed range (kt). 
 Lighter blue = calm winds, dark navy = strong winds, 
 orange/red = highest speeds.<br><br>
 """
 
-spd_colors = dict(zip(spd_labels, ["#AED6F1", "#2E86C1", "#1A5276", "#E67E22", "#C0392B"]))
+spd_colors    = dict(zip(spd_labels, ["#AED6F1", "#2E86C1", "#1A5276", "#E67E22", "#C0392B"]))
 station_names = {
     "AN": "Annapolis",
     "SR": "Sting Ray",
@@ -32,7 +31,7 @@ station_names = {
 class WindPlot(Initializer):
     def buildGrid(self, results, fname, rows=3, cols=2):
         stations = list(results.keys())
-        titles = [station_names.get(st, st) for st in stations]
+        titles   = [station_names.get(st, st) for st in stations]
 
         fig = make_subplots(
             rows=rows, cols=cols,
@@ -42,46 +41,54 @@ class WindPlot(Initializer):
             vertical_spacing=0.10,
         )
 
-        seen = set()  # track which legend entries we've already shown
+        seen = set()
         for i, st in enumerate(stations):
             r, c = i // cols + 1, i % cols + 1
             sub = px.bar_polar(
                 results[st],
-                r="count",
-                theta="dir_bin",
-                color="spd_bin",
+                r="count",              # bar height — raw count
+                theta="dir_bin",        # direction column
+                color="spd_bin",        # speed bin column
+                hover_data={
+                    "pct":   ":.1f",    # show percentage in hover
+                    "count": False      # hide raw count
+                },
                 category_orders={
                     "dir_bin": dir_labels,
-                    "spd_bin": spd_labels},
+                    "spd_bin": spd_labels
+                },
                 color_discrete_map=spd_colors,
+                labels={
+                    "spd_bin": "Wind Speed (kt)",
+                    "dir_bin": "Direction of Wind Speed",
+                    "pct":     "% of winds at this speed from this direction"
+                }
             )
             for tr in sub.data:
-                tr.showlegend = tr.name not in seen
+                tr.showlegend  = tr.name not in seen
                 seen.add(tr.name)
-                tr.legendgroup = tr.name  # keeps toggling synced across all cells
+                tr.legendgroup = tr.name
                 fig.add_trace(tr, row=r, col=c)
 
-        # applies to every polar subplot at once
         fig.update_polars(angularaxis=dict(direction="clockwise", rotation=90))
 
-        # hide leftover empty cells (5 stations in a 3x2 = one blank)
         for j in range(len(stations) + 1, rows * cols + 1):
             key = "polar" if j == 1 else f"polar{j}"
             fig.update_layout({key: dict(radialaxis=dict(visible=False),
                                          angularaxis=dict(visible=False))})
 
         fig.update_layout(
-            title = dict(
+            title=dict(
                 text=f"{fname}<br><br><sup>{howtoread}</sup>",
-                x = 0.5,
+                x=0.5,
                 xanchor="center",
-                y= 0.98,
+                y=0.98,
                 yanchor="top",
             ),
-            margin = dict(t=280),
-            legend_title_text = "Wind Speed (m/s)",
-            template = "plotly_white",
-            width = 900, height = 1200,
+            margin=dict(t=280),
+            legend_title_text="Wind Speed (kt)",
+            template="plotly_white",
+            width=900, height=1200,
         )
 
         for ann in fig.layout.annotations:
@@ -91,7 +98,7 @@ class WindPlot(Initializer):
     def save(self, fig, fname):
         output_dir = r"C:\Users\ncbof\hypoxia\windroseproj\dataOutput"
         os.makedirs(output_dir, exist_ok=True)
-        fig.write_html(os.path.join(output_dir, f"{fname}.html"))
+        fig.write_html(os.path.join(output_dir,  f"{fname}.html"))
         fig.write_image(os.path.join(output_dir, f"{fname}.png"), scale=2)
         fig.write_image(os.path.join(output_dir, f"{fname}.svg"), scale=2)
         fig.show()

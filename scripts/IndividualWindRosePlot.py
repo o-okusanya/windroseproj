@@ -17,6 +17,10 @@ class WindPlotIndividual(Initializer):
             r="count",
             theta="dir_bin",
             color="spd_bin",
+            hover_data={
+                "pct": ":.1f",
+                "count": False
+            },
             category_orders={
                 "dir_bin": dir_labels,
                 "spd_bin": spd_labels
@@ -24,7 +28,11 @@ class WindPlotIndividual(Initializer):
             color_discrete_sequence=["#AED6F1", "#2E86C1", "#1A5276", "#E67E22", "#C0392B"],
             title=f"Wind Rose — CBIBS Station {self.station}<br>"
                   f"<sup>{title_sd[:10]} to {title_ed[:10]}</sup>",
-            labels={"spd_bin": "Speed (m/s)", "dir_bin": "Direction", "count": "Count"},
+            labels={
+                "spd_bin": "Wind Speed (kt)",
+                "dir_bin": "Direction of Wind Speed",
+                "pct": "% of winds at this speed from this direction",
+            },
             template="plotly_white"
         )
 
@@ -39,7 +47,7 @@ class WindPlotIndividual(Initializer):
                 xanchor="left",
                 yanchor="top"
             ),
-            legend_title_text="Wind Speed (m/s)",
+            legend_title_text="Wind Speed (kts)",
             title_font_size=16,
             width=1100,
             height=700,
