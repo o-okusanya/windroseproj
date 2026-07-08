@@ -1,7 +1,7 @@
 import logging
 logger = logging.getLogger(__name__)
 from cfg.loggingconfig import setup_logging
-from datetime import datetime, timedelta, timezone
+from datetime import datetime, timezone
 from scripts.WindRosePlot import WindPlot
 from cfg.databaseconfig import database
 
@@ -9,23 +9,17 @@ setup_logging()
 
 class PipelineYear(WindPlot):
     def runyear(self, stations):
-        now = datetime.now(timezone.utc)
+        now  = datetime.now(timezone.utc)
         year = now.year
-        sddt = datetime(year, 1, 1, tzinfo=timezone.utc)
+        sd   = datetime(year, 1, 1, tzinfo=timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+        ed   = now.strftime("%Y-%m-%dT%H:%M:%SZ")
 
-        self.sd = sddt.strftime("%Y-%m-%dT%H:%M:%SZ")
-        self.ed = now.strftime("%Y-%m-%dT%H:%M:%SZ")
-
-        logger.info(f"Fetching Yearly {self.sd} - {self.ed}")
+        logger.info(f"[year] {sd} -> {ed}")
 
         results = {}
         for station in stations:
-            logger.info(f"Running Year {self.sd} -> {self.ed} for {station}")
-            self.setupParameters(
-                station=station,
-                sd=self.sd,
-                ed=self.ed,
-            )
+            logger.info(f"Running Year for {station}")
+            self.setupParameters(station=station, sd=sd, ed=ed)
             try:
                 wind = self.getData()
                 if wind is None or wind.empty:
@@ -35,16 +29,16 @@ class PipelineYear(WindPlot):
                 results[station] = self.Bins(wind)
             except Exception as e:
                 logger.error(f"Skipping {station}: {e}")
+
         if not results:
             logger.error("No stations returned data; nothing to plot")
             return
 
-        display_title = f"Yearly Wind Roses — {self.ed[:4]}"
-        out_name = f"wind_rose_year{self.ed[:4]}"
+        display_title = f"Yearly Wind Roses — {year}"
+        out_name      = f"wind_rose_year_{year}"
 
         fig = self.buildGrid(results, fname=display_title)
         self.save(fig, fname=out_name)
-
 
 if __name__ == "__main__":
     stations = ['AN', 'SR', 'PL', 'UP', 'GR']

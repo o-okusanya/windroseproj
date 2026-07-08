@@ -7,9 +7,8 @@ from cfg.databaseconfig import database
 
 setup_logging()
 
-class PipelineIndividualSeasonal(WindPlotIndividual):
+class PipelineSeasonalIndividual(WindPlotIndividual):
     def runseason(self, stations):
-
         season, year, sd, ed = lastseason()
 
         for station in stations:
@@ -20,13 +19,20 @@ class PipelineIndividualSeasonal(WindPlotIndividual):
                 if wind is None or wind.empty:
                     logger.warning(f"No data for {station}, skipping")
                     continue
+                self.sd = sd
+                self.ed = ed
                 database(self, wind)
                 grouped = self.Bins(wind)
-                self.plot(grouped, fname=f"wind_rose_{season}_{year}_{self.station}")
+                self.plot(
+                    grouped,
+                    fname=f"wind_rose_{season}_{year}_{station}",
+                    sd=sd,
+                    ed=ed
+                )
             except Exception as e:
                 logger.error(f"Skipping {station}: {e}")
 
 if __name__ == "__main__":
     stations = ['AN', 'SR', 'PL', 'UP', 'GR']
-    logger.info(f"Running 24Hr for {stations}")
-    PipelineIndividualSeasonal().runseason(stations)
+    logger.info(f"Running Seasonal for {stations}")
+    PipelineSeasonalIndividual().runseason(stations)

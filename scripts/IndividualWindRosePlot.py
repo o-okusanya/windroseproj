@@ -5,21 +5,12 @@ logger = logging.getLogger(__name__)
 import plotly.express as px
 from scripts.Initial import Initializer, spd_labels, dir_labels
 
-howtoread = """
-<b>How to Read the Wind Rose</b><br><br>
-<b>Direction:</b> Each spoke points in the direction the wind is coming FROM. 
-North (top) means wind blowing southward.
-The plot is oriented clockwise.<br><br>
-<b>Length:</b> The longer the spoke, the more frequently wind came from that direction.<br><br>
-<b>Color:</b> Each color band represents a wind speed range (m/s). 
-Lighter blue = calm winds, 
-dark navy = strong winds, 
-orange/red = highest speeds.<br><br>
-"""
-
 class WindPlotIndividual(Initializer):
-    def buildFig(self, results):
+    def buildFig(self, results, sd=None, ed=None):
         logger.info(f"Starting plot for station {self.station}")
+
+        title_sd = sd if sd else self.sd
+        title_ed = ed if ed else self.ed
 
         fig = px.bar_polar(
             results,
@@ -32,7 +23,7 @@ class WindPlotIndividual(Initializer):
             },
             color_discrete_sequence=["#AED6F1", "#2E86C1", "#1A5276", "#E67E22", "#C0392B"],
             title=f"Wind Rose — CBIBS Station {self.station}<br>"
-                  f"<sup>{self.sd[:10]} to {self.ed[:10]}</sup>",
+                  f"<sup>{title_sd[:10]} to {title_ed[:10]}</sup>",
             labels={"spd_bin": "Speed (m/s)", "dir_bin": "Direction", "count": "Count"},
             template="plotly_white"
         )
@@ -78,15 +69,16 @@ class WindPlotIndividual(Initializer):
             ]
         )
         return fig
+
     def save(self, fig, fname):
         output_dir = r"C:\Users\ncbof\hypoxia\windroseproj\dataOutput"
         os.makedirs(output_dir, exist_ok=True)
-        fig.write_html(os.path.join(output_dir, f"{fname}.html"))
+        fig.write_html(os.path.join(output_dir,  f"{fname}.html"))
         fig.write_image(os.path.join(output_dir, f"{fname}.png"), scale=2)
         fig.write_image(os.path.join(output_dir, f"{fname}.svg"), scale=2)
         fig.show()
 
-    def plot(self, results, fname):
-        fig = self.buildFig(results)
+    def plot(self, results, fname, sd=None, ed=None):
+        fig = self.buildFig(results, sd=sd, ed=ed)
         self.save(fig, fname)
         return fig
