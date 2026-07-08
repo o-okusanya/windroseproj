@@ -113584,3 +113584,1360 @@
 2026-07-08 16:28:57,550 [INFO] kaleido.kaleido: Exiting Kaleido/Choreo.
 2026-07-08 16:28:57,894 [INFO] choreographer.utils._tmpfile: TemporaryDirectory.cleanup() worked.
 2026-07-08 16:28:57,895 [INFO] choreographer.utils._tmpfile: shutil.rmtree worked.
+2026-07-08 16:35:25,027 [INFO] __main__: Running Week for ['AN', 'SR', 'PL', 'UP', 'GR']
+2026-07-08 16:35:25,027 [INFO] __main__: [week] 2026-07-01T20:35:25Z -> 2026-07-08T20:35:25Z
+2026-07-08 16:35:25,027 [INFO] __main__: Running Week for AN
+2026-07-08 16:35:25,027 [INFO] scripts.Initial: Parameters set for station AN (2026-07-01T20:35:25Z to 2026-07-08T20:35:25Z)
+2026-07-08 16:35:25,027 [INFO] scripts.Initial: Fetching data for station AN
+2026-07-08 16:35:25,027 [INFO] scripts.Initial: Split into 1 chunks
+2026-07-08 16:35:25,028 [INFO] scripts.Initial: Fetching chunk 2026-07-01 -> 2026-07-08
+2026-07-08 16:35:25,032 [DEBUG] urllib3.connectionpool: Starting new HTTPS connection (1): mw.buoybay.noaa.gov:443
+2026-07-08 16:35:25,032 [DEBUG] urllib3.connectionpool: Starting new HTTPS connection (1): mw.buoybay.noaa.gov:443
+2026-07-08 16:35:25,032 [DEBUG] urllib3.connectionpool: Starting new HTTPS connection (1): mw.buoybay.noaa.gov:443
+2026-07-08 16:35:25,581 [DEBUG] urllib3.connectionpool: https://mw.buoybay.noaa.gov:443 "GET /api/v1/json/query/AN?key=f159959c117f473477edbdf3245cc2a4831ac61f&var=wind_speed&sd=2026-07-01T00:00:00Z&ed=2026-07-08T23:59:59Z HTTP/1.1" 200 None
+2026-07-08 16:35:25,607 [DEBUG] urllib3.connectionpool: https://mw.buoybay.noaa.gov:443 "GET /api/v1/json/query/AN?key=f159959c117f473477edbdf3245cc2a4831ac61f&var=wind_speed_of_gust&sd=2026-07-01T00:00:00Z&ed=2026-07-08T23:59:59Z HTTP/1.1" 200 None
+2026-07-08 16:35:25,637 [DEBUG] urllib3.connectionpool: https://mw.buoybay.noaa.gov:443 "GET /api/v1/json/query/AN?key=f159959c117f473477edbdf3245cc2a4831ac61f&var=wind_from_direction&sd=2026-07-01T00:00:00Z&ed=2026-07-08T23:59:59Z HTTP/1.1" 200 None
+2026-07-08 16:35:26,637 [DEBUG] cfg.apiconfig: Fetched 1871 rows for wind_speed
+2026-07-08 16:35:26,771 [DEBUG] cfg.apiconfig: Fetched 1871 rows for wind_from_direction
+2026-07-08 16:35:26,789 [DEBUG] cfg.apiconfig: Fetched 1871 rows for wind_speed_of_gust
+2026-07-08 16:35:26,796 [DEBUG] scripts.Initial: Combined wind shape: (1871, 7)
+2026-07-08 16:35:26,839 [INFO] cfg.databaseconfig: Saved 1871 wind rows for AN to C:\Users\ncbof\hypoxia\windroseproj\dataOutput\db
+2026-07-08 16:35:26,842 [DEBUG] scripts.Initial: Grouped shape: (20, 4)
+2026-07-08 16:35:26,842 [INFO] __main__: Running Week for SR
+2026-07-08 16:35:26,842 [INFO] scripts.Initial: Parameters set for station SR (2026-07-01T20:35:25Z to 2026-07-08T20:35:25Z)
+2026-07-08 16:35:26,842 [INFO] scripts.Initial: Fetching data for station SR
+2026-07-08 16:35:26,842 [INFO] scripts.Initial: Split into 1 chunks
+2026-07-08 16:35:26,843 [INFO] scripts.Initial: Fetching chunk 2026-07-01 -> 2026-07-08
+2026-07-08 16:35:26,845 [DEBUG] urllib3.connectionpool: Starting new HTTPS connection (1): mw.buoybay.noaa.gov:443
+2026-07-08 16:35:26,845 [DEBUG] urllib3.connectionpool: Starting new HTTPS connection (1): mw.buoybay.noaa.gov:443
+2026-07-08 16:35:26,846 [DEBUG] urllib3.connectionpool: Starting new HTTPS connection (1): mw.buoybay.noaa.gov:443
+2026-07-08 16:35:27,359 [DEBUG] urllib3.connectionpool: https://mw.buoybay.noaa.gov:443 "GET /api/v1/json/query/SR?key=f159959c117f473477edbdf3245cc2a4831ac61f&var=wind_speed_of_gust&sd=2026-07-01T00:00:00Z&ed=2026-07-08T23:59:59Z HTTP/1.1" 200 None
+2026-07-08 16:35:27,370 [DEBUG] urllib3.connectionpool: https://mw.buoybay.noaa.gov:443 "GET /api/v1/json/query/SR?key=f159959c117f473477edbdf3245cc2a4831ac61f&var=wind_from_direction&sd=2026-07-01T00:00:00Z&ed=2026-07-08T23:59:59Z HTTP/1.1" 200 None
+2026-07-08 16:35:27,382 [DEBUG] urllib3.connectionpool: https://mw.buoybay.noaa.gov:443 "GET /api/v1/json/query/SR?key=f159959c117f473477edbdf3245cc2a4831ac61f&var=wind_speed&sd=2026-07-01T00:00:00Z&ed=2026-07-08T23:59:59Z HTTP/1.1" 200 None
+2026-07-08 16:35:28,511 [DEBUG] cfg.apiconfig: Fetched 1882 rows for wind_speed_of_gust
+2026-07-08 16:35:28,561 [DEBUG] cfg.apiconfig: Fetched 1882 rows for wind_from_direction
+2026-07-08 16:35:28,586 [DEBUG] cfg.apiconfig: Fetched 1882 rows for wind_speed
+2026-07-08 16:35:28,591 [DEBUG] scripts.Initial: Combined wind shape: (1882, 7)
+2026-07-08 16:35:28,636 [INFO] cfg.databaseconfig: Saved 1882 wind rows for SR to C:\Users\ncbof\hypoxia\windroseproj\dataOutput\db
+2026-07-08 16:35:28,639 [DEBUG] scripts.Initial: Grouped shape: (25, 4)
+2026-07-08 16:35:28,639 [INFO] __main__: Running Week for PL
+2026-07-08 16:35:28,639 [INFO] scripts.Initial: Parameters set for station PL (2026-07-01T20:35:25Z to 2026-07-08T20:35:25Z)
+2026-07-08 16:35:28,640 [INFO] scripts.Initial: Fetching data for station PL
+2026-07-08 16:35:28,640 [INFO] scripts.Initial: Split into 1 chunks
+2026-07-08 16:35:28,640 [INFO] scripts.Initial: Fetching chunk 2026-07-01 -> 2026-07-08
+2026-07-08 16:35:28,643 [DEBUG] urllib3.connectionpool: Starting new HTTPS connection (1): mw.buoybay.noaa.gov:443
+2026-07-08 16:35:28,643 [DEBUG] urllib3.connectionpool: Starting new HTTPS connection (1): mw.buoybay.noaa.gov:443
+2026-07-08 16:35:28,643 [DEBUG] urllib3.connectionpool: Starting new HTTPS connection (1): mw.buoybay.noaa.gov:443
+2026-07-08 16:35:29,139 [DEBUG] urllib3.connectionpool: https://mw.buoybay.noaa.gov:443 "GET /api/v1/json/query/PL?key=f159959c117f473477edbdf3245cc2a4831ac61f&var=wind_speed_of_gust&sd=2026-07-01T00:00:00Z&ed=2026-07-08T23:59:59Z HTTP/1.1" 200 None
+2026-07-08 16:35:29,159 [DEBUG] urllib3.connectionpool: https://mw.buoybay.noaa.gov:443 "GET /api/v1/json/query/PL?key=f159959c117f473477edbdf3245cc2a4831ac61f&var=wind_speed&sd=2026-07-01T00:00:00Z&ed=2026-07-08T23:59:59Z HTTP/1.1" 200 None
+2026-07-08 16:35:29,161 [DEBUG] urllib3.connectionpool: https://mw.buoybay.noaa.gov:443 "GET /api/v1/json/query/PL?key=f159959c117f473477edbdf3245cc2a4831ac61f&var=wind_from_direction&sd=2026-07-01T00:00:00Z&ed=2026-07-08T23:59:59Z HTTP/1.1" 200 None
+2026-07-08 16:35:30,279 [DEBUG] cfg.apiconfig: Fetched 1885 rows for wind_from_direction
+2026-07-08 16:35:30,329 [DEBUG] cfg.apiconfig: Fetched 1885 rows for wind_speed
+2026-07-08 16:35:30,382 [DEBUG] cfg.apiconfig: Fetched 1885 rows for wind_speed_of_gust
+2026-07-08 16:35:30,387 [DEBUG] scripts.Initial: Combined wind shape: (1885, 7)
+2026-07-08 16:35:30,430 [INFO] cfg.databaseconfig: Saved 1885 wind rows for PL to C:\Users\ncbof\hypoxia\windroseproj\dataOutput\db
+2026-07-08 16:35:30,433 [DEBUG] scripts.Initial: Grouped shape: (29, 4)
+2026-07-08 16:35:30,433 [INFO] __main__: Running Week for UP
+2026-07-08 16:35:30,433 [INFO] scripts.Initial: Parameters set for station UP (2026-07-01T20:35:25Z to 2026-07-08T20:35:25Z)
+2026-07-08 16:35:30,433 [INFO] scripts.Initial: Fetching data for station UP
+2026-07-08 16:35:30,433 [INFO] scripts.Initial: Split into 1 chunks
+2026-07-08 16:35:30,434 [INFO] scripts.Initial: Fetching chunk 2026-07-01 -> 2026-07-08
+2026-07-08 16:35:30,436 [DEBUG] urllib3.connectionpool: Starting new HTTPS connection (1): mw.buoybay.noaa.gov:443
+2026-07-08 16:35:30,436 [DEBUG] urllib3.connectionpool: Starting new HTTPS connection (1): mw.buoybay.noaa.gov:443
+2026-07-08 16:35:30,436 [DEBUG] urllib3.connectionpool: Starting new HTTPS connection (1): mw.buoybay.noaa.gov:443
+2026-07-08 16:35:30,790 [DEBUG] urllib3.connectionpool: https://mw.buoybay.noaa.gov:443 "GET /api/v1/json/query/UP?key=f159959c117f473477edbdf3245cc2a4831ac61f&var=wind_from_direction&sd=2026-07-01T00:00:00Z&ed=2026-07-08T23:59:59Z HTTP/1.1" 200 163
+2026-07-08 16:35:30,794 [DEBUG] cfg.apiconfig: Fetched 0 rows for wind_from_direction
+2026-07-08 16:35:30,815 [DEBUG] urllib3.connectionpool: https://mw.buoybay.noaa.gov:443 "GET /api/v1/json/query/UP?key=f159959c117f473477edbdf3245cc2a4831ac61f&var=wind_speed_of_gust&sd=2026-07-01T00:00:00Z&ed=2026-07-08T23:59:59Z HTTP/1.1" 200 163
+2026-07-08 16:35:30,819 [DEBUG] cfg.apiconfig: Fetched 0 rows for wind_speed_of_gust
+2026-07-08 16:35:30,832 [DEBUG] urllib3.connectionpool: https://mw.buoybay.noaa.gov:443 "GET /api/v1/json/query/UP?key=f159959c117f473477edbdf3245cc2a4831ac61f&var=wind_speed&sd=2026-07-01T00:00:00Z&ed=2026-07-08T23:59:59Z HTTP/1.1" 200 163
+2026-07-08 16:35:30,837 [DEBUG] cfg.apiconfig: Fetched 0 rows for wind_speed
+2026-07-08 16:35:30,839 [WARNING] scripts.Initial: Empty response for chunk 2026-07-01 -> 2026-07-08 — skipping
+2026-07-08 16:35:30,840 [WARNING] scripts.Initial: No data returned for UP
+2026-07-08 16:35:30,841 [WARNING] __main__: No data for UP, skipping
+2026-07-08 16:35:30,841 [INFO] __main__: Running Week for GR
+2026-07-08 16:35:30,841 [INFO] scripts.Initial: Parameters set for station GR (2026-07-01T20:35:25Z to 2026-07-08T20:35:25Z)
+2026-07-08 16:35:30,841 [INFO] scripts.Initial: Fetching data for station GR
+2026-07-08 16:35:30,841 [INFO] scripts.Initial: Split into 1 chunks
+2026-07-08 16:35:30,842 [INFO] scripts.Initial: Fetching chunk 2026-07-01 -> 2026-07-08
+2026-07-08 16:35:30,847 [DEBUG] urllib3.connectionpool: Starting new HTTPS connection (1): mw.buoybay.noaa.gov:443
+2026-07-08 16:35:30,848 [DEBUG] urllib3.connectionpool: Starting new HTTPS connection (1): mw.buoybay.noaa.gov:443
+2026-07-08 16:35:30,850 [DEBUG] urllib3.connectionpool: Starting new HTTPS connection (1): mw.buoybay.noaa.gov:443
+2026-07-08 16:35:31,332 [DEBUG] urllib3.connectionpool: https://mw.buoybay.noaa.gov:443 "GET /api/v1/json/query/GR?key=f159959c117f473477edbdf3245cc2a4831ac61f&var=wind_speed_of_gust&sd=2026-07-01T00:00:00Z&ed=2026-07-08T23:59:59Z HTTP/1.1" 200 None
+2026-07-08 16:35:31,341 [DEBUG] urllib3.connectionpool: https://mw.buoybay.noaa.gov:443 "GET /api/v1/json/query/GR?key=f159959c117f473477edbdf3245cc2a4831ac61f&var=wind_speed&sd=2026-07-01T00:00:00Z&ed=2026-07-08T23:59:59Z HTTP/1.1" 200 None
+2026-07-08 16:35:31,355 [DEBUG] urllib3.connectionpool: https://mw.buoybay.noaa.gov:443 "GET /api/v1/json/query/GR?key=f159959c117f473477edbdf3245cc2a4831ac61f&var=wind_from_direction&sd=2026-07-01T00:00:00Z&ed=2026-07-08T23:59:59Z HTTP/1.1" 200 None
+2026-07-08 16:35:32,500 [DEBUG] cfg.apiconfig: Fetched 1884 rows for wind_speed
+2026-07-08 16:35:32,528 [DEBUG] cfg.apiconfig: Fetched 1884 rows for wind_from_direction
+2026-07-08 16:35:32,548 [DEBUG] cfg.apiconfig: Fetched 1884 rows for wind_speed_of_gust
+2026-07-08 16:35:32,552 [DEBUG] scripts.Initial: Combined wind shape: (1884, 7)
+2026-07-08 16:35:32,597 [INFO] cfg.databaseconfig: Saved 1884 wind rows for GR to C:\Users\ncbof\hypoxia\windroseproj\dataOutput\db
+2026-07-08 16:35:32,600 [DEBUG] scripts.Initial: Grouped shape: (35, 4)
+2026-07-08 16:35:32,927 [DEBUG] kaleido.kaleido: Successfully registered PlotlyJSONEncoder.
+2026-07-08 16:35:32,931 [DEBUG] asyncio: Using proactor: IocpProactor
+2026-07-08 16:35:32,931 [DEBUG] kaleido.kaleido: Timeout: 90
+2026-07-08 16:35:32,931 [DEBUG] choreographer.browser_async: Attempting to open new browser.
+2026-07-08 16:35:32,932 [INFO] choreographer.browsers.chromium: Chromium init'ed with kwargs {}
+2026-07-08 16:35:32,947 [DEBUG] choreographer.browsers.chromium: Looking for a chrome browser.
+2026-07-08 16:35:32,948 [INFO] choreographer.browsers.chromium: Found chromium path: C:\Program Files\Google\Chrome\Application\chrome.exe
+2026-07-08 16:35:32,949 [INFO] choreographer.utils._tmpfile: Temp directory created: C:\Users\ncbof\AppData\Local\Temp\tmpi55ua7nm.
+2026-07-08 16:35:32,949 [DEBUG] kaleido._page_generator: Plotly script: ('file:///C:/Users/ncbof/hypoxia/windroseproj/.venv/Lib/site-packages/plotly/package_data/plotly.min.js', 'utf-8')
+2026-07-08 16:35:32,949 [INFO] choreographer.browser_async: Opening browser.
+2026-07-08 16:35:32,950 [DEBUG] choreographer.browser_async: Trying to open browser.
+2026-07-08 16:35:32,950 [INFO] choreographer.utils._tmpfile: Temp directory created: C:\Users\ncbof\AppData\Local\Temp\tmp4mjjh3i1.
+2026-07-08 16:35:32,950 [INFO] choreographer.browsers.chromium: Temporary directory at: C:\Users\ncbof\AppData\Local\Temp\tmp4mjjh3i1
+2026-07-08 16:35:32,950 [DEBUG] choreographer.browsers.chromium: Returning cli: ['C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe', '--disable-gpu', '--headless', '--no-sandbox', '--disable-breakpad', '--allow-file-access-from-files', '--enable-logging=stderr', '--user-data-dir=C:\\Users\\ncbof\\AppData\\Local\\Temp\\tmp4mjjh3i1', '--no-first-run', '--enable-unsafe-swiftshader', '--disable-dev-shm-usage', '--disable-background-media-suspend', '--disable-lazy-loading', '--disable-background-timer-throttling', '--disable-backgrounding-occluded-windows', '--disable-renderer-backgrounding', '--disable-component-update', '--disable-hang-monitor', '--disable-popup-blocking', '--disable-prompt-on-repost', '--disable-ipc-flooding-protection', '--disable-sync', '--metrics-recording-only', '--password-store=basic', '--use-mock-keychain', '--no-default-browser-check', '--no-process-per-site', '--disable-web-security', '--remote-debugging-pipe', '--remote-debugging-io-pipes=1032,1020']
+2026-07-08 16:35:32,950 [DEBUG] choreographer.browsers.chromium: Returning args: {'creationflags': 512, 'close_fds': False}
+2026-07-08 16:35:32,955 [DEBUG] choreographer.protocol.devtools_async: Created new target 0.
+2026-07-08 16:35:32,955 [DEBUG] choreographer.protocol.devtools_async: New session: 
+2026-07-08 16:35:32,955 [DEBUG] choreographer.browser_async: Starting watchdog
+2026-07-08 16:35:32,955 [DEBUG] choreographer.browser_async: Opening channel.
+2026-07-08 16:35:32,955 [DEBUG] choreographer.browser_async: Running read loop
+2026-07-08 16:35:32,956 [DEBUG] choreographer.browser_async: In watchdog
+2026-07-08 16:35:32,956 [DEBUG] choreographer.browser_async: Populating Targets
+2026-07-08 16:35:32,956 [DEBUG] choreographer.protocol.devtools_async: Cmd 'Target.getTargets', param keys '', sessionId ''
+2026-07-08 16:35:32,956 [DEBUG] choreographer._brokers._async: Broker writing Target.getTargets with key ('', 0)
+2026-07-08 16:35:32,956 [DEBUG] choreographer._brokers._async: Created future: ('', 0) <Future pending>
+2026-07-08 16:35:32,956 [DEBUG] choreographer.channels._wire: Serialized: {"id": 0, "meth...et.getTargets"}, size: 40
+2026-07-08 16:35:32,956 [DEBUG] choreographer.channels.pipe: Writing message b'{"id": 0, "meth'...b't.getTargets"}\x00', size: 41.
+2026-07-08 16:35:32,956 [DEBUG] choreographer.channels.pipe: ***Wrote 41/41***
+2026-07-08 16:35:33,051 [DEBUG] browser_proc: [INFO:components\enterprise\browser\controller\chrome_browser_cloud_management_controller.cc:239] No machine level policy manager exists.
+2026-07-08 16:35:33,152 [DEBUG] browser_proc: [WARNING:chrome\browser\extensions\external_pref_loader.cc:294] You are using an old-style extension deployment method (external_extensions.json), which will soon be deprecated. (see http://developer.chrome.com/docs/extensions/how-to/distribute/install-extensions)
+2026-07-08 16:35:33,177 [DEBUG] browser_proc: [WARNING:chrome\browser\extensions\external_registry_loader_win.cc:236] Error observing HKLM: Access is denied. (0x5)
+2026-07-08 16:35:33,178 [DEBUG] choreographer.channels.pipe: First read in loop: b'{"id":0,"result'...b'F0FF9BFF5A"}]}}'. size: 505.
+2026-07-08 16:35:33,178 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:33,178 [DEBUG] choreographer.channels.pipe: Total loops: 2, Final size: 506.
+2026-07-08 16:35:33,178 [DEBUG] choreographer.channels.pipe: Received 2 raw_messages.
+2026-07-08 16:35:33,179 [DEBUG] choreographer._brokers._async: Channel read found 1 json objects.
+2026-07-08 16:35:33,179 [DEBUG] choreographer._brokers._async: Have a response with key ('', 0)
+2026-07-08 16:35:33,179 [DEBUG] choreographer._brokers._async: Found future for key ('', 0)
+2026-07-08 16:35:33,179 [DEBUG] choreographer.protocol.devtools_async: Created new target D28384F1FC1E7164A091BD0064008F36.
+2026-07-08 16:35:33,179 [DEBUG] choreographer.protocol.devtools_async: Cmd 'Target.attachToTarget', param keys 'dict_keys(['targetId', 'flatten'])', sessionId ''
+2026-07-08 16:35:33,179 [DEBUG] choreographer._brokers._async: Broker writing Target.attachToTarget with key ('', 1)
+2026-07-08 16:35:33,180 [DEBUG] choreographer._brokers._async: Created future: ('', 1) <Future pending>
+2026-07-08 16:35:33,180 [DEBUG] choreographer.channels._wire: Serialized: {"id": 1, "meth...latten": true}}, size: 121
+2026-07-08 16:35:33,180 [DEBUG] choreographer.channels.pipe: Writing message b'{"id": 1, "meth'...b'atten": true}}\x00', size: 122.
+2026-07-08 16:35:33,180 [DEBUG] choreographer.channels.pipe: ***Wrote 122/122***
+2026-07-08 16:35:33,194 [DEBUG] choreographer.channels.pipe: First read in loop: b'{"method":"Targ'...b'bugger":false}}'. size: 333.
+2026-07-08 16:35:33,195 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:33,195 [DEBUG] choreographer.channels.pipe: Total loops: 2, Final size: 401.
+2026-07-08 16:35:33,195 [DEBUG] choreographer.channels.pipe: Received 3 raw_messages.
+2026-07-08 16:35:33,196 [DEBUG] choreographer._brokers._async: Channel read found 2 json objects.
+2026-07-08 16:35:33,196 [DEBUG] choreographer._brokers._async: Received event Target.attachedToTarget for  targeting <choreographer.protocol.devtools_async.Session object at 0x000001EE9270E7B0>.
+2026-07-08 16:35:33,196 [DEBUG] choreographer._brokers._async: Have a response with key ('', 1)
+2026-07-08 16:35:33,196 [DEBUG] choreographer._brokers._async: Found future for key ('', 1)
+2026-07-08 16:35:33,196 [DEBUG] choreographer.protocol.devtools_async: New session: B929D9F8237BDCAD828069629A916AB5
+2026-07-08 16:35:33,196 [DEBUG] choreographer.browser_async: The target D28384F1FC1E7164A091BD0064008F36 was added
+2026-07-08 16:35:33,197 [INFO] kaleido.kaleido: Conforming 1 to file:///C:/Users/ncbof/AppData/Local/Temp/tmpi55ua7nm/index.html
+2026-07-08 16:35:33,197 [DEBUG] choreographer._brokers._async: Session B929D9F8237BDCAD828069629A916AB5 is subscribing to Runtime.executionContextCreated one time.
+2026-07-08 16:35:33,197 [DEBUG] choreographer._brokers._async: Session B929D9F8237BDCAD828069629A916AB5 is subscribing to Page.loadEventFired one time.
+2026-07-08 16:35:33,197 [DEBUG] choreographer.protocol.devtools_async: Cmd 'Page.navigate', param keys 'dict_keys(['url'])', sessionId 'B929D9F8237BDCAD828069629A916AB5'
+2026-07-08 16:35:33,197 [DEBUG] choreographer._brokers._async: Broker writing Page.navigate with key ('B929D9F8237BDCAD828069629A916AB5', 0)
+2026-07-08 16:35:33,197 [DEBUG] choreographer._brokers._async: Created future: ('B929D9F8237BDCAD828069629A916AB5', 0) <Future pending>
+2026-07-08 16:35:33,198 [DEBUG] choreographer.channels._wire: Serialized: {"id": 0, "meth...m/index.html"}}, size: 172
+2026-07-08 16:35:33,198 [DEBUG] choreographer.channels.pipe: Writing message b'{"id": 0, "meth'...b'/index.html"}}\x00', size: 173.
+2026-07-08 16:35:33,198 [DEBUG] choreographer.channels.pipe: ***Wrote 173/173***
+2026-07-08 16:35:33,221 [DEBUG] choreographer.channels.pipe: First read in loop: b'{"id":0,"result'...b'069629A916AB5"}'. size: 176.
+2026-07-08 16:35:33,221 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:33,221 [DEBUG] choreographer.channels.pipe: Total loops: 2, Final size: 177.
+2026-07-08 16:35:33,221 [DEBUG] choreographer.channels.pipe: Received 2 raw_messages.
+2026-07-08 16:35:33,222 [DEBUG] choreographer._brokers._async: Channel read found 1 json objects.
+2026-07-08 16:35:33,222 [DEBUG] choreographer._brokers._async: Have a response with key ('B929D9F8237BDCAD828069629A916AB5', 0)
+2026-07-08 16:35:33,222 [DEBUG] choreographer._brokers._async: Found future for key ('B929D9F8237BDCAD828069629A916AB5', 0)
+2026-07-08 16:35:33,222 [DEBUG] choreographer.protocol.devtools_async: Cmd 'Page.enable', param keys '', sessionId 'B929D9F8237BDCAD828069629A916AB5'
+2026-07-08 16:35:33,222 [DEBUG] choreographer._brokers._async: Broker writing Page.enable with key ('B929D9F8237BDCAD828069629A916AB5', 1)
+2026-07-08 16:35:33,222 [DEBUG] choreographer._brokers._async: Created future: ('B929D9F8237BDCAD828069629A916AB5', 1) <Future pending>
+2026-07-08 16:35:33,223 [DEBUG] choreographer.channels._wire: Serialized: {"id": 1, "meth...069629A916AB5"}, size: 83
+2026-07-08 16:35:33,223 [DEBUG] choreographer.channels.pipe: Writing message b'{"id": 1, "meth'...b'69629A916AB5"}\x00', size: 84.
+2026-07-08 16:35:33,223 [DEBUG] choreographer.channels.pipe: ***Wrote 84/84***
+2026-07-08 16:35:33,263 [DEBUG] choreographer.channels.pipe: First read in loop: b'{"id":1,"result'...b'069629A916AB5"}'. size: 67.
+2026-07-08 16:35:33,264 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:33,264 [DEBUG] choreographer.channels.pipe: Total loops: 2, Final size: 68.
+2026-07-08 16:35:33,264 [DEBUG] choreographer.channels.pipe: Received 2 raw_messages.
+2026-07-08 16:35:33,264 [DEBUG] choreographer._brokers._async: Channel read found 1 json objects.
+2026-07-08 16:35:33,264 [DEBUG] choreographer._brokers._async: Have a response with key ('B929D9F8237BDCAD828069629A916AB5', 1)
+2026-07-08 16:35:33,264 [DEBUG] choreographer._brokers._async: Found future for key ('B929D9F8237BDCAD828069629A916AB5', 1)
+2026-07-08 16:35:33,264 [DEBUG] choreographer.protocol.devtools_async: Cmd 'Runtime.enable', param keys '', sessionId 'B929D9F8237BDCAD828069629A916AB5'
+2026-07-08 16:35:33,264 [DEBUG] choreographer._brokers._async: Broker writing Runtime.enable with key ('B929D9F8237BDCAD828069629A916AB5', 2)
+2026-07-08 16:35:33,264 [DEBUG] choreographer._brokers._async: Created future: ('B929D9F8237BDCAD828069629A916AB5', 2) <Future pending>
+2026-07-08 16:35:33,265 [DEBUG] choreographer.channels._wire: Serialized: {"id": 2, "meth...069629A916AB5"}, size: 86
+2026-07-08 16:35:33,265 [DEBUG] choreographer.channels.pipe: Writing message b'{"id": 2, "meth'...b'69629A916AB5"}\x00', size: 87.
+2026-07-08 16:35:33,265 [DEBUG] choreographer.channels.pipe: ***Wrote 87/87***
+2026-07-08 16:35:33,268 [DEBUG] choreographer.channels.pipe: First read in loop: b'{"method":"Runt'...b'069629A916AB5"}'. size: 295.
+2026-07-08 16:35:33,269 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:33,269 [DEBUG] choreographer.channels.pipe: Total loops: 2, Final size: 364.
+2026-07-08 16:35:33,269 [DEBUG] choreographer.channels.pipe: Received 3 raw_messages.
+2026-07-08 16:35:33,269 [DEBUG] choreographer._brokers._async: Channel read found 2 json objects.
+2026-07-08 16:35:33,269 [DEBUG] choreographer._brokers._async: Received event Runtime.executionContextCreated for B929D9F8237BDCAD828069629A916AB5 targeting <choreographer.protocol.devtools_async.Session object at 0x000001EE92697250>.
+2026-07-08 16:35:33,270 [DEBUG] choreographer._brokers._async: Have a response with key ('B929D9F8237BDCAD828069629A916AB5', 2)
+2026-07-08 16:35:33,270 [DEBUG] choreographer._brokers._async: Found future for key ('B929D9F8237BDCAD828069629A916AB5', 2)
+2026-07-08 16:35:33,987 [DEBUG] choreographer.channels.pipe: First read in loop: b'{"method":"Page'...b'069629A916AB5"}'. size: 123.
+2026-07-08 16:35:33,987 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:33,987 [DEBUG] choreographer.channels.pipe: Total loops: 2, Final size: 124.
+2026-07-08 16:35:33,987 [DEBUG] choreographer.channels.pipe: Received 2 raw_messages.
+2026-07-08 16:35:33,987 [DEBUG] choreographer._brokers._async: Channel read found 1 json objects.
+2026-07-08 16:35:33,988 [DEBUG] choreographer._brokers._async: Received event Page.domContentEventFired for B929D9F8237BDCAD828069629A916AB5 targeting <choreographer.protocol.devtools_async.Session object at 0x000001EE92697250>.
+2026-07-08 16:35:34,001 [DEBUG] choreographer.channels.pipe: First read in loop: b'{"method":"Page'...b'069629A916AB5"}'. size: 117.
+2026-07-08 16:35:34,002 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:34,002 [DEBUG] choreographer.channels.pipe: Total loops: 2, Final size: 118.
+2026-07-08 16:35:34,002 [DEBUG] choreographer.channels.pipe: Received 2 raw_messages.
+2026-07-08 16:35:34,002 [DEBUG] choreographer._brokers._async: Channel read found 1 json objects.
+2026-07-08 16:35:34,002 [DEBUG] choreographer._brokers._async: Received event Page.loadEventFired for B929D9F8237BDCAD828069629A916AB5 targeting <choreographer.protocol.devtools_async.Session object at 0x000001EE92697250>.
+2026-07-08 16:35:34,003 [DEBUG] choreographer.channels.pipe: First read in loop: b'{"method":"Page'...b'69629A916AB5"}\x00'. size: 141.
+2026-07-08 16:35:34,003 [DEBUG] choreographer.channels.pipe: Total loops: 1, Final size: 141.
+2026-07-08 16:35:34,003 [DEBUG] choreographer.channels.pipe: Received 2 raw_messages.
+2026-07-08 16:35:34,003 [DEBUG] choreographer._brokers._async: Channel read found 1 json objects.
+2026-07-08 16:35:34,003 [DEBUG] choreographer._brokers._async: Received event Page.frameStoppedLoading for B929D9F8237BDCAD828069629A916AB5 targeting <choreographer.protocol.devtools_async.Session object at 0x000001EE92697250>.
+2026-07-08 16:35:34,116 [INFO] kaleido.kaleido: Getting tab from queue (has 1)
+2026-07-08 16:35:34,117 [INFO] kaleido.kaleido: Got D283
+2026-07-08 16:35:34,117 [DEBUG] choreographer.protocol.devtools_async: Cmd 'Runtime.callFunctionOn', param keys 'dict_keys(['functionDeclaration', 'arguments', 'returnByValue', 'userGesture', 'awaitPromise', 'executionContextId'])', sessionId 'B929D9F8237BDCAD828069629A916AB5'
+2026-07-08 16:35:34,118 [DEBUG] choreographer._brokers._async: Broker writing Runtime.callFunctionOn with key ('B929D9F8237BDCAD828069629A916AB5', 3)
+2026-07-08 16:35:34,118 [DEBUG] choreographer._brokers._async: Created future: ('B929D9F8237BDCAD828069629A916AB5', 3) <Future pending>
+2026-07-08 16:35:34,118 [DEBUG] choreographer.channels._wire: Serialized: {"id": 3, "meth...ContextId": 1}}, size: 21723
+2026-07-08 16:35:34,119 [DEBUG] choreographer.channels.pipe: Writing message b'{"id": 3, "meth'...b'ontextId": 1}}\x00', size: 21724.
+2026-07-08 16:35:34,119 [DEBUG] choreographer.channels.pipe: ***Wrote 21724/21724***
+2026-07-08 16:35:34,263 [DEBUG] choreographer.channels.pipe: First read in loop: b'{"id":3,"result'...b'631VOuEV88JN82H'. size: 10000.
+2026-07-08 16:35:34,264 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:34,264 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:34,264 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:34,264 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:34,264 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:34,264 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:34,264 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:34,264 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:34,264 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:34,264 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:34,265 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:34,265 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:34,265 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:34,265 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:34,265 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:34,265 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:34,265 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:34,265 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:34,265 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:34,265 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:34,265 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:34,266 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:34,266 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:34,266 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:34,266 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:34,266 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:34,266 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:34,266 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:34,266 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:34,266 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:34,266 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:34,266 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:34,266 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:34,266 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:34,266 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:34,266 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:34,266 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:34,266 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:34,266 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:34,266 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:34,266 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:34,266 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:34,267 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:34,267 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:34,267 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:34,267 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:34,267 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:34,267 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:34,267 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:34,267 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:34,267 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:34,267 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:34,267 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:34,267 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:34,267 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:34,267 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:34,267 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:34,267 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:34,267 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:34,267 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:34,267 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:34,268 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:34,268 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:34,268 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:34,268 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:34,268 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:34,268 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:34,268 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:34,268 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:34,268 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:34,268 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:34,268 [DEBUG] choreographer.channels.pipe: Total loops: 72, Final size: 668147.
+2026-07-08 16:35:34,270 [DEBUG] choreographer.channels.pipe: Received 2 raw_messages.
+2026-07-08 16:35:34,271 [DEBUG] choreographer._brokers._async: Channel read found 1 json objects.
+2026-07-08 16:35:34,271 [DEBUG] choreographer._brokers._async: Have a response with key ('B929D9F8237BDCAD828069629A916AB5', 3)
+2026-07-08 16:35:34,271 [DEBUG] choreographer._brokers._async: Found future for key ('B929D9F8237BDCAD828069629A916AB5', 3)
+2026-07-08 16:35:34,273 [INFO] kaleido.kaleido: Reloading tab D283 before return.
+2026-07-08 16:35:34,273 [DEBUG] kaleido._kaleido_tab._tab: Reloading tab <choreographer.browser_async.Tab object at 0x000001EE9270E900> with javascript.
+2026-07-08 16:35:34,273 [DEBUG] choreographer._brokers._async: Session B929D9F8237BDCAD828069629A916AB5 is subscribing to Runtime.executionContextCreated one time.
+2026-07-08 16:35:34,273 [DEBUG] choreographer._brokers._async: Session B929D9F8237BDCAD828069629A916AB5 is subscribing to Page.loadEventFired one time.
+2026-07-08 16:35:34,273 [DEBUG] choreographer.protocol.devtools_async: Cmd 'Page.reload', param keys '', sessionId 'B929D9F8237BDCAD828069629A916AB5'
+2026-07-08 16:35:34,274 [DEBUG] choreographer._brokers._async: Broker writing Page.reload with key ('B929D9F8237BDCAD828069629A916AB5', 4)
+2026-07-08 16:35:34,274 [DEBUG] choreographer._brokers._async: Created future: ('B929D9F8237BDCAD828069629A916AB5', 4) <Future pending>
+2026-07-08 16:35:34,274 [DEBUG] choreographer.channels._wire: Serialized: {"id": 4, "meth...069629A916AB5"}, size: 83
+2026-07-08 16:35:34,274 [DEBUG] choreographer.channels.pipe: Writing message b'{"id": 4, "meth'...b'69629A916AB5"}\x00', size: 84.
+2026-07-08 16:35:34,274 [DEBUG] choreographer.channels.pipe: ***Wrote 84/84***
+2026-07-08 16:35:34,276 [DEBUG] choreographer.channels.pipe: First read in loop: b'{"method":"Page'...b'069629A916AB5"}'. size: 288.
+2026-07-08 16:35:34,277 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:34,277 [DEBUG] choreographer.channels.pipe: Total loops: 2, Final size: 289.
+2026-07-08 16:35:34,277 [DEBUG] choreographer.channels.pipe: Received 2 raw_messages.
+2026-07-08 16:35:34,277 [DEBUG] choreographer._brokers._async: Channel read found 1 json objects.
+2026-07-08 16:35:34,277 [DEBUG] choreographer._brokers._async: Received event Page.frameStartedNavigating for B929D9F8237BDCAD828069629A916AB5 targeting <choreographer.protocol.devtools_async.Session object at 0x000001EE92697250>.
+2026-07-08 16:35:34,277 [DEBUG] choreographer.channels.pipe: First read in loop: b'{"method":"Page'...b'69629A916AB5"}\x00'. size: 141.
+2026-07-08 16:35:34,277 [DEBUG] choreographer.channels.pipe: Total loops: 1, Final size: 141.
+2026-07-08 16:35:34,277 [DEBUG] choreographer.channels.pipe: Received 2 raw_messages.
+2026-07-08 16:35:34,277 [DEBUG] choreographer._brokers._async: Channel read found 1 json objects.
+2026-07-08 16:35:34,277 [DEBUG] choreographer._brokers._async: Received event Page.frameStartedLoading for B929D9F8237BDCAD828069629A916AB5 targeting <choreographer.protocol.devtools_async.Session object at 0x000001EE92697250>.
+2026-07-08 16:35:34,278 [DEBUG] choreographer.channels.pipe: First read in loop: b'{"id":4,"result'...b'069629A916AB5"}'. size: 67.
+2026-07-08 16:35:34,278 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:34,278 [DEBUG] choreographer.channels.pipe: Total loops: 2, Final size: 68.
+2026-07-08 16:35:34,278 [DEBUG] choreographer.channels.pipe: Received 2 raw_messages.
+2026-07-08 16:35:34,278 [DEBUG] choreographer._brokers._async: Channel read found 1 json objects.
+2026-07-08 16:35:34,278 [DEBUG] choreographer._brokers._async: Have a response with key ('B929D9F8237BDCAD828069629A916AB5', 4)
+2026-07-08 16:35:34,278 [DEBUG] choreographer._brokers._async: Found future for key ('B929D9F8237BDCAD828069629A916AB5', 4)
+2026-07-08 16:35:34,279 [DEBUG] choreographer.channels.pipe: First read in loop: b'{"method":"Runt'...b'069629A916AB5"}'. size: 104.
+2026-07-08 16:35:34,280 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:34,280 [DEBUG] choreographer.channels.pipe: Total loops: 2, Final size: 105.
+2026-07-08 16:35:34,280 [DEBUG] choreographer.channels.pipe: Received 2 raw_messages.
+2026-07-08 16:35:34,280 [DEBUG] choreographer._brokers._async: Channel read found 1 json objects.
+2026-07-08 16:35:34,280 [DEBUG] choreographer._brokers._async: Received event Runtime.executionContextsCleared for B929D9F8237BDCAD828069629A916AB5 targeting <choreographer.protocol.devtools_async.Session object at 0x000001EE92697250>.
+2026-07-08 16:35:34,282 [DEBUG] choreographer.channels.pipe: First read in loop: b'{"method":"Runt'...b'069629A916AB5"}'. size: 104.
+2026-07-08 16:35:34,283 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:34,283 [DEBUG] choreographer.channels.pipe: Total loops: 2, Final size: 641.
+2026-07-08 16:35:34,283 [DEBUG] choreographer.channels.pipe: Received 3 raw_messages.
+2026-07-08 16:35:34,283 [DEBUG] choreographer._brokers._async: Channel read found 2 json objects.
+2026-07-08 16:35:34,283 [DEBUG] choreographer._brokers._async: Received event Runtime.executionContextsCleared for B929D9F8237BDCAD828069629A916AB5 targeting <choreographer.protocol.devtools_async.Session object at 0x000001EE92697250>.
+2026-07-08 16:35:34,283 [DEBUG] choreographer._brokers._async: Received event Page.frameNavigated for B929D9F8237BDCAD828069629A916AB5 targeting <choreographer.protocol.devtools_async.Session object at 0x000001EE92697250>.
+2026-07-08 16:35:34,286 [DEBUG] choreographer.channels.pipe: First read in loop: b'{"method":"Runt'...b'069629A916AB5"}'. size: 296.
+2026-07-08 16:35:34,286 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:34,286 [DEBUG] choreographer.channels.pipe: Total loops: 2, Final size: 297.
+2026-07-08 16:35:34,287 [DEBUG] choreographer.channels.pipe: Received 2 raw_messages.
+2026-07-08 16:35:34,287 [DEBUG] choreographer._brokers._async: Channel read found 1 json objects.
+2026-07-08 16:35:34,287 [DEBUG] choreographer._brokers._async: Received event Runtime.executionContextCreated for B929D9F8237BDCAD828069629A916AB5 targeting <choreographer.protocol.devtools_async.Session object at 0x000001EE92697250>.
+2026-07-08 16:35:34,329 [DEBUG] choreographer.channels.pipe: First read in loop: b'{"method":"Page'...b'069629A916AB5"}'. size: 122.
+2026-07-08 16:35:34,330 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:34,330 [DEBUG] choreographer.channels.pipe: Total loops: 2, Final size: 241.
+2026-07-08 16:35:34,330 [DEBUG] choreographer.channels.pipe: Received 3 raw_messages.
+2026-07-08 16:35:34,330 [DEBUG] choreographer._brokers._async: Channel read found 2 json objects.
+2026-07-08 16:35:34,330 [DEBUG] choreographer._brokers._async: Received event Page.domContentEventFired for B929D9F8237BDCAD828069629A916AB5 targeting <choreographer.protocol.devtools_async.Session object at 0x000001EE92697250>.
+2026-07-08 16:35:34,330 [DEBUG] choreographer._brokers._async: Received event Page.loadEventFired for B929D9F8237BDCAD828069629A916AB5 targeting <choreographer.protocol.devtools_async.Session object at 0x000001EE92697250>.
+2026-07-08 16:35:34,331 [INFO] kaleido.kaleido: Putting tab D283 back (queue size: 0).
+2026-07-08 16:35:34,331 [DEBUG] kaleido.kaleido: D283 put back.
+2026-07-08 16:35:34,331 [INFO] kaleido.kaleido: Waiting for all cleanups to finish.
+2026-07-08 16:35:34,331 [INFO] kaleido.kaleido: Exiting Kaleido.
+2026-07-08 16:35:34,331 [DEBUG] kaleido.kaleido: Cleaning up <choreographer.utils._tmpfile.TmpDirectory object at 0x000001EE9270E120>
+2026-07-08 16:35:34,331 [DEBUG] choreographer.channels.pipe: First read in loop: b'{"method":"Page'...b'69629A916AB5"}\x00'. size: 141.
+2026-07-08 16:35:34,331 [DEBUG] choreographer.channels.pipe: Total loops: 1, Final size: 141.
+2026-07-08 16:35:34,331 [DEBUG] choreographer.channels.pipe: Received 2 raw_messages.
+2026-07-08 16:35:34,332 [INFO] choreographer.utils._tmpfile: TemporaryDirectory.cleanup() worked.
+2026-07-08 16:35:34,332 [INFO] choreographer.utils._tmpfile: shutil.rmtree worked.
+2026-07-08 16:35:34,332 [INFO] choreographer.browser_async: Closing browser.
+2026-07-08 16:35:34,332 [DEBUG] choreographer.browser_async: Cancelling watchdog.
+2026-07-08 16:35:34,333 [DEBUG] choreographer.browser_async: Starting browser close methods.
+2026-07-08 16:35:34,333 [DEBUG] choreographer.browser_async: Trying Browser.close
+2026-07-08 16:35:34,333 [DEBUG] choreographer.protocol.devtools_async: Cmd 'Browser.close', param keys '', sessionId ''
+2026-07-08 16:35:34,333 [DEBUG] choreographer._brokers._async: Broker writing Browser.close with key ('', 2)
+2026-07-08 16:35:34,333 [DEBUG] choreographer._brokers._async: Created future: ('', 2) <Future pending>
+2026-07-08 16:35:34,333 [DEBUG] choreographer.channels._wire: Serialized: {"id": 2, "meth...Browser.close"}, size: 36
+2026-07-08 16:35:34,333 [DEBUG] choreographer.browser_async: Watchdog full shutdown (in finally:)
+2026-07-08 16:35:34,333 [DEBUG] choreographer.channels.pipe: Writing message b'{"id": 2, "meth'...b'rowser.close"}\x00', size: 37.
+2026-07-08 16:35:34,333 [DEBUG] choreographer.channels.pipe: ***Wrote 37/37***
+2026-07-08 16:35:34,333 [DEBUG] choreographer._brokers._async: Channel read found 1 json objects.
+2026-07-08 16:35:34,333 [DEBUG] choreographer._brokers._async: Received event Page.frameStoppedLoading for B929D9F8237BDCAD828069629A916AB5 targeting <choreographer.protocol.devtools_async.Session object at 0x000001EE92697250>.
+2026-07-08 16:35:34,333 [DEBUG] choreographer.channels.pipe: First read in loop: b'{"id":2,"result'...b'2,"result":{}}\x00'. size: 21.
+2026-07-08 16:35:34,333 [DEBUG] choreographer.channels.pipe: Total loops: 1, Final size: 21.
+2026-07-08 16:35:34,333 [DEBUG] choreographer.channels.pipe: Received 2 raw_messages.
+2026-07-08 16:35:34,333 [DEBUG] choreographer._brokers._async: Channel read found 1 json objects.
+2026-07-08 16:35:34,333 [DEBUG] choreographer._brokers._async: Have a response with key ('', 2)
+2026-07-08 16:35:34,333 [DEBUG] choreographer._brokers._async: Found future for key ('', 2)
+2026-07-08 16:35:34,353 [DEBUG] choreographer._brokers._async: Error in readloop. Will post a close() task.
+2026-07-08 16:35:34,353 [DEBUG] choreographer._brokers._async: PipeClosedError caught
+2026-07-08 16:35:34,353 [DEBUG] kaleido.kaleido: Cleaning up <choreographer.utils._tmpfile.TmpDirectory object at 0x000001EE9270E120>
+2026-07-08 16:35:34,353 [INFO] choreographer.utils._tmpfile: TemporaryDirectory.cleanup() worked.
+2026-07-08 16:35:34,353 [INFO] choreographer.utils._tmpfile: shutil.rmtree worked.
+2026-07-08 16:35:34,353 [INFO] choreographer.browser_async: Closing browser.
+2026-07-08 16:35:34,354 [DEBUG] choreographer.browser_async: Cancelling watchdog.
+2026-07-08 16:35:34,354 [INFO] kaleido.kaleido: Cancelling tasks.
+2026-07-08 16:35:34,354 [INFO] kaleido.kaleido: Exiting Kaleido/Choreo.
+2026-07-08 16:35:34,432 [DEBUG] choreographer.browser_async: Browser close methods finished.
+2026-07-08 16:35:34,432 [DEBUG] choreographer._brokers._async: Cancelling message futures
+2026-07-08 16:35:34,432 [DEBUG] choreographer._brokers._async: Cancelling read task
+2026-07-08 16:35:34,432 [DEBUG] choreographer._brokers._async: Cancelling subscription-futures
+2026-07-08 16:35:34,432 [DEBUG] choreographer._brokers._async: Cancelling background tasks
+2026-07-08 16:35:34,433 [DEBUG] choreographer.browser_async: Broker cleaned up.
+2026-07-08 16:35:34,433 [DEBUG] choreographer.browser_async: Logging pipe closed.
+2026-07-08 16:35:34,433 [DEBUG] choreographer.browser_async: Browser channel closed.
+2026-07-08 16:35:34,473 [INFO] choreographer.utils._tmpfile: TemporaryDirectory.cleanup() worked.
+2026-07-08 16:35:34,473 [INFO] choreographer.utils._tmpfile: shutil.rmtree worked.
+2026-07-08 16:35:34,473 [DEBUG] choreographer.browser_async: Browser implementation cleaned up.
+2026-07-08 16:35:34,473 [INFO] kaleido.kaleido: Cancelling tasks.
+2026-07-08 16:35:34,473 [INFO] kaleido.kaleido: Exiting Kaleido/Choreo.
+2026-07-08 16:35:34,477 [DEBUG] asyncio: Using proactor: IocpProactor
+2026-07-08 16:35:34,478 [DEBUG] kaleido.kaleido: Timeout: 90
+2026-07-08 16:35:34,478 [DEBUG] choreographer.browser_async: Attempting to open new browser.
+2026-07-08 16:35:34,479 [INFO] choreographer.browsers.chromium: Chromium init'ed with kwargs {}
+2026-07-08 16:35:34,479 [DEBUG] choreographer.browsers.chromium: Looking for a chrome browser.
+2026-07-08 16:35:34,480 [INFO] choreographer.browsers.chromium: Found chromium path: C:\Program Files\Google\Chrome\Application\chrome.exe
+2026-07-08 16:35:34,480 [INFO] choreographer.utils._tmpfile: Temp directory created: C:\Users\ncbof\AppData\Local\Temp\tmpu53rczfd.
+2026-07-08 16:35:34,481 [DEBUG] kaleido._page_generator: Plotly script: ('file:///C:/Users/ncbof/hypoxia/windroseproj/.venv/Lib/site-packages/plotly/package_data/plotly.min.js', 'utf-8')
+2026-07-08 16:35:34,481 [INFO] choreographer.browser_async: Opening browser.
+2026-07-08 16:35:34,482 [DEBUG] choreographer.browser_async: Trying to open browser.
+2026-07-08 16:35:34,482 [INFO] choreographer.utils._tmpfile: Temp directory created: C:\Users\ncbof\AppData\Local\Temp\tmpq8gmjhs2.
+2026-07-08 16:35:34,483 [INFO] choreographer.browsers.chromium: Temporary directory at: C:\Users\ncbof\AppData\Local\Temp\tmpq8gmjhs2
+2026-07-08 16:35:34,483 [DEBUG] choreographer.browsers.chromium: Returning cli: ['C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe', '--disable-gpu', '--headless', '--no-sandbox', '--disable-breakpad', '--allow-file-access-from-files', '--enable-logging=stderr', '--user-data-dir=C:\\Users\\ncbof\\AppData\\Local\\Temp\\tmpq8gmjhs2', '--no-first-run', '--enable-unsafe-swiftshader', '--disable-dev-shm-usage', '--disable-background-media-suspend', '--disable-lazy-loading', '--disable-background-timer-throttling', '--disable-backgrounding-occluded-windows', '--disable-renderer-backgrounding', '--disable-component-update', '--disable-hang-monitor', '--disable-popup-blocking', '--disable-prompt-on-repost', '--disable-ipc-flooding-protection', '--disable-sync', '--metrics-recording-only', '--password-store=basic', '--use-mock-keychain', '--no-default-browser-check', '--no-process-per-site', '--disable-web-security', '--remote-debugging-pipe', '--remote-debugging-io-pipes=552,700']
+2026-07-08 16:35:34,483 [DEBUG] choreographer.browsers.chromium: Returning args: {'creationflags': 512, 'close_fds': False}
+2026-07-08 16:35:34,490 [DEBUG] choreographer.protocol.devtools_async: Created new target 0.
+2026-07-08 16:35:34,490 [DEBUG] choreographer.protocol.devtools_async: New session: 
+2026-07-08 16:35:34,490 [DEBUG] choreographer.browser_async: Starting watchdog
+2026-07-08 16:35:34,490 [DEBUG] choreographer.browser_async: Opening channel.
+2026-07-08 16:35:34,490 [DEBUG] choreographer.browser_async: Running read loop
+2026-07-08 16:35:34,490 [DEBUG] choreographer.browser_async: In watchdog
+2026-07-08 16:35:34,490 [DEBUG] choreographer.browser_async: Populating Targets
+2026-07-08 16:35:34,490 [DEBUG] choreographer.protocol.devtools_async: Cmd 'Target.getTargets', param keys '', sessionId ''
+2026-07-08 16:35:34,490 [DEBUG] choreographer._brokers._async: Broker writing Target.getTargets with key ('', 0)
+2026-07-08 16:35:34,491 [DEBUG] choreographer._brokers._async: Created future: ('', 0) <Future pending>
+2026-07-08 16:35:34,491 [DEBUG] choreographer.channels._wire: Serialized: {"id": 0, "meth...et.getTargets"}, size: 40
+2026-07-08 16:35:34,491 [DEBUG] choreographer.channels.pipe: Writing message b'{"id": 0, "meth'...b't.getTargets"}\x00', size: 41.
+2026-07-08 16:35:34,491 [DEBUG] choreographer.channels.pipe: ***Wrote 41/41***
+2026-07-08 16:35:34,594 [DEBUG] browser_proc: [INFO:components\enterprise\browser\controller\chrome_browser_cloud_management_controller.cc:239] No machine level policy manager exists.
+2026-07-08 16:35:34,697 [DEBUG] browser_proc: [WARNING:chrome\browser\extensions\external_pref_loader.cc:294] You are using an old-style extension deployment method (external_extensions.json), which will soon be deprecated. (see http://developer.chrome.com/docs/extensions/how-to/distribute/install-extensions)
+2026-07-08 16:35:34,750 [DEBUG] browser_proc: [WARNING:chrome\browser\extensions\external_registry_loader_win.cc:236] Error observing HKLM: Access is denied. (0x5)
+2026-07-08 16:35:34,751 [DEBUG] choreographer.channels.pipe: First read in loop: b'{"id":0,"result'...b'0DD1AE9E81"}]}}'. size: 505.
+2026-07-08 16:35:34,751 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:34,751 [DEBUG] choreographer.channels.pipe: Total loops: 2, Final size: 506.
+2026-07-08 16:35:34,751 [DEBUG] choreographer.channels.pipe: Received 2 raw_messages.
+2026-07-08 16:35:34,752 [DEBUG] choreographer._brokers._async: Channel read found 1 json objects.
+2026-07-08 16:35:34,752 [DEBUG] choreographer._brokers._async: Have a response with key ('', 0)
+2026-07-08 16:35:34,752 [DEBUG] choreographer._brokers._async: Found future for key ('', 0)
+2026-07-08 16:35:34,752 [DEBUG] choreographer.protocol.devtools_async: Created new target 27B6750D65F91703E7401DC9AAE774B6.
+2026-07-08 16:35:34,752 [DEBUG] choreographer.protocol.devtools_async: Cmd 'Target.attachToTarget', param keys 'dict_keys(['targetId', 'flatten'])', sessionId ''
+2026-07-08 16:35:34,752 [DEBUG] choreographer._brokers._async: Broker writing Target.attachToTarget with key ('', 1)
+2026-07-08 16:35:34,752 [DEBUG] choreographer._brokers._async: Created future: ('', 1) <Future pending>
+2026-07-08 16:35:34,753 [DEBUG] choreographer.channels._wire: Serialized: {"id": 1, "meth...latten": true}}, size: 121
+2026-07-08 16:35:34,753 [DEBUG] choreographer.channels.pipe: Writing message b'{"id": 1, "meth'...b'atten": true}}\x00', size: 122.
+2026-07-08 16:35:34,753 [DEBUG] choreographer.channels.pipe: ***Wrote 122/122***
+2026-07-08 16:35:34,763 [DEBUG] choreographer.channels.pipe: First read in loop: b'{"method":"Targ'...b'bugger":false}}'. size: 333.
+2026-07-08 16:35:34,764 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:34,764 [DEBUG] choreographer.channels.pipe: Total loops: 2, Final size: 401.
+2026-07-08 16:35:34,764 [DEBUG] choreographer.channels.pipe: Received 3 raw_messages.
+2026-07-08 16:35:34,764 [DEBUG] choreographer._brokers._async: Channel read found 2 json objects.
+2026-07-08 16:35:34,765 [DEBUG] choreographer._brokers._async: Received event Target.attachedToTarget for  targeting <choreographer.protocol.devtools_async.Session object at 0x000001EE92784690>.
+2026-07-08 16:35:34,765 [DEBUG] choreographer._brokers._async: Have a response with key ('', 1)
+2026-07-08 16:35:34,765 [DEBUG] choreographer._brokers._async: Found future for key ('', 1)
+2026-07-08 16:35:34,765 [DEBUG] choreographer.protocol.devtools_async: New session: DEDADFFD33BC80EDEAD94EDE8C8506F4
+2026-07-08 16:35:34,765 [DEBUG] choreographer.browser_async: The target 27B6750D65F91703E7401DC9AAE774B6 was added
+2026-07-08 16:35:34,765 [INFO] kaleido.kaleido: Conforming 1 to file:///C:/Users/ncbof/AppData/Local/Temp/tmpu53rczfd/index.html
+2026-07-08 16:35:34,766 [DEBUG] choreographer._brokers._async: Session DEDADFFD33BC80EDEAD94EDE8C8506F4 is subscribing to Runtime.executionContextCreated one time.
+2026-07-08 16:35:34,766 [DEBUG] choreographer._brokers._async: Session DEDADFFD33BC80EDEAD94EDE8C8506F4 is subscribing to Page.loadEventFired one time.
+2026-07-08 16:35:34,766 [DEBUG] choreographer.protocol.devtools_async: Cmd 'Page.navigate', param keys 'dict_keys(['url'])', sessionId 'DEDADFFD33BC80EDEAD94EDE8C8506F4'
+2026-07-08 16:35:34,766 [DEBUG] choreographer._brokers._async: Broker writing Page.navigate with key ('DEDADFFD33BC80EDEAD94EDE8C8506F4', 0)
+2026-07-08 16:35:34,766 [DEBUG] choreographer._brokers._async: Created future: ('DEDADFFD33BC80EDEAD94EDE8C8506F4', 0) <Future pending>
+2026-07-08 16:35:34,766 [DEBUG] choreographer.channels._wire: Serialized: {"id": 0, "meth...d/index.html"}}, size: 172
+2026-07-08 16:35:34,767 [DEBUG] choreographer.channels.pipe: Writing message b'{"id": 0, "meth'...b'/index.html"}}\x00', size: 173.
+2026-07-08 16:35:34,767 [DEBUG] choreographer.channels.pipe: ***Wrote 173/173***
+2026-07-08 16:35:34,799 [DEBUG] choreographer.channels.pipe: First read in loop: b'{"id":0,"result'...b'94EDE8C8506F4"}'. size: 176.
+2026-07-08 16:35:34,800 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:34,800 [DEBUG] choreographer.channels.pipe: Total loops: 2, Final size: 177.
+2026-07-08 16:35:34,800 [DEBUG] choreographer.channels.pipe: Received 2 raw_messages.
+2026-07-08 16:35:34,800 [DEBUG] choreographer._brokers._async: Channel read found 1 json objects.
+2026-07-08 16:35:34,800 [DEBUG] choreographer._brokers._async: Have a response with key ('DEDADFFD33BC80EDEAD94EDE8C8506F4', 0)
+2026-07-08 16:35:34,801 [DEBUG] choreographer._brokers._async: Found future for key ('DEDADFFD33BC80EDEAD94EDE8C8506F4', 0)
+2026-07-08 16:35:34,801 [DEBUG] choreographer.protocol.devtools_async: Cmd 'Page.enable', param keys '', sessionId 'DEDADFFD33BC80EDEAD94EDE8C8506F4'
+2026-07-08 16:35:34,801 [DEBUG] choreographer._brokers._async: Broker writing Page.enable with key ('DEDADFFD33BC80EDEAD94EDE8C8506F4', 1)
+2026-07-08 16:35:34,801 [DEBUG] choreographer._brokers._async: Created future: ('DEDADFFD33BC80EDEAD94EDE8C8506F4', 1) <Future pending>
+2026-07-08 16:35:34,801 [DEBUG] choreographer.channels._wire: Serialized: {"id": 1, "meth...94EDE8C8506F4"}, size: 83
+2026-07-08 16:35:34,801 [DEBUG] choreographer.channels.pipe: Writing message b'{"id": 1, "meth'...b'4EDE8C8506F4"}\x00', size: 84.
+2026-07-08 16:35:34,801 [DEBUG] choreographer.channels.pipe: ***Wrote 84/84***
+2026-07-08 16:35:34,835 [DEBUG] choreographer.channels.pipe: First read in loop: b'{"id":1,"result'...b'94EDE8C8506F4"}'. size: 67.
+2026-07-08 16:35:34,835 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:34,835 [DEBUG] choreographer.channels.pipe: Total loops: 2, Final size: 68.
+2026-07-08 16:35:34,835 [DEBUG] choreographer.channels.pipe: Received 2 raw_messages.
+2026-07-08 16:35:34,836 [DEBUG] choreographer._brokers._async: Channel read found 1 json objects.
+2026-07-08 16:35:34,836 [DEBUG] choreographer._brokers._async: Have a response with key ('DEDADFFD33BC80EDEAD94EDE8C8506F4', 1)
+2026-07-08 16:35:34,836 [DEBUG] choreographer._brokers._async: Found future for key ('DEDADFFD33BC80EDEAD94EDE8C8506F4', 1)
+2026-07-08 16:35:34,836 [DEBUG] choreographer.protocol.devtools_async: Cmd 'Runtime.enable', param keys '', sessionId 'DEDADFFD33BC80EDEAD94EDE8C8506F4'
+2026-07-08 16:35:34,836 [DEBUG] choreographer._brokers._async: Broker writing Runtime.enable with key ('DEDADFFD33BC80EDEAD94EDE8C8506F4', 2)
+2026-07-08 16:35:34,836 [DEBUG] choreographer._brokers._async: Created future: ('DEDADFFD33BC80EDEAD94EDE8C8506F4', 2) <Future pending>
+2026-07-08 16:35:34,837 [DEBUG] choreographer.channels._wire: Serialized: {"id": 2, "meth...94EDE8C8506F4"}, size: 86
+2026-07-08 16:35:34,837 [DEBUG] choreographer.channels.pipe: Writing message b'{"id": 2, "meth'...b'4EDE8C8506F4"}\x00', size: 87.
+2026-07-08 16:35:34,837 [DEBUG] choreographer.channels.pipe: ***Wrote 87/87***
+2026-07-08 16:35:34,837 [DEBUG] choreographer.channels.pipe: First read in loop: b'{"method":"Runt'...b'94EDE8C8506F4"}'. size: 294.
+2026-07-08 16:35:34,838 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:34,838 [DEBUG] choreographer.channels.pipe: Total loops: 2, Final size: 363.
+2026-07-08 16:35:34,838 [DEBUG] choreographer.channels.pipe: Received 3 raw_messages.
+2026-07-08 16:35:34,838 [DEBUG] choreographer._brokers._async: Channel read found 2 json objects.
+2026-07-08 16:35:34,838 [DEBUG] choreographer._brokers._async: Received event Runtime.executionContextCreated for DEDADFFD33BC80EDEAD94EDE8C8506F4 targeting <choreographer.protocol.devtools_async.Session object at 0x000001EE9268F6F0>.
+2026-07-08 16:35:34,838 [DEBUG] choreographer._brokers._async: Have a response with key ('DEDADFFD33BC80EDEAD94EDE8C8506F4', 2)
+2026-07-08 16:35:34,838 [DEBUG] choreographer._brokers._async: Found future for key ('DEDADFFD33BC80EDEAD94EDE8C8506F4', 2)
+2026-07-08 16:35:35,492 [DEBUG] choreographer.channels.pipe: First read in loop: b'{"method":"Page'...b'94EDE8C8506F4"}'. size: 123.
+2026-07-08 16:35:35,492 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:35,492 [DEBUG] choreographer.channels.pipe: Total loops: 2, Final size: 124.
+2026-07-08 16:35:35,492 [DEBUG] choreographer.channels.pipe: Received 2 raw_messages.
+2026-07-08 16:35:35,493 [DEBUG] choreographer._brokers._async: Channel read found 1 json objects.
+2026-07-08 16:35:35,493 [DEBUG] choreographer._brokers._async: Received event Page.domContentEventFired for DEDADFFD33BC80EDEAD94EDE8C8506F4 targeting <choreographer.protocol.devtools_async.Session object at 0x000001EE9268F6F0>.
+2026-07-08 16:35:35,507 [DEBUG] choreographer.channels.pipe: First read in loop: b'{"method":"Page'...b'94EDE8C8506F4"}'. size: 117.
+2026-07-08 16:35:35,507 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:35,507 [DEBUG] choreographer.channels.pipe: Total loops: 2, Final size: 118.
+2026-07-08 16:35:35,507 [DEBUG] choreographer.channels.pipe: Received 2 raw_messages.
+2026-07-08 16:35:35,507 [DEBUG] choreographer._brokers._async: Channel read found 1 json objects.
+2026-07-08 16:35:35,507 [DEBUG] choreographer._brokers._async: Received event Page.loadEventFired for DEDADFFD33BC80EDEAD94EDE8C8506F4 targeting <choreographer.protocol.devtools_async.Session object at 0x000001EE9268F6F0>.
+2026-07-08 16:35:35,508 [DEBUG] choreographer.channels.pipe: First read in loop: b'{"method":"Page'...b'4EDE8C8506F4"}\x00'. size: 141.
+2026-07-08 16:35:35,508 [DEBUG] choreographer.channels.pipe: Total loops: 1, Final size: 141.
+2026-07-08 16:35:35,508 [DEBUG] choreographer.channels.pipe: Received 2 raw_messages.
+2026-07-08 16:35:35,508 [DEBUG] choreographer._brokers._async: Channel read found 1 json objects.
+2026-07-08 16:35:35,508 [DEBUG] choreographer._brokers._async: Received event Page.frameStoppedLoading for DEDADFFD33BC80EDEAD94EDE8C8506F4 targeting <choreographer.protocol.devtools_async.Session object at 0x000001EE9268F6F0>.
+2026-07-08 16:35:35,621 [INFO] kaleido.kaleido: Getting tab from queue (has 1)
+2026-07-08 16:35:35,621 [INFO] kaleido.kaleido: Got 27B6
+2026-07-08 16:35:35,622 [DEBUG] choreographer.protocol.devtools_async: Cmd 'Runtime.callFunctionOn', param keys 'dict_keys(['functionDeclaration', 'arguments', 'returnByValue', 'userGesture', 'awaitPromise', 'executionContextId'])', sessionId 'DEDADFFD33BC80EDEAD94EDE8C8506F4'
+2026-07-08 16:35:35,623 [DEBUG] choreographer._brokers._async: Broker writing Runtime.callFunctionOn with key ('DEDADFFD33BC80EDEAD94EDE8C8506F4', 3)
+2026-07-08 16:35:35,623 [DEBUG] choreographer._brokers._async: Created future: ('DEDADFFD33BC80EDEAD94EDE8C8506F4', 3) <Future pending>
+2026-07-08 16:35:35,624 [DEBUG] choreographer.channels._wire: Serialized: {"id": 3, "meth...ContextId": 1}}, size: 21723
+2026-07-08 16:35:35,624 [DEBUG] choreographer.channels.pipe: Writing message b'{"id": 3, "meth'...b'ontextId": 1}}\x00', size: 21724.
+2026-07-08 16:35:35,625 [DEBUG] choreographer.channels.pipe: ***Wrote 21724/21724***
+2026-07-08 16:35:35,723 [DEBUG] choreographer.channels.pipe: First read in loop: b'{"id":3,"result'...b'e=\\\\\\"vector-ef'. size: 10000.
+2026-07-08 16:35:35,723 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:35,723 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:35,723 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:35,723 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:35,723 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:35,723 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:35,723 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:35,723 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:35,723 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:35,723 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:35,724 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:35,724 [DEBUG] choreographer.channels.pipe: Total loops: 12, Final size: 102820.
+2026-07-08 16:35:35,724 [DEBUG] choreographer.channels.pipe: Received 2 raw_messages.
+2026-07-08 16:35:35,724 [DEBUG] choreographer._brokers._async: Channel read found 1 json objects.
+2026-07-08 16:35:35,724 [DEBUG] choreographer._brokers._async: Have a response with key ('DEDADFFD33BC80EDEAD94EDE8C8506F4', 3)
+2026-07-08 16:35:35,724 [DEBUG] choreographer._brokers._async: Found future for key ('DEDADFFD33BC80EDEAD94EDE8C8506F4', 3)
+2026-07-08 16:35:35,725 [INFO] kaleido.kaleido: Reloading tab 27B6 before return.
+2026-07-08 16:35:35,725 [DEBUG] kaleido._kaleido_tab._tab: Reloading tab <choreographer.browser_async.Tab object at 0x000001EE92784910> with javascript.
+2026-07-08 16:35:35,725 [DEBUG] choreographer._brokers._async: Session DEDADFFD33BC80EDEAD94EDE8C8506F4 is subscribing to Runtime.executionContextCreated one time.
+2026-07-08 16:35:35,725 [DEBUG] choreographer._brokers._async: Session DEDADFFD33BC80EDEAD94EDE8C8506F4 is subscribing to Page.loadEventFired one time.
+2026-07-08 16:35:35,725 [DEBUG] choreographer.protocol.devtools_async: Cmd 'Page.reload', param keys '', sessionId 'DEDADFFD33BC80EDEAD94EDE8C8506F4'
+2026-07-08 16:35:35,725 [DEBUG] choreographer._brokers._async: Broker writing Page.reload with key ('DEDADFFD33BC80EDEAD94EDE8C8506F4', 4)
+2026-07-08 16:35:35,725 [DEBUG] choreographer._brokers._async: Created future: ('DEDADFFD33BC80EDEAD94EDE8C8506F4', 4) <Future pending>
+2026-07-08 16:35:35,725 [DEBUG] choreographer.channels._wire: Serialized: {"id": 4, "meth...94EDE8C8506F4"}, size: 83
+2026-07-08 16:35:35,725 [DEBUG] choreographer.channels.pipe: Writing message b'{"id": 4, "meth'...b'4EDE8C8506F4"}\x00', size: 84.
+2026-07-08 16:35:35,725 [DEBUG] choreographer.channels.pipe: ***Wrote 84/84***
+2026-07-08 16:35:35,728 [DEBUG] choreographer.channels.pipe: First read in loop: b'{"method":"Page'...b'94EDE8C8506F4"}'. size: 288.
+2026-07-08 16:35:35,728 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:35,728 [DEBUG] choreographer.channels.pipe: Total loops: 2, Final size: 289.
+2026-07-08 16:35:35,728 [DEBUG] choreographer.channels.pipe: Received 2 raw_messages.
+2026-07-08 16:35:35,728 [DEBUG] choreographer._brokers._async: Channel read found 1 json objects.
+2026-07-08 16:35:35,729 [DEBUG] choreographer._brokers._async: Received event Page.frameStartedNavigating for DEDADFFD33BC80EDEAD94EDE8C8506F4 targeting <choreographer.protocol.devtools_async.Session object at 0x000001EE9268F6F0>.
+2026-07-08 16:35:35,729 [DEBUG] choreographer.channels.pipe: First read in loop: b'{"method":"Page'...b'4EDE8C8506F4"}\x00'. size: 141.
+2026-07-08 16:35:35,729 [DEBUG] choreographer.channels.pipe: Total loops: 1, Final size: 141.
+2026-07-08 16:35:35,729 [DEBUG] choreographer.channels.pipe: Received 2 raw_messages.
+2026-07-08 16:35:35,729 [DEBUG] choreographer._brokers._async: Channel read found 1 json objects.
+2026-07-08 16:35:35,729 [DEBUG] choreographer._brokers._async: Received event Page.frameStartedLoading for DEDADFFD33BC80EDEAD94EDE8C8506F4 targeting <choreographer.protocol.devtools_async.Session object at 0x000001EE9268F6F0>.
+2026-07-08 16:35:35,730 [DEBUG] choreographer.channels.pipe: First read in loop: b'{"id":4,"result'...b'4EDE8C8506F4"}\x00'. size: 68.
+2026-07-08 16:35:35,730 [DEBUG] choreographer.channels.pipe: Total loops: 1, Final size: 68.
+2026-07-08 16:35:35,730 [DEBUG] choreographer.channels.pipe: Received 2 raw_messages.
+2026-07-08 16:35:35,730 [DEBUG] choreographer._brokers._async: Channel read found 1 json objects.
+2026-07-08 16:35:35,730 [DEBUG] choreographer._brokers._async: Have a response with key ('DEDADFFD33BC80EDEAD94EDE8C8506F4', 4)
+2026-07-08 16:35:35,730 [DEBUG] choreographer._brokers._async: Found future for key ('DEDADFFD33BC80EDEAD94EDE8C8506F4', 4)
+2026-07-08 16:35:35,732 [DEBUG] choreographer.channels.pipe: First read in loop: b'{"method":"Runt'...b'94EDE8C8506F4"}'. size: 104.
+2026-07-08 16:35:35,732 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:35,732 [DEBUG] choreographer.channels.pipe: Total loops: 2, Final size: 105.
+2026-07-08 16:35:35,732 [DEBUG] choreographer.channels.pipe: Received 2 raw_messages.
+2026-07-08 16:35:35,732 [DEBUG] choreographer._brokers._async: Channel read found 1 json objects.
+2026-07-08 16:35:35,733 [DEBUG] choreographer._brokers._async: Received event Runtime.executionContextsCleared for DEDADFFD33BC80EDEAD94EDE8C8506F4 targeting <choreographer.protocol.devtools_async.Session object at 0x000001EE9268F6F0>.
+2026-07-08 16:35:35,734 [DEBUG] choreographer.channels.pipe: First read in loop: b'{"method":"Runt'...b'94EDE8C8506F4"}'. size: 104.
+2026-07-08 16:35:35,734 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:35,734 [DEBUG] choreographer.channels.pipe: Total loops: 2, Final size: 641.
+2026-07-08 16:35:35,734 [DEBUG] choreographer.channels.pipe: Received 3 raw_messages.
+2026-07-08 16:35:35,735 [DEBUG] choreographer._brokers._async: Channel read found 2 json objects.
+2026-07-08 16:35:35,735 [DEBUG] choreographer._brokers._async: Received event Runtime.executionContextsCleared for DEDADFFD33BC80EDEAD94EDE8C8506F4 targeting <choreographer.protocol.devtools_async.Session object at 0x000001EE9268F6F0>.
+2026-07-08 16:35:35,735 [DEBUG] choreographer._brokers._async: Received event Page.frameNavigated for DEDADFFD33BC80EDEAD94EDE8C8506F4 targeting <choreographer.protocol.devtools_async.Session object at 0x000001EE9268F6F0>.
+2026-07-08 16:35:35,738 [DEBUG] choreographer.channels.pipe: First read in loop: b'{"method":"Runt'...b'94EDE8C8506F4"}'. size: 295.
+2026-07-08 16:35:35,738 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:35,738 [DEBUG] choreographer.channels.pipe: Total loops: 2, Final size: 296.
+2026-07-08 16:35:35,738 [DEBUG] choreographer.channels.pipe: Received 2 raw_messages.
+2026-07-08 16:35:35,739 [DEBUG] choreographer._brokers._async: Channel read found 1 json objects.
+2026-07-08 16:35:35,739 [DEBUG] choreographer._brokers._async: Received event Runtime.executionContextCreated for DEDADFFD33BC80EDEAD94EDE8C8506F4 targeting <choreographer.protocol.devtools_async.Session object at 0x000001EE9268F6F0>.
+2026-07-08 16:35:35,783 [DEBUG] choreographer.channels.pipe: First read in loop: b'{"method":"Page'...b'94EDE8C8506F4"}'. size: 123.
+2026-07-08 16:35:35,783 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:35:35,783 [DEBUG] choreographer.channels.pipe: Total loops: 2, Final size: 242.
+2026-07-08 16:35:35,783 [DEBUG] choreographer.channels.pipe: Received 3 raw_messages.
+2026-07-08 16:35:35,784 [DEBUG] choreographer._brokers._async: Channel read found 2 json objects.
+2026-07-08 16:35:35,784 [DEBUG] choreographer._brokers._async: Received event Page.domContentEventFired for DEDADFFD33BC80EDEAD94EDE8C8506F4 targeting <choreographer.protocol.devtools_async.Session object at 0x000001EE9268F6F0>.
+2026-07-08 16:35:35,784 [DEBUG] choreographer._brokers._async: Received event Page.loadEventFired for DEDADFFD33BC80EDEAD94EDE8C8506F4 targeting <choreographer.protocol.devtools_async.Session object at 0x000001EE9268F6F0>.
+2026-07-08 16:35:35,784 [INFO] kaleido.kaleido: Putting tab 27B6 back (queue size: 0).
+2026-07-08 16:35:35,784 [DEBUG] kaleido.kaleido: 27B6 put back.
+2026-07-08 16:35:35,784 [INFO] kaleido.kaleido: Waiting for all cleanups to finish.
+2026-07-08 16:35:35,784 [INFO] kaleido.kaleido: Exiting Kaleido.
+2026-07-08 16:35:35,785 [DEBUG] kaleido.kaleido: Cleaning up <choreographer.utils._tmpfile.TmpDirectory object at 0x000001EE92697ED0>
+2026-07-08 16:35:35,785 [DEBUG] choreographer.channels.pipe: First read in loop: b'{"method":"Page'...b'4EDE8C8506F4"}\x00'. size: 141.
+2026-07-08 16:35:35,785 [DEBUG] choreographer.channels.pipe: Total loops: 1, Final size: 141.
+2026-07-08 16:35:35,785 [DEBUG] choreographer.channels.pipe: Received 2 raw_messages.
+2026-07-08 16:35:35,786 [INFO] choreographer.utils._tmpfile: TemporaryDirectory.cleanup() worked.
+2026-07-08 16:35:35,786 [INFO] choreographer.utils._tmpfile: shutil.rmtree worked.
+2026-07-08 16:35:35,786 [INFO] choreographer.browser_async: Closing browser.
+2026-07-08 16:35:35,786 [DEBUG] choreographer.browser_async: Cancelling watchdog.
+2026-07-08 16:35:35,786 [DEBUG] choreographer.browser_async: Starting browser close methods.
+2026-07-08 16:35:35,786 [DEBUG] choreographer.browser_async: Trying Browser.close
+2026-07-08 16:35:35,786 [DEBUG] choreographer.protocol.devtools_async: Cmd 'Browser.close', param keys '', sessionId ''
+2026-07-08 16:35:35,786 [DEBUG] choreographer._brokers._async: Broker writing Browser.close with key ('', 2)
+2026-07-08 16:35:35,786 [DEBUG] choreographer._brokers._async: Created future: ('', 2) <Future pending>
+2026-07-08 16:35:35,786 [DEBUG] choreographer.channels._wire: Serialized: {"id": 2, "meth...Browser.close"}, size: 36
+2026-07-08 16:35:35,787 [DEBUG] choreographer.browser_async: Watchdog full shutdown (in finally:)
+2026-07-08 16:35:35,787 [DEBUG] choreographer.channels.pipe: Writing message b'{"id": 2, "meth'...b'rowser.close"}\x00', size: 37.
+2026-07-08 16:35:35,787 [DEBUG] choreographer._brokers._async: Channel read found 1 json objects.
+2026-07-08 16:35:35,787 [DEBUG] choreographer.channels.pipe: ***Wrote 37/37***
+2026-07-08 16:35:35,787 [DEBUG] choreographer._brokers._async: Received event Page.frameStoppedLoading for DEDADFFD33BC80EDEAD94EDE8C8506F4 targeting <choreographer.protocol.devtools_async.Session object at 0x000001EE9268F6F0>.
+2026-07-08 16:35:35,787 [DEBUG] choreographer.channels.pipe: First read in loop: b'{"id":2,"result'...b'2,"result":{}}\x00'. size: 21.
+2026-07-08 16:35:35,788 [DEBUG] choreographer.channels.pipe: Total loops: 1, Final size: 21.
+2026-07-08 16:35:35,788 [DEBUG] choreographer.channels.pipe: Received 2 raw_messages.
+2026-07-08 16:35:35,788 [DEBUG] choreographer._brokers._async: Channel read found 1 json objects.
+2026-07-08 16:35:35,788 [DEBUG] choreographer._brokers._async: Have a response with key ('', 2)
+2026-07-08 16:35:35,788 [DEBUG] choreographer._brokers._async: Found future for key ('', 2)
+2026-07-08 16:35:35,808 [DEBUG] choreographer._brokers._async: Error in readloop. Will post a close() task.
+2026-07-08 16:35:35,808 [DEBUG] choreographer._brokers._async: PipeClosedError caught
+2026-07-08 16:35:35,808 [DEBUG] kaleido.kaleido: Cleaning up <choreographer.utils._tmpfile.TmpDirectory object at 0x000001EE92697ED0>
+2026-07-08 16:35:35,808 [INFO] choreographer.utils._tmpfile: TemporaryDirectory.cleanup() worked.
+2026-07-08 16:35:35,809 [INFO] choreographer.utils._tmpfile: shutil.rmtree worked.
+2026-07-08 16:35:35,809 [INFO] choreographer.browser_async: Closing browser.
+2026-07-08 16:35:35,809 [DEBUG] choreographer.browser_async: Cancelling watchdog.
+2026-07-08 16:35:35,809 [INFO] kaleido.kaleido: Cancelling tasks.
+2026-07-08 16:35:35,809 [INFO] kaleido.kaleido: Exiting Kaleido/Choreo.
+2026-07-08 16:35:35,885 [DEBUG] choreographer.browser_async: Browser close methods finished.
+2026-07-08 16:35:35,885 [DEBUG] choreographer._brokers._async: Cancelling message futures
+2026-07-08 16:35:35,885 [DEBUG] choreographer._brokers._async: Cancelling read task
+2026-07-08 16:35:35,885 [DEBUG] choreographer._brokers._async: Cancelling subscription-futures
+2026-07-08 16:35:35,885 [DEBUG] choreographer._brokers._async: Cancelling background tasks
+2026-07-08 16:35:35,886 [DEBUG] choreographer.browser_async: Broker cleaned up.
+2026-07-08 16:35:35,886 [DEBUG] choreographer.browser_async: Logging pipe closed.
+2026-07-08 16:35:35,886 [DEBUG] choreographer.browser_async: Browser channel closed.
+2026-07-08 16:35:35,914 [INFO] choreographer.utils._tmpfile: TemporaryDirectory.cleanup() worked.
+2026-07-08 16:35:35,914 [INFO] choreographer.utils._tmpfile: shutil.rmtree worked.
+2026-07-08 16:35:35,914 [DEBUG] choreographer.browser_async: Browser implementation cleaned up.
+2026-07-08 16:35:35,914 [INFO] kaleido.kaleido: Cancelling tasks.
+2026-07-08 16:35:35,914 [INFO] kaleido.kaleido: Exiting Kaleido/Choreo.
+2026-07-08 16:35:35,921 [INFO] choreographer.utils._tmpfile: TemporaryDirectory.cleanup() worked.
+2026-07-08 16:35:35,921 [INFO] choreographer.utils._tmpfile: shutil.rmtree worked.
+2026-07-08 16:35:36,194 [INFO] choreographer.utils._tmpfile: TemporaryDirectory.cleanup() worked.
+2026-07-08 16:35:36,195 [INFO] choreographer.utils._tmpfile: shutil.rmtree worked.
+2026-07-08 16:44:02,067 [INFO] __main__: Running Yearly for ['AN', 'SR', 'PL', 'UP', 'GR']
+2026-07-08 16:44:02,068 [INFO] __main__: [year] 2026-07-01T00:00:00Z -> 2026-07-08T20:44:02Z
+2026-07-08 16:46:11,903 [INFO] __main__: Running Yearly for ['AN', 'SR', 'PL', 'UP', 'GR']
+2026-07-08 16:46:11,903 [INFO] __main__: [year] 2026-07-01T00:00:00Z -> 2026-07-08T20:46:11Z
+2026-07-08 16:46:11,903 [INFO] __main__: Running Month July for AN
+2026-07-08 16:46:11,903 [INFO] scripts.Initial: Parameters set for station AN (2026-07-01T00:00:00Z to 2026-07-08T20:46:11Z)
+2026-07-08 16:46:11,903 [INFO] scripts.Initial: Fetching data for station AN
+2026-07-08 16:46:11,904 [INFO] scripts.Initial: Split into 1 chunks
+2026-07-08 16:46:11,904 [INFO] scripts.Initial: Fetching chunk 2026-07-01 -> 2026-07-08
+2026-07-08 16:46:11,908 [DEBUG] urllib3.connectionpool: Starting new HTTPS connection (1): mw.buoybay.noaa.gov:443
+2026-07-08 16:46:11,908 [DEBUG] urllib3.connectionpool: Starting new HTTPS connection (1): mw.buoybay.noaa.gov:443
+2026-07-08 16:46:11,908 [DEBUG] urllib3.connectionpool: Starting new HTTPS connection (1): mw.buoybay.noaa.gov:443
+2026-07-08 16:46:12,429 [DEBUG] urllib3.connectionpool: https://mw.buoybay.noaa.gov:443 "GET /api/v1/json/query/AN?key=f159959c117f473477edbdf3245cc2a4831ac61f&var=wind_from_direction&sd=2026-07-01T00:00:00Z&ed=2026-07-08T23:59:59Z HTTP/1.1" 200 None
+2026-07-08 16:46:12,439 [DEBUG] urllib3.connectionpool: https://mw.buoybay.noaa.gov:443 "GET /api/v1/json/query/AN?key=f159959c117f473477edbdf3245cc2a4831ac61f&var=wind_speed_of_gust&sd=2026-07-01T00:00:00Z&ed=2026-07-08T23:59:59Z HTTP/1.1" 200 None
+2026-07-08 16:46:12,452 [DEBUG] urllib3.connectionpool: https://mw.buoybay.noaa.gov:443 "GET /api/v1/json/query/AN?key=f159959c117f473477edbdf3245cc2a4831ac61f&var=wind_speed&sd=2026-07-01T00:00:00Z&ed=2026-07-08T23:59:59Z HTTP/1.1" 200 None
+2026-07-08 16:46:13,561 [DEBUG] cfg.apiconfig: Fetched 1873 rows for wind_speed_of_gust
+2026-07-08 16:46:13,598 [DEBUG] cfg.apiconfig: Fetched 1873 rows for wind_from_direction
+2026-07-08 16:46:13,652 [DEBUG] cfg.apiconfig: Fetched 1873 rows for wind_speed
+2026-07-08 16:46:13,659 [DEBUG] scripts.Initial: Combined wind shape: (1873, 7)
+2026-07-08 16:46:13,699 [INFO] cfg.databaseconfig: Saved 1873 wind rows for AN to C:\Users\ncbof\hypoxia\windroseproj\dataOutput\db
+2026-07-08 16:46:13,703 [DEBUG] scripts.Initial: Grouped shape: (20, 4)
+2026-07-08 16:46:13,703 [INFO] __main__: Running Month July for SR
+2026-07-08 16:46:13,703 [INFO] scripts.Initial: Parameters set for station SR (2026-07-01T00:00:00Z to 2026-07-08T20:46:11Z)
+2026-07-08 16:46:13,703 [INFO] scripts.Initial: Fetching data for station SR
+2026-07-08 16:46:13,703 [INFO] scripts.Initial: Split into 1 chunks
+2026-07-08 16:46:13,704 [INFO] scripts.Initial: Fetching chunk 2026-07-01 -> 2026-07-08
+2026-07-08 16:46:13,706 [DEBUG] urllib3.connectionpool: Starting new HTTPS connection (1): mw.buoybay.noaa.gov:443
+2026-07-08 16:46:13,706 [DEBUG] urllib3.connectionpool: Starting new HTTPS connection (1): mw.buoybay.noaa.gov:443
+2026-07-08 16:46:13,707 [DEBUG] urllib3.connectionpool: Starting new HTTPS connection (1): mw.buoybay.noaa.gov:443
+2026-07-08 16:46:14,156 [DEBUG] urllib3.connectionpool: https://mw.buoybay.noaa.gov:443 "GET /api/v1/json/query/SR?key=f159959c117f473477edbdf3245cc2a4831ac61f&var=wind_speed&sd=2026-07-01T00:00:00Z&ed=2026-07-08T23:59:59Z HTTP/1.1" 200 None
+2026-07-08 16:46:14,192 [DEBUG] urllib3.connectionpool: https://mw.buoybay.noaa.gov:443 "GET /api/v1/json/query/SR?key=f159959c117f473477edbdf3245cc2a4831ac61f&var=wind_from_direction&sd=2026-07-01T00:00:00Z&ed=2026-07-08T23:59:59Z HTTP/1.1" 200 None
+2026-07-08 16:46:14,195 [DEBUG] urllib3.connectionpool: https://mw.buoybay.noaa.gov:443 "GET /api/v1/json/query/SR?key=f159959c117f473477edbdf3245cc2a4831ac61f&var=wind_speed_of_gust&sd=2026-07-01T00:00:00Z&ed=2026-07-08T23:59:59Z HTTP/1.1" 200 None
+2026-07-08 16:46:15,229 [DEBUG] cfg.apiconfig: Fetched 1884 rows for wind_speed
+2026-07-08 16:46:15,297 [DEBUG] cfg.apiconfig: Fetched 1884 rows for wind_from_direction
+2026-07-08 16:46:15,390 [DEBUG] cfg.apiconfig: Fetched 1884 rows for wind_speed_of_gust
+2026-07-08 16:46:15,395 [DEBUG] scripts.Initial: Combined wind shape: (1884, 7)
+2026-07-08 16:46:15,439 [INFO] cfg.databaseconfig: Saved 1884 wind rows for SR to C:\Users\ncbof\hypoxia\windroseproj\dataOutput\db
+2026-07-08 16:46:15,442 [DEBUG] scripts.Initial: Grouped shape: (25, 4)
+2026-07-08 16:46:15,443 [INFO] __main__: Running Month July for PL
+2026-07-08 16:46:15,443 [INFO] scripts.Initial: Parameters set for station PL (2026-07-01T00:00:00Z to 2026-07-08T20:46:11Z)
+2026-07-08 16:46:15,443 [INFO] scripts.Initial: Fetching data for station PL
+2026-07-08 16:46:15,443 [INFO] scripts.Initial: Split into 1 chunks
+2026-07-08 16:46:15,443 [INFO] scripts.Initial: Fetching chunk 2026-07-01 -> 2026-07-08
+2026-07-08 16:46:15,446 [DEBUG] urllib3.connectionpool: Starting new HTTPS connection (1): mw.buoybay.noaa.gov:443
+2026-07-08 16:46:15,447 [DEBUG] urllib3.connectionpool: Starting new HTTPS connection (1): mw.buoybay.noaa.gov:443
+2026-07-08 16:46:15,447 [DEBUG] urllib3.connectionpool: Starting new HTTPS connection (1): mw.buoybay.noaa.gov:443
+2026-07-08 16:46:15,893 [DEBUG] urllib3.connectionpool: https://mw.buoybay.noaa.gov:443 "GET /api/v1/json/query/PL?key=f159959c117f473477edbdf3245cc2a4831ac61f&var=wind_from_direction&sd=2026-07-01T00:00:00Z&ed=2026-07-08T23:59:59Z HTTP/1.1" 200 None
+2026-07-08 16:46:15,910 [DEBUG] urllib3.connectionpool: https://mw.buoybay.noaa.gov:443 "GET /api/v1/json/query/PL?key=f159959c117f473477edbdf3245cc2a4831ac61f&var=wind_speed&sd=2026-07-01T00:00:00Z&ed=2026-07-08T23:59:59Z HTTP/1.1" 200 None
+2026-07-08 16:46:15,941 [DEBUG] urllib3.connectionpool: https://mw.buoybay.noaa.gov:443 "GET /api/v1/json/query/PL?key=f159959c117f473477edbdf3245cc2a4831ac61f&var=wind_speed_of_gust&sd=2026-07-01T00:00:00Z&ed=2026-07-08T23:59:59Z HTTP/1.1" 200 None
+2026-07-08 16:46:17,075 [DEBUG] cfg.apiconfig: Fetched 1887 rows for wind_from_direction
+2026-07-08 16:46:17,089 [DEBUG] cfg.apiconfig: Fetched 1887 rows for wind_speed
+2026-07-08 16:46:17,184 [DEBUG] cfg.apiconfig: Fetched 1887 rows for wind_speed_of_gust
+2026-07-08 16:46:17,190 [DEBUG] scripts.Initial: Combined wind shape: (1887, 7)
+2026-07-08 16:46:17,236 [INFO] cfg.databaseconfig: Saved 1887 wind rows for PL to C:\Users\ncbof\hypoxia\windroseproj\dataOutput\db
+2026-07-08 16:46:17,239 [DEBUG] scripts.Initial: Grouped shape: (29, 4)
+2026-07-08 16:46:17,239 [INFO] __main__: Running Month July for UP
+2026-07-08 16:46:17,239 [INFO] scripts.Initial: Parameters set for station UP (2026-07-01T00:00:00Z to 2026-07-08T20:46:11Z)
+2026-07-08 16:46:17,239 [INFO] scripts.Initial: Fetching data for station UP
+2026-07-08 16:46:17,239 [INFO] scripts.Initial: Split into 1 chunks
+2026-07-08 16:46:17,239 [INFO] scripts.Initial: Fetching chunk 2026-07-01 -> 2026-07-08
+2026-07-08 16:46:17,241 [DEBUG] urllib3.connectionpool: Starting new HTTPS connection (1): mw.buoybay.noaa.gov:443
+2026-07-08 16:46:17,242 [DEBUG] urllib3.connectionpool: Starting new HTTPS connection (1): mw.buoybay.noaa.gov:443
+2026-07-08 16:46:17,243 [DEBUG] urllib3.connectionpool: Starting new HTTPS connection (1): mw.buoybay.noaa.gov:443
+2026-07-08 16:46:17,603 [DEBUG] urllib3.connectionpool: https://mw.buoybay.noaa.gov:443 "GET /api/v1/json/query/UP?key=f159959c117f473477edbdf3245cc2a4831ac61f&var=wind_from_direction&sd=2026-07-01T00:00:00Z&ed=2026-07-08T23:59:59Z HTTP/1.1" 200 163
+2026-07-08 16:46:17,606 [DEBUG] cfg.apiconfig: Fetched 0 rows for wind_from_direction
+2026-07-08 16:46:17,611 [DEBUG] urllib3.connectionpool: https://mw.buoybay.noaa.gov:443 "GET /api/v1/json/query/UP?key=f159959c117f473477edbdf3245cc2a4831ac61f&var=wind_speed_of_gust&sd=2026-07-01T00:00:00Z&ed=2026-07-08T23:59:59Z HTTP/1.1" 200 163
+2026-07-08 16:46:17,613 [DEBUG] cfg.apiconfig: Fetched 0 rows for wind_speed_of_gust
+2026-07-08 16:46:17,624 [DEBUG] urllib3.connectionpool: https://mw.buoybay.noaa.gov:443 "GET /api/v1/json/query/UP?key=f159959c117f473477edbdf3245cc2a4831ac61f&var=wind_speed&sd=2026-07-01T00:00:00Z&ed=2026-07-08T23:59:59Z HTTP/1.1" 200 163
+2026-07-08 16:46:17,627 [DEBUG] cfg.apiconfig: Fetched 0 rows for wind_speed
+2026-07-08 16:46:17,629 [WARNING] scripts.Initial: Empty response for chunk 2026-07-01 -> 2026-07-08 — skipping
+2026-07-08 16:46:17,630 [WARNING] scripts.Initial: No data returned for UP
+2026-07-08 16:46:17,631 [WARNING] __main__: No data for UP, skipping
+2026-07-08 16:46:17,631 [INFO] __main__: Running Month July for GR
+2026-07-08 16:46:17,631 [INFO] scripts.Initial: Parameters set for station GR (2026-07-01T00:00:00Z to 2026-07-08T20:46:11Z)
+2026-07-08 16:46:17,631 [INFO] scripts.Initial: Fetching data for station GR
+2026-07-08 16:46:17,631 [INFO] scripts.Initial: Split into 1 chunks
+2026-07-08 16:46:17,631 [INFO] scripts.Initial: Fetching chunk 2026-07-01 -> 2026-07-08
+2026-07-08 16:46:17,637 [DEBUG] urllib3.connectionpool: Starting new HTTPS connection (1): mw.buoybay.noaa.gov:443
+2026-07-08 16:46:17,638 [DEBUG] urllib3.connectionpool: Starting new HTTPS connection (1): mw.buoybay.noaa.gov:443
+2026-07-08 16:46:17,640 [DEBUG] urllib3.connectionpool: Starting new HTTPS connection (1): mw.buoybay.noaa.gov:443
+2026-07-08 16:46:18,093 [DEBUG] urllib3.connectionpool: https://mw.buoybay.noaa.gov:443 "GET /api/v1/json/query/GR?key=f159959c117f473477edbdf3245cc2a4831ac61f&var=wind_speed&sd=2026-07-01T00:00:00Z&ed=2026-07-08T23:59:59Z HTTP/1.1" 200 None
+2026-07-08 16:46:18,093 [DEBUG] urllib3.connectionpool: https://mw.buoybay.noaa.gov:443 "GET /api/v1/json/query/GR?key=f159959c117f473477edbdf3245cc2a4831ac61f&var=wind_speed_of_gust&sd=2026-07-01T00:00:00Z&ed=2026-07-08T23:59:59Z HTTP/1.1" 200 None
+2026-07-08 16:46:18,113 [DEBUG] urllib3.connectionpool: https://mw.buoybay.noaa.gov:443 "GET /api/v1/json/query/GR?key=f159959c117f473477edbdf3245cc2a4831ac61f&var=wind_from_direction&sd=2026-07-01T00:00:00Z&ed=2026-07-08T23:59:59Z HTTP/1.1" 200 None
+2026-07-08 16:46:19,289 [DEBUG] cfg.apiconfig: Fetched 1886 rows for wind_speed_of_gust
+2026-07-08 16:46:19,324 [DEBUG] cfg.apiconfig: Fetched 1886 rows for wind_speed
+2026-07-08 16:46:19,358 [DEBUG] cfg.apiconfig: Fetched 1886 rows for wind_from_direction
+2026-07-08 16:48:15,360 [INFO] __main__: Running Yearly for ['AN', 'SR', 'PL', 'UP', 'GR']
+2026-07-08 16:48:15,360 [INFO] __main__: [year] 2026-07-01T00:00:00Z -> 2026-07-08T20:48:15Z
+2026-07-08 16:48:15,360 [INFO] __main__: Running Month July for AN
+2026-07-08 16:48:15,360 [INFO] scripts.Initial: Parameters set for station AN (2026-07-01T00:00:00Z to 2026-07-08T20:48:15Z)
+2026-07-08 16:48:15,360 [INFO] scripts.Initial: Fetching data for station AN
+2026-07-08 16:48:15,361 [INFO] scripts.Initial: Split into 1 chunks
+2026-07-08 16:48:15,361 [INFO] scripts.Initial: Fetching chunk 2026-07-01 -> 2026-07-08
+2026-07-08 16:48:15,365 [DEBUG] urllib3.connectionpool: Starting new HTTPS connection (1): mw.buoybay.noaa.gov:443
+2026-07-08 16:48:15,366 [DEBUG] urllib3.connectionpool: Starting new HTTPS connection (1): mw.buoybay.noaa.gov:443
+2026-07-08 16:48:15,366 [DEBUG] urllib3.connectionpool: Starting new HTTPS connection (1): mw.buoybay.noaa.gov:443
+2026-07-08 16:48:15,806 [DEBUG] urllib3.connectionpool: https://mw.buoybay.noaa.gov:443 "GET /api/v1/json/query/AN?key=f159959c117f473477edbdf3245cc2a4831ac61f&var=wind_from_direction&sd=2026-07-01T00:00:00Z&ed=2026-07-08T23:59:59Z HTTP/1.1" 200 None
+2026-07-08 16:48:15,847 [DEBUG] urllib3.connectionpool: https://mw.buoybay.noaa.gov:443 "GET /api/v1/json/query/AN?key=f159959c117f473477edbdf3245cc2a4831ac61f&var=wind_speed_of_gust&sd=2026-07-01T00:00:00Z&ed=2026-07-08T23:59:59Z HTTP/1.1" 200 None
+2026-07-08 16:48:15,851 [DEBUG] urllib3.connectionpool: https://mw.buoybay.noaa.gov:443 "GET /api/v1/json/query/AN?key=f159959c117f473477edbdf3245cc2a4831ac61f&var=wind_speed&sd=2026-07-01T00:00:00Z&ed=2026-07-08T23:59:59Z HTTP/1.1" 200 None
+2026-07-08 16:48:16,869 [DEBUG] cfg.apiconfig: Fetched 1873 rows for wind_from_direction
+2026-07-08 16:48:17,024 [DEBUG] cfg.apiconfig: Fetched 1873 rows for wind_speed_of_gust
+2026-07-08 16:48:17,036 [DEBUG] cfg.apiconfig: Fetched 1873 rows for wind_speed
+2026-07-08 16:48:17,043 [DEBUG] scripts.Initial: Combined wind shape: (1873, 7)
+2026-07-08 16:48:17,087 [INFO] cfg.databaseconfig: Saved 1873 wind rows for AN to C:\Users\ncbof\hypoxia\windroseproj\dataOutput\db
+2026-07-08 16:48:17,092 [DEBUG] scripts.Initial: Grouped shape: (20, 4)
+2026-07-08 16:48:17,092 [INFO] __main__: Running Month July for SR
+2026-07-08 16:48:17,092 [INFO] scripts.Initial: Parameters set for station SR (2026-07-01T00:00:00Z to 2026-07-08T20:48:15Z)
+2026-07-08 16:48:17,092 [INFO] scripts.Initial: Fetching data for station SR
+2026-07-08 16:48:17,092 [INFO] scripts.Initial: Split into 1 chunks
+2026-07-08 16:48:17,092 [INFO] scripts.Initial: Fetching chunk 2026-07-01 -> 2026-07-08
+2026-07-08 16:48:17,095 [DEBUG] urllib3.connectionpool: Starting new HTTPS connection (1): mw.buoybay.noaa.gov:443
+2026-07-08 16:48:17,096 [DEBUG] urllib3.connectionpool: Starting new HTTPS connection (1): mw.buoybay.noaa.gov:443
+2026-07-08 16:48:17,096 [DEBUG] urllib3.connectionpool: Starting new HTTPS connection (1): mw.buoybay.noaa.gov:443
+2026-07-08 16:48:17,525 [DEBUG] urllib3.connectionpool: https://mw.buoybay.noaa.gov:443 "GET /api/v1/json/query/SR?key=f159959c117f473477edbdf3245cc2a4831ac61f&var=wind_speed_of_gust&sd=2026-07-01T00:00:00Z&ed=2026-07-08T23:59:59Z HTTP/1.1" 200 None
+2026-07-08 16:48:17,558 [DEBUG] urllib3.connectionpool: https://mw.buoybay.noaa.gov:443 "GET /api/v1/json/query/SR?key=f159959c117f473477edbdf3245cc2a4831ac61f&var=wind_from_direction&sd=2026-07-01T00:00:00Z&ed=2026-07-08T23:59:59Z HTTP/1.1" 200 None
+2026-07-08 16:48:17,597 [DEBUG] urllib3.connectionpool: https://mw.buoybay.noaa.gov:443 "GET /api/v1/json/query/SR?key=f159959c117f473477edbdf3245cc2a4831ac61f&var=wind_speed&sd=2026-07-01T00:00:00Z&ed=2026-07-08T23:59:59Z HTTP/1.1" 200 None
+2026-07-08 16:48:18,679 [DEBUG] cfg.apiconfig: Fetched 1884 rows for wind_speed_of_gust
+2026-07-08 16:48:18,758 [DEBUG] cfg.apiconfig: Fetched 1884 rows for wind_speed
+2026-07-08 16:48:18,778 [DEBUG] cfg.apiconfig: Fetched 1884 rows for wind_from_direction
+2026-07-08 16:48:18,783 [DEBUG] scripts.Initial: Combined wind shape: (1884, 7)
+2026-07-08 16:48:18,827 [INFO] cfg.databaseconfig: Saved 1884 wind rows for SR to C:\Users\ncbof\hypoxia\windroseproj\dataOutput\db
+2026-07-08 16:48:18,830 [DEBUG] scripts.Initial: Grouped shape: (25, 4)
+2026-07-08 16:48:18,830 [INFO] __main__: Running Month July for PL
+2026-07-08 16:48:18,830 [INFO] scripts.Initial: Parameters set for station PL (2026-07-01T00:00:00Z to 2026-07-08T20:48:15Z)
+2026-07-08 16:48:18,830 [INFO] scripts.Initial: Fetching data for station PL
+2026-07-08 16:48:18,830 [INFO] scripts.Initial: Split into 1 chunks
+2026-07-08 16:48:18,830 [INFO] scripts.Initial: Fetching chunk 2026-07-01 -> 2026-07-08
+2026-07-08 16:48:18,833 [DEBUG] urllib3.connectionpool: Starting new HTTPS connection (1): mw.buoybay.noaa.gov:443
+2026-07-08 16:48:18,834 [DEBUG] urllib3.connectionpool: Starting new HTTPS connection (1): mw.buoybay.noaa.gov:443
+2026-07-08 16:48:18,834 [DEBUG] urllib3.connectionpool: Starting new HTTPS connection (1): mw.buoybay.noaa.gov:443
+2026-07-08 16:48:19,291 [DEBUG] urllib3.connectionpool: https://mw.buoybay.noaa.gov:443 "GET /api/v1/json/query/PL?key=f159959c117f473477edbdf3245cc2a4831ac61f&var=wind_from_direction&sd=2026-07-01T00:00:00Z&ed=2026-07-08T23:59:59Z HTTP/1.1" 200 None
+2026-07-08 16:48:19,299 [DEBUG] urllib3.connectionpool: https://mw.buoybay.noaa.gov:443 "GET /api/v1/json/query/PL?key=f159959c117f473477edbdf3245cc2a4831ac61f&var=wind_speed&sd=2026-07-01T00:00:00Z&ed=2026-07-08T23:59:59Z HTTP/1.1" 200 None
+2026-07-08 16:48:19,305 [DEBUG] urllib3.connectionpool: https://mw.buoybay.noaa.gov:443 "GET /api/v1/json/query/PL?key=f159959c117f473477edbdf3245cc2a4831ac61f&var=wind_speed_of_gust&sd=2026-07-01T00:00:00Z&ed=2026-07-08T23:59:59Z HTTP/1.1" 200 None
+2026-07-08 16:48:20,487 [DEBUG] cfg.apiconfig: Fetched 1887 rows for wind_speed_of_gust
+2026-07-08 16:48:20,488 [DEBUG] cfg.apiconfig: Fetched 1887 rows for wind_speed
+2026-07-08 16:48:20,517 [DEBUG] cfg.apiconfig: Fetched 1887 rows for wind_from_direction
+2026-07-08 16:48:20,522 [DEBUG] scripts.Initial: Combined wind shape: (1887, 7)
+2026-07-08 16:48:20,565 [INFO] cfg.databaseconfig: Saved 1887 wind rows for PL to C:\Users\ncbof\hypoxia\windroseproj\dataOutput\db
+2026-07-08 16:48:20,568 [DEBUG] scripts.Initial: Grouped shape: (29, 4)
+2026-07-08 16:48:20,568 [INFO] __main__: Running Month July for UP
+2026-07-08 16:48:20,568 [INFO] scripts.Initial: Parameters set for station UP (2026-07-01T00:00:00Z to 2026-07-08T20:48:15Z)
+2026-07-08 16:48:20,568 [INFO] scripts.Initial: Fetching data for station UP
+2026-07-08 16:48:20,568 [INFO] scripts.Initial: Split into 1 chunks
+2026-07-08 16:48:20,569 [INFO] scripts.Initial: Fetching chunk 2026-07-01 -> 2026-07-08
+2026-07-08 16:48:20,571 [DEBUG] urllib3.connectionpool: Starting new HTTPS connection (1): mw.buoybay.noaa.gov:443
+2026-07-08 16:48:20,571 [DEBUG] urllib3.connectionpool: Starting new HTTPS connection (1): mw.buoybay.noaa.gov:443
+2026-07-08 16:48:20,572 [DEBUG] urllib3.connectionpool: Starting new HTTPS connection (1): mw.buoybay.noaa.gov:443
+2026-07-08 16:48:20,954 [DEBUG] urllib3.connectionpool: https://mw.buoybay.noaa.gov:443 "GET /api/v1/json/query/UP?key=f159959c117f473477edbdf3245cc2a4831ac61f&var=wind_from_direction&sd=2026-07-01T00:00:00Z&ed=2026-07-08T23:59:59Z HTTP/1.1" 200 163
+2026-07-08 16:48:20,958 [DEBUG] cfg.apiconfig: Fetched 0 rows for wind_from_direction
+2026-07-08 16:48:20,976 [DEBUG] urllib3.connectionpool: https://mw.buoybay.noaa.gov:443 "GET /api/v1/json/query/UP?key=f159959c117f473477edbdf3245cc2a4831ac61f&var=wind_speed_of_gust&sd=2026-07-01T00:00:00Z&ed=2026-07-08T23:59:59Z HTTP/1.1" 200 163
+2026-07-08 16:48:20,980 [DEBUG] cfg.apiconfig: Fetched 0 rows for wind_speed_of_gust
+2026-07-08 16:48:20,981 [DEBUG] urllib3.connectionpool: https://mw.buoybay.noaa.gov:443 "GET /api/v1/json/query/UP?key=f159959c117f473477edbdf3245cc2a4831ac61f&var=wind_speed&sd=2026-07-01T00:00:00Z&ed=2026-07-08T23:59:59Z HTTP/1.1" 200 163
+2026-07-08 16:48:20,983 [DEBUG] cfg.apiconfig: Fetched 0 rows for wind_speed
+2026-07-08 16:48:20,985 [WARNING] scripts.Initial: Empty response for chunk 2026-07-01 -> 2026-07-08 — skipping
+2026-07-08 16:48:20,985 [WARNING] scripts.Initial: No data returned for UP
+2026-07-08 16:48:20,986 [WARNING] __main__: No data for UP, skipping
+2026-07-08 16:48:20,986 [INFO] __main__: Running Month July for GR
+2026-07-08 16:48:20,986 [INFO] scripts.Initial: Parameters set for station GR (2026-07-01T00:00:00Z to 2026-07-08T20:48:15Z)
+2026-07-08 16:48:20,986 [INFO] scripts.Initial: Fetching data for station GR
+2026-07-08 16:48:20,986 [INFO] scripts.Initial: Split into 1 chunks
+2026-07-08 16:48:20,986 [INFO] scripts.Initial: Fetching chunk 2026-07-01 -> 2026-07-08
+2026-07-08 16:48:20,991 [DEBUG] urllib3.connectionpool: Starting new HTTPS connection (1): mw.buoybay.noaa.gov:443
+2026-07-08 16:48:20,993 [DEBUG] urllib3.connectionpool: Starting new HTTPS connection (1): mw.buoybay.noaa.gov:443
+2026-07-08 16:48:20,994 [DEBUG] urllib3.connectionpool: Starting new HTTPS connection (1): mw.buoybay.noaa.gov:443
+2026-07-08 16:48:21,409 [DEBUG] urllib3.connectionpool: https://mw.buoybay.noaa.gov:443 "GET /api/v1/json/query/GR?key=f159959c117f473477edbdf3245cc2a4831ac61f&var=wind_from_direction&sd=2026-07-01T00:00:00Z&ed=2026-07-08T23:59:59Z HTTP/1.1" 200 None
+2026-07-08 16:48:21,441 [DEBUG] urllib3.connectionpool: https://mw.buoybay.noaa.gov:443 "GET /api/v1/json/query/GR?key=f159959c117f473477edbdf3245cc2a4831ac61f&var=wind_speed&sd=2026-07-01T00:00:00Z&ed=2026-07-08T23:59:59Z HTTP/1.1" 200 None
+2026-07-08 16:48:21,443 [DEBUG] urllib3.connectionpool: https://mw.buoybay.noaa.gov:443 "GET /api/v1/json/query/GR?key=f159959c117f473477edbdf3245cc2a4831ac61f&var=wind_speed_of_gust&sd=2026-07-01T00:00:00Z&ed=2026-07-08T23:59:59Z HTTP/1.1" 200 None
+2026-07-08 16:48:22,566 [DEBUG] cfg.apiconfig: Fetched 1886 rows for wind_from_direction
+2026-07-08 16:48:22,709 [DEBUG] cfg.apiconfig: Fetched 1886 rows for wind_speed
+2026-07-08 16:48:22,740 [DEBUG] cfg.apiconfig: Fetched 1886 rows for wind_speed_of_gust
+2026-07-08 16:48:22,745 [DEBUG] scripts.Initial: Combined wind shape: (1886, 7)
+2026-07-08 16:48:22,801 [INFO] cfg.databaseconfig: Saved 1886 wind rows for GR to C:\Users\ncbof\hypoxia\windroseproj\dataOutput\db
+2026-07-08 16:48:22,804 [DEBUG] scripts.Initial: Grouped shape: (35, 4)
+2026-07-08 16:48:23,151 [DEBUG] kaleido.kaleido: Successfully registered PlotlyJSONEncoder.
+2026-07-08 16:48:23,154 [DEBUG] asyncio: Using proactor: IocpProactor
+2026-07-08 16:48:23,155 [DEBUG] kaleido.kaleido: Timeout: 90
+2026-07-08 16:48:23,155 [DEBUG] choreographer.browser_async: Attempting to open new browser.
+2026-07-08 16:48:23,156 [INFO] choreographer.browsers.chromium: Chromium init'ed with kwargs {}
+2026-07-08 16:48:23,172 [DEBUG] choreographer.browsers.chromium: Looking for a chrome browser.
+2026-07-08 16:48:23,172 [INFO] choreographer.browsers.chromium: Found chromium path: C:\Program Files\Google\Chrome\Application\chrome.exe
+2026-07-08 16:48:23,174 [INFO] choreographer.utils._tmpfile: Temp directory created: C:\Users\ncbof\AppData\Local\Temp\tmp4pyyluc2.
+2026-07-08 16:48:23,174 [DEBUG] kaleido._page_generator: Plotly script: ('file:///C:/Users/ncbof/hypoxia/windroseproj/.venv/Lib/site-packages/plotly/package_data/plotly.min.js', 'utf-8')
+2026-07-08 16:48:23,174 [INFO] choreographer.browser_async: Opening browser.
+2026-07-08 16:48:23,175 [DEBUG] choreographer.browser_async: Trying to open browser.
+2026-07-08 16:48:23,175 [INFO] choreographer.utils._tmpfile: Temp directory created: C:\Users\ncbof\AppData\Local\Temp\tmpb3bols51.
+2026-07-08 16:48:23,175 [INFO] choreographer.browsers.chromium: Temporary directory at: C:\Users\ncbof\AppData\Local\Temp\tmpb3bols51
+2026-07-08 16:48:23,175 [DEBUG] choreographer.browsers.chromium: Returning cli: ['C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe', '--disable-gpu', '--headless', '--no-sandbox', '--disable-breakpad', '--allow-file-access-from-files', '--enable-logging=stderr', '--user-data-dir=C:\\Users\\ncbof\\AppData\\Local\\Temp\\tmpb3bols51', '--no-first-run', '--enable-unsafe-swiftshader', '--disable-dev-shm-usage', '--disable-background-media-suspend', '--disable-lazy-loading', '--disable-background-timer-throttling', '--disable-backgrounding-occluded-windows', '--disable-renderer-backgrounding', '--disable-component-update', '--disable-hang-monitor', '--disable-popup-blocking', '--disable-prompt-on-repost', '--disable-ipc-flooding-protection', '--disable-sync', '--metrics-recording-only', '--password-store=basic', '--use-mock-keychain', '--no-default-browser-check', '--no-process-per-site', '--disable-web-security', '--remote-debugging-pipe', '--remote-debugging-io-pipes=956,952']
+2026-07-08 16:48:23,175 [DEBUG] choreographer.browsers.chromium: Returning args: {'creationflags': 512, 'close_fds': False}
+2026-07-08 16:48:23,182 [DEBUG] choreographer.protocol.devtools_async: Created new target 0.
+2026-07-08 16:48:23,182 [DEBUG] choreographer.protocol.devtools_async: New session: 
+2026-07-08 16:48:23,182 [DEBUG] choreographer.browser_async: Starting watchdog
+2026-07-08 16:48:23,182 [DEBUG] choreographer.browser_async: Opening channel.
+2026-07-08 16:48:23,182 [DEBUG] choreographer.browser_async: Running read loop
+2026-07-08 16:48:23,183 [DEBUG] choreographer.browser_async: In watchdog
+2026-07-08 16:48:23,183 [DEBUG] choreographer.browser_async: Populating Targets
+2026-07-08 16:48:23,183 [DEBUG] choreographer.protocol.devtools_async: Cmd 'Target.getTargets', param keys '', sessionId ''
+2026-07-08 16:48:23,183 [DEBUG] choreographer._brokers._async: Broker writing Target.getTargets with key ('', 0)
+2026-07-08 16:48:23,184 [DEBUG] choreographer._brokers._async: Created future: ('', 0) <Future pending>
+2026-07-08 16:48:23,184 [DEBUG] choreographer.channels._wire: Serialized: {"id": 0, "meth...et.getTargets"}, size: 40
+2026-07-08 16:48:23,184 [DEBUG] choreographer.channels.pipe: Writing message b'{"id": 0, "meth'...b't.getTargets"}\x00', size: 41.
+2026-07-08 16:48:23,184 [DEBUG] choreographer.channels.pipe: ***Wrote 41/41***
+2026-07-08 16:48:23,301 [DEBUG] browser_proc: [INFO:components\enterprise\browser\controller\chrome_browser_cloud_management_controller.cc:239] No machine level policy manager exists.
+2026-07-08 16:48:23,422 [DEBUG] browser_proc: [WARNING:chrome\browser\extensions\external_pref_loader.cc:294] You are using an old-style extension deployment method (external_extensions.json), which will soon be deprecated. (see http://developer.chrome.com/docs/extensions/how-to/distribute/install-extensions)
+2026-07-08 16:48:23,471 [DEBUG] choreographer.channels.pipe: First read in loop: b'{"id":0,"result'...b'4B79B1EA7C"}]}}'. size: 505.
+2026-07-08 16:48:23,471 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:23,472 [DEBUG] browser_proc: [WARNING:chrome\browser\extensions\external_registry_loader_win.cc:236] Error observing HKLM: Access is denied. (0x5)
+2026-07-08 16:48:23,472 [DEBUG] choreographer.channels.pipe: Total loops: 2, Final size: 506.
+2026-07-08 16:48:23,472 [DEBUG] choreographer.channels.pipe: Received 2 raw_messages.
+2026-07-08 16:48:23,472 [DEBUG] choreographer._brokers._async: Channel read found 1 json objects.
+2026-07-08 16:48:23,472 [DEBUG] choreographer._brokers._async: Have a response with key ('', 0)
+2026-07-08 16:48:23,472 [DEBUG] choreographer._brokers._async: Found future for key ('', 0)
+2026-07-08 16:48:23,472 [DEBUG] choreographer.protocol.devtools_async: Created new target 80F9D7E38C953385E546308EBD9C756A.
+2026-07-08 16:48:23,473 [DEBUG] choreographer.protocol.devtools_async: Cmd 'Target.attachToTarget', param keys 'dict_keys(['targetId', 'flatten'])', sessionId ''
+2026-07-08 16:48:23,473 [DEBUG] choreographer._brokers._async: Broker writing Target.attachToTarget with key ('', 1)
+2026-07-08 16:48:23,473 [DEBUG] choreographer._brokers._async: Created future: ('', 1) <Future pending>
+2026-07-08 16:48:23,473 [DEBUG] choreographer.channels._wire: Serialized: {"id": 1, "meth...latten": true}}, size: 121
+2026-07-08 16:48:23,473 [DEBUG] choreographer.channels.pipe: Writing message b'{"id": 1, "meth'...b'atten": true}}\x00', size: 122.
+2026-07-08 16:48:23,473 [DEBUG] choreographer.channels.pipe: ***Wrote 122/122***
+2026-07-08 16:48:23,486 [DEBUG] choreographer.channels.pipe: First read in loop: b'{"method":"Targ'...b'bugger":false}}'. size: 333.
+2026-07-08 16:48:23,486 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:23,487 [DEBUG] choreographer.channels.pipe: Total loops: 2, Final size: 334.
+2026-07-08 16:48:23,487 [DEBUG] choreographer.channels.pipe: Received 2 raw_messages.
+2026-07-08 16:48:23,488 [DEBUG] choreographer._brokers._async: Channel read found 1 json objects.
+2026-07-08 16:48:23,488 [DEBUG] choreographer._brokers._async: Received event Target.attachedToTarget for  targeting <choreographer.protocol.devtools_async.Session object at 0x000002733842E660>.
+2026-07-08 16:48:23,488 [DEBUG] choreographer.channels.pipe: First read in loop: b'{"id":1,"result'...b'32C83C94578"}}\x00'. size: 67.
+2026-07-08 16:48:23,488 [DEBUG] choreographer.channels.pipe: Total loops: 1, Final size: 67.
+2026-07-08 16:48:23,488 [DEBUG] choreographer.channels.pipe: Received 2 raw_messages.
+2026-07-08 16:48:23,489 [DEBUG] choreographer._brokers._async: Channel read found 1 json objects.
+2026-07-08 16:48:23,489 [DEBUG] choreographer._brokers._async: Have a response with key ('', 1)
+2026-07-08 16:48:23,489 [DEBUG] choreographer._brokers._async: Found future for key ('', 1)
+2026-07-08 16:48:23,489 [DEBUG] choreographer.protocol.devtools_async: New session: 2F53269B8D6C17B1D820232C83C94578
+2026-07-08 16:48:23,489 [DEBUG] choreographer.browser_async: The target 80F9D7E38C953385E546308EBD9C756A was added
+2026-07-08 16:48:23,489 [INFO] kaleido.kaleido: Conforming 1 to file:///C:/Users/ncbof/AppData/Local/Temp/tmp4pyyluc2/index.html
+2026-07-08 16:48:23,490 [DEBUG] choreographer._brokers._async: Session 2F53269B8D6C17B1D820232C83C94578 is subscribing to Runtime.executionContextCreated one time.
+2026-07-08 16:48:23,490 [DEBUG] choreographer._brokers._async: Session 2F53269B8D6C17B1D820232C83C94578 is subscribing to Page.loadEventFired one time.
+2026-07-08 16:48:23,490 [DEBUG] choreographer.protocol.devtools_async: Cmd 'Page.navigate', param keys 'dict_keys(['url'])', sessionId '2F53269B8D6C17B1D820232C83C94578'
+2026-07-08 16:48:23,490 [DEBUG] choreographer._brokers._async: Broker writing Page.navigate with key ('2F53269B8D6C17B1D820232C83C94578', 0)
+2026-07-08 16:48:23,490 [DEBUG] choreographer._brokers._async: Created future: ('2F53269B8D6C17B1D820232C83C94578', 0) <Future pending>
+2026-07-08 16:48:23,491 [DEBUG] choreographer.channels._wire: Serialized: {"id": 0, "meth...2/index.html"}}, size: 172
+2026-07-08 16:48:23,491 [DEBUG] choreographer.channels.pipe: Writing message b'{"id": 0, "meth'...b'/index.html"}}\x00', size: 173.
+2026-07-08 16:48:23,491 [DEBUG] choreographer.channels.pipe: ***Wrote 173/173***
+2026-07-08 16:48:23,512 [DEBUG] choreographer.channels.pipe: First read in loop: b'{"id":0,"result'...b'0232C83C94578"}'. size: 176.
+2026-07-08 16:48:23,512 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:23,513 [DEBUG] choreographer.channels.pipe: Total loops: 2, Final size: 177.
+2026-07-08 16:48:23,513 [DEBUG] choreographer.channels.pipe: Received 2 raw_messages.
+2026-07-08 16:48:23,513 [DEBUG] choreographer._brokers._async: Channel read found 1 json objects.
+2026-07-08 16:48:23,513 [DEBUG] choreographer._brokers._async: Have a response with key ('2F53269B8D6C17B1D820232C83C94578', 0)
+2026-07-08 16:48:23,513 [DEBUG] choreographer._brokers._async: Found future for key ('2F53269B8D6C17B1D820232C83C94578', 0)
+2026-07-08 16:48:23,514 [DEBUG] choreographer.protocol.devtools_async: Cmd 'Page.enable', param keys '', sessionId '2F53269B8D6C17B1D820232C83C94578'
+2026-07-08 16:48:23,514 [DEBUG] choreographer._brokers._async: Broker writing Page.enable with key ('2F53269B8D6C17B1D820232C83C94578', 1)
+2026-07-08 16:48:23,514 [DEBUG] choreographer._brokers._async: Created future: ('2F53269B8D6C17B1D820232C83C94578', 1) <Future pending>
+2026-07-08 16:48:23,514 [DEBUG] choreographer.channels._wire: Serialized: {"id": 1, "meth...0232C83C94578"}, size: 83
+2026-07-08 16:48:23,514 [DEBUG] choreographer.channels.pipe: Writing message b'{"id": 1, "meth'...b'232C83C94578"}\x00', size: 84.
+2026-07-08 16:48:23,514 [DEBUG] choreographer.channels.pipe: ***Wrote 84/84***
+2026-07-08 16:48:23,555 [DEBUG] choreographer.channels.pipe: First read in loop: b'{"id":1,"result'...b'0232C83C94578"}'. size: 67.
+2026-07-08 16:48:23,555 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:23,555 [DEBUG] choreographer.channels.pipe: Total loops: 2, Final size: 68.
+2026-07-08 16:48:23,556 [DEBUG] choreographer.channels.pipe: Received 2 raw_messages.
+2026-07-08 16:48:23,556 [DEBUG] choreographer._brokers._async: Channel read found 1 json objects.
+2026-07-08 16:48:23,556 [DEBUG] choreographer._brokers._async: Have a response with key ('2F53269B8D6C17B1D820232C83C94578', 1)
+2026-07-08 16:48:23,556 [DEBUG] choreographer._brokers._async: Found future for key ('2F53269B8D6C17B1D820232C83C94578', 1)
+2026-07-08 16:48:23,556 [DEBUG] choreographer.protocol.devtools_async: Cmd 'Runtime.enable', param keys '', sessionId '2F53269B8D6C17B1D820232C83C94578'
+2026-07-08 16:48:23,557 [DEBUG] choreographer._brokers._async: Broker writing Runtime.enable with key ('2F53269B8D6C17B1D820232C83C94578', 2)
+2026-07-08 16:48:23,557 [DEBUG] choreographer._brokers._async: Created future: ('2F53269B8D6C17B1D820232C83C94578', 2) <Future pending>
+2026-07-08 16:48:23,557 [DEBUG] choreographer.channels._wire: Serialized: {"id": 2, "meth...0232C83C94578"}, size: 86
+2026-07-08 16:48:23,557 [DEBUG] choreographer.channels.pipe: Writing message b'{"id": 2, "meth'...b'232C83C94578"}\x00', size: 87.
+2026-07-08 16:48:23,557 [DEBUG] choreographer.channels.pipe: ***Wrote 87/87***
+2026-07-08 16:48:23,558 [DEBUG] choreographer.channels.pipe: First read in loop: b'{"method":"Runt'...b'0232C83C94578"}'. size: 293.
+2026-07-08 16:48:23,558 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:23,558 [DEBUG] choreographer.channels.pipe: Total loops: 2, Final size: 362.
+2026-07-08 16:48:23,558 [DEBUG] choreographer.channels.pipe: Received 3 raw_messages.
+2026-07-08 16:48:23,559 [DEBUG] choreographer._brokers._async: Channel read found 2 json objects.
+2026-07-08 16:48:23,559 [DEBUG] choreographer._brokers._async: Received event Runtime.executionContextCreated for 2F53269B8D6C17B1D820232C83C94578 targeting <choreographer.protocol.devtools_async.Session object at 0x000002733839F250>.
+2026-07-08 16:48:23,559 [DEBUG] choreographer._brokers._async: Have a response with key ('2F53269B8D6C17B1D820232C83C94578', 2)
+2026-07-08 16:48:23,559 [DEBUG] choreographer._brokers._async: Found future for key ('2F53269B8D6C17B1D820232C83C94578', 2)
+2026-07-08 16:48:24,221 [DEBUG] choreographer.channels.pipe: First read in loop: b'{"method":"Page'...b'0232C83C94578"}'. size: 123.
+2026-07-08 16:48:24,222 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:24,222 [DEBUG] choreographer.channels.pipe: Total loops: 2, Final size: 124.
+2026-07-08 16:48:24,222 [DEBUG] choreographer.channels.pipe: Received 2 raw_messages.
+2026-07-08 16:48:24,222 [DEBUG] choreographer._brokers._async: Channel read found 1 json objects.
+2026-07-08 16:48:24,222 [DEBUG] choreographer._brokers._async: Received event Page.domContentEventFired for 2F53269B8D6C17B1D820232C83C94578 targeting <choreographer.protocol.devtools_async.Session object at 0x000002733839F250>.
+2026-07-08 16:48:24,232 [DEBUG] choreographer.channels.pipe: First read in loop: b'{"method":"Page'...b'0232C83C94578"}'. size: 117.
+2026-07-08 16:48:24,232 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:24,233 [DEBUG] choreographer.channels.pipe: Total loops: 2, Final size: 118.
+2026-07-08 16:48:24,233 [DEBUG] choreographer.channels.pipe: Received 2 raw_messages.
+2026-07-08 16:48:24,233 [DEBUG] choreographer._brokers._async: Channel read found 1 json objects.
+2026-07-08 16:48:24,233 [DEBUG] choreographer._brokers._async: Received event Page.loadEventFired for 2F53269B8D6C17B1D820232C83C94578 targeting <choreographer.protocol.devtools_async.Session object at 0x000002733839F250>.
+2026-07-08 16:48:24,233 [DEBUG] choreographer.channels.pipe: First read in loop: b'{"method":"Page'...b'232C83C94578"}\x00'. size: 141.
+2026-07-08 16:48:24,234 [DEBUG] choreographer.channels.pipe: Total loops: 1, Final size: 141.
+2026-07-08 16:48:24,234 [DEBUG] choreographer.channels.pipe: Received 2 raw_messages.
+2026-07-08 16:48:24,234 [DEBUG] choreographer._brokers._async: Channel read found 1 json objects.
+2026-07-08 16:48:24,234 [DEBUG] choreographer._brokers._async: Received event Page.frameStoppedLoading for 2F53269B8D6C17B1D820232C83C94578 targeting <choreographer.protocol.devtools_async.Session object at 0x000002733839F250>.
+2026-07-08 16:48:24,349 [INFO] kaleido.kaleido: Getting tab from queue (has 1)
+2026-07-08 16:48:24,349 [INFO] kaleido.kaleido: Got 80F9
+2026-07-08 16:48:24,350 [DEBUG] choreographer.protocol.devtools_async: Cmd 'Runtime.callFunctionOn', param keys 'dict_keys(['functionDeclaration', 'arguments', 'returnByValue', 'userGesture', 'awaitPromise', 'executionContextId'])', sessionId '2F53269B8D6C17B1D820232C83C94578'
+2026-07-08 16:48:24,351 [DEBUG] choreographer._brokers._async: Broker writing Runtime.callFunctionOn with key ('2F53269B8D6C17B1D820232C83C94578', 3)
+2026-07-08 16:48:24,351 [DEBUG] choreographer._brokers._async: Created future: ('2F53269B8D6C17B1D820232C83C94578', 3) <Future pending>
+2026-07-08 16:48:24,352 [DEBUG] choreographer.channels._wire: Serialized: {"id": 3, "meth...ContextId": 1}}, size: 21679
+2026-07-08 16:48:24,352 [DEBUG] choreographer.channels.pipe: Writing message b'{"id": 3, "meth'...b'ontextId": 1}}\x00', size: 21680.
+2026-07-08 16:48:24,353 [DEBUG] choreographer.channels.pipe: ***Wrote 21680/21680***
+2026-07-08 16:48:24,487 [DEBUG] choreographer.channels.pipe: First read in loop: b'{"id":3,"result'...b'AAWHRfDCFAAQgAA'. size: 10000.
+2026-07-08 16:48:24,487 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:24,488 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:24,488 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:24,488 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:24,488 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:24,488 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:24,488 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:24,488 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:24,488 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:24,488 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:24,488 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:24,488 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:24,488 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:24,488 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:24,488 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:24,488 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:24,488 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:24,488 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:24,488 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:24,488 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:24,488 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:24,489 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:24,489 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:24,489 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:24,489 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:24,489 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:24,489 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:24,489 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:24,489 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:24,489 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:24,489 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:24,489 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:24,489 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:24,489 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:24,489 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:24,489 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:24,489 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:24,489 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:24,489 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:24,489 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:24,491 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:24,491 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:24,492 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:24,492 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:24,492 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:24,492 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:24,492 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:24,492 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:24,492 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:24,492 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:24,492 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:24,492 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:24,492 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:24,492 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:24,492 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:24,492 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:24,492 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:24,492 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:24,492 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:24,492 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:24,492 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:24,492 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:24,493 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:24,493 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:24,493 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:24,493 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:24,493 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:24,493 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:24,493 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:24,493 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:24,493 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:24,493 [DEBUG] choreographer.channels.pipe: Total loops: 72, Final size: 661079.
+2026-07-08 16:48:24,495 [DEBUG] choreographer.channels.pipe: Received 2 raw_messages.
+2026-07-08 16:48:24,496 [DEBUG] choreographer._brokers._async: Channel read found 1 json objects.
+2026-07-08 16:48:24,496 [DEBUG] choreographer._brokers._async: Have a response with key ('2F53269B8D6C17B1D820232C83C94578', 3)
+2026-07-08 16:48:24,496 [DEBUG] choreographer._brokers._async: Found future for key ('2F53269B8D6C17B1D820232C83C94578', 3)
+2026-07-08 16:48:24,499 [INFO] kaleido.kaleido: Reloading tab 80F9 before return.
+2026-07-08 16:48:24,499 [DEBUG] kaleido._kaleido_tab._tab: Reloading tab <choreographer.browser_async.Tab object at 0x000002733842E7B0> with javascript.
+2026-07-08 16:48:24,499 [DEBUG] choreographer._brokers._async: Session 2F53269B8D6C17B1D820232C83C94578 is subscribing to Runtime.executionContextCreated one time.
+2026-07-08 16:48:24,499 [DEBUG] choreographer._brokers._async: Session 2F53269B8D6C17B1D820232C83C94578 is subscribing to Page.loadEventFired one time.
+2026-07-08 16:48:24,499 [DEBUG] choreographer.protocol.devtools_async: Cmd 'Page.reload', param keys '', sessionId '2F53269B8D6C17B1D820232C83C94578'
+2026-07-08 16:48:24,499 [DEBUG] choreographer._brokers._async: Broker writing Page.reload with key ('2F53269B8D6C17B1D820232C83C94578', 4)
+2026-07-08 16:48:24,499 [DEBUG] choreographer._brokers._async: Created future: ('2F53269B8D6C17B1D820232C83C94578', 4) <Future pending>
+2026-07-08 16:48:24,499 [DEBUG] choreographer.channels._wire: Serialized: {"id": 4, "meth...0232C83C94578"}, size: 83
+2026-07-08 16:48:24,499 [DEBUG] choreographer.channels.pipe: Writing message b'{"id": 4, "meth'...b'232C83C94578"}\x00', size: 84.
+2026-07-08 16:48:24,499 [DEBUG] choreographer.channels.pipe: ***Wrote 84/84***
+2026-07-08 16:48:24,501 [DEBUG] choreographer.channels.pipe: First read in loop: b'{"method":"Page'...b'0232C83C94578"}'. size: 288.
+2026-07-08 16:48:24,502 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:24,502 [DEBUG] choreographer.channels.pipe: Total loops: 2, Final size: 289.
+2026-07-08 16:48:24,502 [DEBUG] choreographer.channels.pipe: Received 2 raw_messages.
+2026-07-08 16:48:24,502 [DEBUG] choreographer._brokers._async: Channel read found 1 json objects.
+2026-07-08 16:48:24,502 [DEBUG] choreographer._brokers._async: Received event Page.frameStartedNavigating for 2F53269B8D6C17B1D820232C83C94578 targeting <choreographer.protocol.devtools_async.Session object at 0x000002733839F250>.
+2026-07-08 16:48:24,502 [DEBUG] choreographer.channels.pipe: First read in loop: b'{"method":"Page'...b'232C83C94578"}\x00'. size: 141.
+2026-07-08 16:48:24,503 [DEBUG] choreographer.channels.pipe: Total loops: 1, Final size: 141.
+2026-07-08 16:48:24,503 [DEBUG] choreographer.channels.pipe: Received 2 raw_messages.
+2026-07-08 16:48:24,503 [DEBUG] choreographer._brokers._async: Channel read found 1 json objects.
+2026-07-08 16:48:24,503 [DEBUG] choreographer._brokers._async: Received event Page.frameStartedLoading for 2F53269B8D6C17B1D820232C83C94578 targeting <choreographer.protocol.devtools_async.Session object at 0x000002733839F250>.
+2026-07-08 16:48:24,503 [DEBUG] choreographer.channels.pipe: First read in loop: b'{"id":4,"result'...b'232C83C94578"}\x00'. size: 68.
+2026-07-08 16:48:24,503 [DEBUG] choreographer.channels.pipe: Total loops: 1, Final size: 68.
+2026-07-08 16:48:24,503 [DEBUG] choreographer.channels.pipe: Received 2 raw_messages.
+2026-07-08 16:48:24,503 [DEBUG] choreographer._brokers._async: Channel read found 1 json objects.
+2026-07-08 16:48:24,504 [DEBUG] choreographer._brokers._async: Have a response with key ('2F53269B8D6C17B1D820232C83C94578', 4)
+2026-07-08 16:48:24,504 [DEBUG] choreographer._brokers._async: Found future for key ('2F53269B8D6C17B1D820232C83C94578', 4)
+2026-07-08 16:48:24,505 [DEBUG] choreographer.channels.pipe: First read in loop: b'{"method":"Runt'...b'0232C83C94578"}'. size: 104.
+2026-07-08 16:48:24,505 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:24,505 [DEBUG] choreographer.channels.pipe: Total loops: 2, Final size: 105.
+2026-07-08 16:48:24,505 [DEBUG] choreographer.channels.pipe: Received 2 raw_messages.
+2026-07-08 16:48:24,506 [DEBUG] choreographer._brokers._async: Channel read found 1 json objects.
+2026-07-08 16:48:24,506 [DEBUG] choreographer._brokers._async: Received event Runtime.executionContextsCleared for 2F53269B8D6C17B1D820232C83C94578 targeting <choreographer.protocol.devtools_async.Session object at 0x000002733839F250>.
+2026-07-08 16:48:24,508 [DEBUG] choreographer.channels.pipe: First read in loop: b'{"method":"Runt'...b'0232C83C94578"}'. size: 104.
+2026-07-08 16:48:24,508 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:24,508 [DEBUG] choreographer.channels.pipe: Total loops: 2, Final size: 641.
+2026-07-08 16:48:24,508 [DEBUG] choreographer.channels.pipe: Received 3 raw_messages.
+2026-07-08 16:48:24,509 [DEBUG] choreographer._brokers._async: Channel read found 2 json objects.
+2026-07-08 16:48:24,509 [DEBUG] choreographer._brokers._async: Received event Runtime.executionContextsCleared for 2F53269B8D6C17B1D820232C83C94578 targeting <choreographer.protocol.devtools_async.Session object at 0x000002733839F250>.
+2026-07-08 16:48:24,509 [DEBUG] choreographer._brokers._async: Received event Page.frameNavigated for 2F53269B8D6C17B1D820232C83C94578 targeting <choreographer.protocol.devtools_async.Session object at 0x000002733839F250>.
+2026-07-08 16:48:24,512 [DEBUG] choreographer.channels.pipe: First read in loop: b'{"method":"Runt'...b'0232C83C94578"}'. size: 295.
+2026-07-08 16:48:24,512 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:24,512 [DEBUG] choreographer.channels.pipe: Total loops: 2, Final size: 296.
+2026-07-08 16:48:24,512 [DEBUG] choreographer.channels.pipe: Received 2 raw_messages.
+2026-07-08 16:48:24,512 [DEBUG] choreographer._brokers._async: Channel read found 1 json objects.
+2026-07-08 16:48:24,512 [DEBUG] choreographer._brokers._async: Received event Runtime.executionContextCreated for 2F53269B8D6C17B1D820232C83C94578 targeting <choreographer.protocol.devtools_async.Session object at 0x000002733839F250>.
+2026-07-08 16:48:24,557 [DEBUG] choreographer.channels.pipe: First read in loop: b'{"method":"Page'...b'0232C83C94578"}'. size: 123.
+2026-07-08 16:48:24,557 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:24,557 [DEBUG] choreographer.channels.pipe: Total loops: 2, Final size: 382.
+2026-07-08 16:48:24,557 [DEBUG] choreographer.channels.pipe: Received 4 raw_messages.
+2026-07-08 16:48:24,558 [DEBUG] choreographer._brokers._async: Channel read found 3 json objects.
+2026-07-08 16:48:24,558 [DEBUG] choreographer._brokers._async: Received event Page.domContentEventFired for 2F53269B8D6C17B1D820232C83C94578 targeting <choreographer.protocol.devtools_async.Session object at 0x000002733839F250>.
+2026-07-08 16:48:24,558 [DEBUG] choreographer._brokers._async: Received event Page.loadEventFired for 2F53269B8D6C17B1D820232C83C94578 targeting <choreographer.protocol.devtools_async.Session object at 0x000002733839F250>.
+2026-07-08 16:48:24,558 [DEBUG] choreographer._brokers._async: Received event Page.frameStoppedLoading for 2F53269B8D6C17B1D820232C83C94578 targeting <choreographer.protocol.devtools_async.Session object at 0x000002733839F250>.
+2026-07-08 16:48:24,558 [INFO] kaleido.kaleido: Putting tab 80F9 back (queue size: 0).
+2026-07-08 16:48:24,558 [DEBUG] kaleido.kaleido: 80F9 put back.
+2026-07-08 16:48:24,558 [INFO] kaleido.kaleido: Waiting for all cleanups to finish.
+2026-07-08 16:48:24,558 [INFO] kaleido.kaleido: Exiting Kaleido.
+2026-07-08 16:48:24,558 [DEBUG] kaleido.kaleido: Cleaning up <choreographer.utils._tmpfile.TmpDirectory object at 0x000002733842DFD0>
+2026-07-08 16:48:24,559 [INFO] choreographer.utils._tmpfile: TemporaryDirectory.cleanup() worked.
+2026-07-08 16:48:24,560 [INFO] choreographer.utils._tmpfile: shutil.rmtree worked.
+2026-07-08 16:48:24,560 [INFO] choreographer.browser_async: Closing browser.
+2026-07-08 16:48:24,560 [DEBUG] choreographer.browser_async: Cancelling watchdog.
+2026-07-08 16:48:24,560 [DEBUG] choreographer.browser_async: Starting browser close methods.
+2026-07-08 16:48:24,560 [DEBUG] choreographer.browser_async: Trying Browser.close
+2026-07-08 16:48:24,560 [DEBUG] choreographer.protocol.devtools_async: Cmd 'Browser.close', param keys '', sessionId ''
+2026-07-08 16:48:24,560 [DEBUG] choreographer._brokers._async: Broker writing Browser.close with key ('', 2)
+2026-07-08 16:48:24,560 [DEBUG] choreographer._brokers._async: Created future: ('', 2) <Future pending>
+2026-07-08 16:48:24,560 [DEBUG] choreographer.browser_async: Watchdog full shutdown (in finally:)
+2026-07-08 16:48:24,560 [DEBUG] choreographer.channels._wire: Serialized: {"id": 2, "meth...Browser.close"}, size: 36
+2026-07-08 16:48:24,560 [DEBUG] choreographer.channels.pipe: Writing message b'{"id": 2, "meth'...b'rowser.close"}\x00', size: 37.
+2026-07-08 16:48:24,560 [DEBUG] choreographer.channels.pipe: ***Wrote 37/37***
+2026-07-08 16:48:24,561 [DEBUG] choreographer.channels.pipe: First read in loop: b'{"id":2,"result'...b':2,"result":{}}'. size: 20.
+2026-07-08 16:48:24,561 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:24,561 [DEBUG] choreographer.channels.pipe: Total loops: 2, Final size: 21.
+2026-07-08 16:48:24,561 [DEBUG] choreographer.channels.pipe: Received 2 raw_messages.
+2026-07-08 16:48:24,561 [DEBUG] choreographer._brokers._async: Channel read found 1 json objects.
+2026-07-08 16:48:24,561 [DEBUG] choreographer._brokers._async: Have a response with key ('', 2)
+2026-07-08 16:48:24,561 [DEBUG] choreographer._brokers._async: Found future for key ('', 2)
+2026-07-08 16:48:24,582 [DEBUG] choreographer._brokers._async: Error in readloop. Will post a close() task.
+2026-07-08 16:48:24,582 [DEBUG] choreographer._brokers._async: PipeClosedError caught
+2026-07-08 16:48:24,582 [DEBUG] kaleido.kaleido: Cleaning up <choreographer.utils._tmpfile.TmpDirectory object at 0x000002733842DFD0>
+2026-07-08 16:48:24,582 [INFO] choreographer.utils._tmpfile: TemporaryDirectory.cleanup() worked.
+2026-07-08 16:48:24,582 [INFO] choreographer.utils._tmpfile: shutil.rmtree worked.
+2026-07-08 16:48:24,582 [INFO] choreographer.browser_async: Closing browser.
+2026-07-08 16:48:24,582 [DEBUG] choreographer.browser_async: Cancelling watchdog.
+2026-07-08 16:48:24,582 [INFO] kaleido.kaleido: Cancelling tasks.
+2026-07-08 16:48:24,583 [INFO] kaleido.kaleido: Exiting Kaleido/Choreo.
+2026-07-08 16:48:24,669 [DEBUG] choreographer.browser_async: Browser close methods finished.
+2026-07-08 16:48:24,670 [DEBUG] choreographer._brokers._async: Cancelling message futures
+2026-07-08 16:48:24,670 [DEBUG] choreographer._brokers._async: Cancelling read task
+2026-07-08 16:48:24,670 [DEBUG] choreographer._brokers._async: Cancelling subscription-futures
+2026-07-08 16:48:24,670 [DEBUG] choreographer._brokers._async: Cancelling background tasks
+2026-07-08 16:48:24,670 [DEBUG] choreographer.browser_async: Broker cleaned up.
+2026-07-08 16:48:24,670 [DEBUG] choreographer.browser_async: Logging pipe closed.
+2026-07-08 16:48:24,670 [DEBUG] choreographer.browser_async: Browser channel closed.
+2026-07-08 16:48:24,719 [INFO] choreographer.utils._tmpfile: TemporaryDirectory.cleanup() worked.
+2026-07-08 16:48:24,719 [INFO] choreographer.utils._tmpfile: shutil.rmtree worked.
+2026-07-08 16:48:24,720 [DEBUG] choreographer.browser_async: Browser implementation cleaned up.
+2026-07-08 16:48:24,720 [INFO] kaleido.kaleido: Cancelling tasks.
+2026-07-08 16:48:24,720 [INFO] kaleido.kaleido: Exiting Kaleido/Choreo.
+2026-07-08 16:48:24,725 [DEBUG] asyncio: Using proactor: IocpProactor
+2026-07-08 16:48:24,725 [DEBUG] kaleido.kaleido: Timeout: 90
+2026-07-08 16:48:24,725 [DEBUG] choreographer.browser_async: Attempting to open new browser.
+2026-07-08 16:48:24,726 [INFO] choreographer.browsers.chromium: Chromium init'ed with kwargs {}
+2026-07-08 16:48:24,726 [DEBUG] choreographer.browsers.chromium: Looking for a chrome browser.
+2026-07-08 16:48:24,727 [INFO] choreographer.browsers.chromium: Found chromium path: C:\Program Files\Google\Chrome\Application\chrome.exe
+2026-07-08 16:48:24,727 [INFO] choreographer.utils._tmpfile: Temp directory created: C:\Users\ncbof\AppData\Local\Temp\tmplydj4xwj.
+2026-07-08 16:48:24,728 [DEBUG] kaleido._page_generator: Plotly script: ('file:///C:/Users/ncbof/hypoxia/windroseproj/.venv/Lib/site-packages/plotly/package_data/plotly.min.js', 'utf-8')
+2026-07-08 16:48:24,728 [INFO] choreographer.browser_async: Opening browser.
+2026-07-08 16:48:24,729 [DEBUG] choreographer.browser_async: Trying to open browser.
+2026-07-08 16:48:24,729 [INFO] choreographer.utils._tmpfile: Temp directory created: C:\Users\ncbof\AppData\Local\Temp\tmpzwp3g2x1.
+2026-07-08 16:48:24,729 [INFO] choreographer.browsers.chromium: Temporary directory at: C:\Users\ncbof\AppData\Local\Temp\tmpzwp3g2x1
+2026-07-08 16:48:24,729 [DEBUG] choreographer.browsers.chromium: Returning cli: ['C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe', '--disable-gpu', '--headless', '--no-sandbox', '--disable-breakpad', '--allow-file-access-from-files', '--enable-logging=stderr', '--user-data-dir=C:\\Users\\ncbof\\AppData\\Local\\Temp\\tmpzwp3g2x1', '--no-first-run', '--enable-unsafe-swiftshader', '--disable-dev-shm-usage', '--disable-background-media-suspend', '--disable-lazy-loading', '--disable-background-timer-throttling', '--disable-backgrounding-occluded-windows', '--disable-renderer-backgrounding', '--disable-component-update', '--disable-hang-monitor', '--disable-popup-blocking', '--disable-prompt-on-repost', '--disable-ipc-flooding-protection', '--disable-sync', '--metrics-recording-only', '--password-store=basic', '--use-mock-keychain', '--no-default-browser-check', '--no-process-per-site', '--disable-web-security', '--remote-debugging-pipe', '--remote-debugging-io-pipes=956,940']
+2026-07-08 16:48:24,729 [DEBUG] choreographer.browsers.chromium: Returning args: {'creationflags': 512, 'close_fds': False}
+2026-07-08 16:48:24,735 [DEBUG] choreographer.protocol.devtools_async: Created new target 0.
+2026-07-08 16:48:24,735 [DEBUG] choreographer.protocol.devtools_async: New session: 
+2026-07-08 16:48:24,735 [DEBUG] choreographer.browser_async: Starting watchdog
+2026-07-08 16:48:24,735 [DEBUG] choreographer.browser_async: Opening channel.
+2026-07-08 16:48:24,735 [DEBUG] choreographer.browser_async: Running read loop
+2026-07-08 16:48:24,736 [DEBUG] choreographer.browser_async: In watchdog
+2026-07-08 16:48:24,736 [DEBUG] choreographer.browser_async: Populating Targets
+2026-07-08 16:48:24,736 [DEBUG] choreographer.protocol.devtools_async: Cmd 'Target.getTargets', param keys '', sessionId ''
+2026-07-08 16:48:24,737 [DEBUG] choreographer._brokers._async: Broker writing Target.getTargets with key ('', 0)
+2026-07-08 16:48:24,737 [DEBUG] choreographer._brokers._async: Created future: ('', 0) <Future pending>
+2026-07-08 16:48:24,737 [DEBUG] choreographer.channels._wire: Serialized: {"id": 0, "meth...et.getTargets"}, size: 40
+2026-07-08 16:48:24,737 [DEBUG] choreographer.channels.pipe: Writing message b'{"id": 0, "meth'...b't.getTargets"}\x00', size: 41.
+2026-07-08 16:48:24,738 [DEBUG] choreographer.channels.pipe: ***Wrote 41/41***
+2026-07-08 16:48:24,843 [DEBUG] browser_proc: [INFO:components\enterprise\browser\controller\chrome_browser_cloud_management_controller.cc:239] No machine level policy manager exists.
+2026-07-08 16:48:24,965 [DEBUG] browser_proc: [WARNING:chrome\browser\extensions\external_pref_loader.cc:294] You are using an old-style extension deployment method (external_extensions.json), which will soon be deprecated. (see http://developer.chrome.com/docs/extensions/how-to/distribute/install-extensions)
+2026-07-08 16:48:25,012 [DEBUG] browser_proc: [WARNING:chrome\browser\extensions\external_registry_loader_win.cc:236] Error observing HKLM: Access is denied. (0x5)
+2026-07-08 16:48:25,013 [DEBUG] choreographer.channels.pipe: First read in loop: b'{"id":0,"result'...b'159E6774DF"}]}}'. size: 505.
+2026-07-08 16:48:25,013 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:25,013 [DEBUG] choreographer.channels.pipe: Total loops: 2, Final size: 506.
+2026-07-08 16:48:25,013 [DEBUG] choreographer.channels.pipe: Received 2 raw_messages.
+2026-07-08 16:48:25,014 [DEBUG] choreographer._brokers._async: Channel read found 1 json objects.
+2026-07-08 16:48:25,014 [DEBUG] choreographer._brokers._async: Have a response with key ('', 0)
+2026-07-08 16:48:25,014 [DEBUG] choreographer._brokers._async: Found future for key ('', 0)
+2026-07-08 16:48:25,014 [DEBUG] choreographer.protocol.devtools_async: Created new target CFBED97D7ED699E536CC1556B6F5027B.
+2026-07-08 16:48:25,015 [DEBUG] choreographer.protocol.devtools_async: Cmd 'Target.attachToTarget', param keys 'dict_keys(['targetId', 'flatten'])', sessionId ''
+2026-07-08 16:48:25,015 [DEBUG] choreographer._brokers._async: Broker writing Target.attachToTarget with key ('', 1)
+2026-07-08 16:48:25,015 [DEBUG] choreographer._brokers._async: Created future: ('', 1) <Future pending>
+2026-07-08 16:48:25,015 [DEBUG] choreographer.channels._wire: Serialized: {"id": 1, "meth...latten": true}}, size: 121
+2026-07-08 16:48:25,016 [DEBUG] choreographer.channels.pipe: Writing message b'{"id": 1, "meth'...b'atten": true}}\x00', size: 122.
+2026-07-08 16:48:25,016 [DEBUG] choreographer.channels.pipe: ***Wrote 122/122***
+2026-07-08 16:48:25,028 [DEBUG] choreographer.channels.pipe: First read in loop: b'{"method":"Targ'...b'bugger":false}}'. size: 333.
+2026-07-08 16:48:25,028 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:25,028 [DEBUG] choreographer.channels.pipe: Total loops: 2, Final size: 401.
+2026-07-08 16:48:25,028 [DEBUG] choreographer.channels.pipe: Received 3 raw_messages.
+2026-07-08 16:48:25,028 [DEBUG] choreographer._brokers._async: Channel read found 2 json objects.
+2026-07-08 16:48:25,029 [DEBUG] choreographer._brokers._async: Received event Target.attachedToTarget for  targeting <choreographer.protocol.devtools_async.Session object at 0x000002733848C690>.
+2026-07-08 16:48:25,029 [DEBUG] choreographer._brokers._async: Have a response with key ('', 1)
+2026-07-08 16:48:25,029 [DEBUG] choreographer._brokers._async: Found future for key ('', 1)
+2026-07-08 16:48:25,029 [DEBUG] choreographer.protocol.devtools_async: New session: A1630202624BAE9AA734056F44AD8CEC
+2026-07-08 16:48:25,029 [DEBUG] choreographer.browser_async: The target CFBED97D7ED699E536CC1556B6F5027B was added
+2026-07-08 16:48:25,029 [INFO] kaleido.kaleido: Conforming 1 to file:///C:/Users/ncbof/AppData/Local/Temp/tmplydj4xwj/index.html
+2026-07-08 16:48:25,029 [DEBUG] choreographer._brokers._async: Session A1630202624BAE9AA734056F44AD8CEC is subscribing to Runtime.executionContextCreated one time.
+2026-07-08 16:48:25,029 [DEBUG] choreographer._brokers._async: Session A1630202624BAE9AA734056F44AD8CEC is subscribing to Page.loadEventFired one time.
+2026-07-08 16:48:25,030 [DEBUG] choreographer.protocol.devtools_async: Cmd 'Page.navigate', param keys 'dict_keys(['url'])', sessionId 'A1630202624BAE9AA734056F44AD8CEC'
+2026-07-08 16:48:25,030 [DEBUG] choreographer._brokers._async: Broker writing Page.navigate with key ('A1630202624BAE9AA734056F44AD8CEC', 0)
+2026-07-08 16:48:25,030 [DEBUG] choreographer._brokers._async: Created future: ('A1630202624BAE9AA734056F44AD8CEC', 0) <Future pending>
+2026-07-08 16:48:25,030 [DEBUG] choreographer.channels._wire: Serialized: {"id": 0, "meth...j/index.html"}}, size: 172
+2026-07-08 16:48:25,030 [DEBUG] choreographer.channels.pipe: Writing message b'{"id": 0, "meth'...b'/index.html"}}\x00', size: 173.
+2026-07-08 16:48:25,030 [DEBUG] choreographer.channels.pipe: ***Wrote 173/173***
+2026-07-08 16:48:25,055 [DEBUG] choreographer.channels.pipe: First read in loop: b'{"id":0,"result'...b'4056F44AD8CEC"}'. size: 176.
+2026-07-08 16:48:25,055 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:25,056 [DEBUG] choreographer.channels.pipe: Total loops: 2, Final size: 177.
+2026-07-08 16:48:25,056 [DEBUG] choreographer.channels.pipe: Received 2 raw_messages.
+2026-07-08 16:48:25,056 [DEBUG] choreographer._brokers._async: Channel read found 1 json objects.
+2026-07-08 16:48:25,056 [DEBUG] choreographer._brokers._async: Have a response with key ('A1630202624BAE9AA734056F44AD8CEC', 0)
+2026-07-08 16:48:25,056 [DEBUG] choreographer._brokers._async: Found future for key ('A1630202624BAE9AA734056F44AD8CEC', 0)
+2026-07-08 16:48:25,057 [DEBUG] choreographer.protocol.devtools_async: Cmd 'Page.enable', param keys '', sessionId 'A1630202624BAE9AA734056F44AD8CEC'
+2026-07-08 16:48:25,057 [DEBUG] choreographer._brokers._async: Broker writing Page.enable with key ('A1630202624BAE9AA734056F44AD8CEC', 1)
+2026-07-08 16:48:25,057 [DEBUG] choreographer._brokers._async: Created future: ('A1630202624BAE9AA734056F44AD8CEC', 1) <Future pending>
+2026-07-08 16:48:25,057 [DEBUG] choreographer.channels._wire: Serialized: {"id": 1, "meth...4056F44AD8CEC"}, size: 83
+2026-07-08 16:48:25,057 [DEBUG] choreographer.channels.pipe: Writing message b'{"id": 1, "meth'...b'056F44AD8CEC"}\x00', size: 84.
+2026-07-08 16:48:25,057 [DEBUG] choreographer.channels.pipe: ***Wrote 84/84***
+2026-07-08 16:48:25,094 [DEBUG] choreographer.channels.pipe: First read in loop: b'{"id":1,"result'...b'4056F44AD8CEC"}'. size: 67.
+2026-07-08 16:48:25,094 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:25,094 [DEBUG] choreographer.channels.pipe: Total loops: 2, Final size: 68.
+2026-07-08 16:48:25,094 [DEBUG] choreographer.channels.pipe: Received 2 raw_messages.
+2026-07-08 16:48:25,095 [DEBUG] choreographer._brokers._async: Channel read found 1 json objects.
+2026-07-08 16:48:25,095 [DEBUG] choreographer._brokers._async: Have a response with key ('A1630202624BAE9AA734056F44AD8CEC', 1)
+2026-07-08 16:48:25,095 [DEBUG] choreographer._brokers._async: Found future for key ('A1630202624BAE9AA734056F44AD8CEC', 1)
+2026-07-08 16:48:25,095 [DEBUG] choreographer.protocol.devtools_async: Cmd 'Runtime.enable', param keys '', sessionId 'A1630202624BAE9AA734056F44AD8CEC'
+2026-07-08 16:48:25,095 [DEBUG] choreographer._brokers._async: Broker writing Runtime.enable with key ('A1630202624BAE9AA734056F44AD8CEC', 2)
+2026-07-08 16:48:25,095 [DEBUG] choreographer._brokers._async: Created future: ('A1630202624BAE9AA734056F44AD8CEC', 2) <Future pending>
+2026-07-08 16:48:25,095 [DEBUG] choreographer.channels._wire: Serialized: {"id": 2, "meth...4056F44AD8CEC"}, size: 86
+2026-07-08 16:48:25,096 [DEBUG] choreographer.channels.pipe: Writing message b'{"id": 2, "meth'...b'056F44AD8CEC"}\x00', size: 87.
+2026-07-08 16:48:25,096 [DEBUG] choreographer.channels.pipe: ***Wrote 87/87***
+2026-07-08 16:48:25,096 [DEBUG] choreographer.channels.pipe: First read in loop: b'{"method":"Runt'...b'4056F44AD8CEC"}'. size: 294.
+2026-07-08 16:48:25,096 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:25,096 [DEBUG] choreographer.channels.pipe: Total loops: 2, Final size: 363.
+2026-07-08 16:48:25,097 [DEBUG] choreographer.channels.pipe: Received 3 raw_messages.
+2026-07-08 16:48:25,097 [DEBUG] choreographer._brokers._async: Channel read found 2 json objects.
+2026-07-08 16:48:25,097 [DEBUG] choreographer._brokers._async: Received event Runtime.executionContextCreated for A1630202624BAE9AA734056F44AD8CEC targeting <choreographer.protocol.devtools_async.Session object at 0x00000273383976F0>.
+2026-07-08 16:48:25,097 [DEBUG] choreographer._brokers._async: Have a response with key ('A1630202624BAE9AA734056F44AD8CEC', 2)
+2026-07-08 16:48:25,097 [DEBUG] choreographer._brokers._async: Found future for key ('A1630202624BAE9AA734056F44AD8CEC', 2)
+2026-07-08 16:48:25,802 [DEBUG] choreographer.channels.pipe: First read in loop: b'{"method":"Page'...b'4056F44AD8CEC"}'. size: 123.
+2026-07-08 16:48:25,802 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:25,802 [DEBUG] choreographer.channels.pipe: Total loops: 2, Final size: 124.
+2026-07-08 16:48:25,802 [DEBUG] choreographer.channels.pipe: Received 2 raw_messages.
+2026-07-08 16:48:25,803 [DEBUG] choreographer._brokers._async: Channel read found 1 json objects.
+2026-07-08 16:48:25,803 [DEBUG] choreographer._brokers._async: Received event Page.domContentEventFired for A1630202624BAE9AA734056F44AD8CEC targeting <choreographer.protocol.devtools_async.Session object at 0x00000273383976F0>.
+2026-07-08 16:48:25,815 [DEBUG] choreographer.channels.pipe: First read in loop: b'{"method":"Page'...b'4056F44AD8CEC"}'. size: 117.
+2026-07-08 16:48:25,815 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:25,815 [DEBUG] choreographer.channels.pipe: Total loops: 2, Final size: 118.
+2026-07-08 16:48:25,815 [DEBUG] choreographer.channels.pipe: Received 2 raw_messages.
+2026-07-08 16:48:25,816 [DEBUG] choreographer._brokers._async: Channel read found 1 json objects.
+2026-07-08 16:48:25,816 [DEBUG] choreographer._brokers._async: Received event Page.loadEventFired for A1630202624BAE9AA734056F44AD8CEC targeting <choreographer.protocol.devtools_async.Session object at 0x00000273383976F0>.
+2026-07-08 16:48:25,816 [DEBUG] choreographer.channels.pipe: First read in loop: b'{"method":"Page'...b'056F44AD8CEC"}\x00'. size: 141.
+2026-07-08 16:48:25,816 [DEBUG] choreographer.channels.pipe: Total loops: 1, Final size: 141.
+2026-07-08 16:48:25,816 [DEBUG] choreographer.channels.pipe: Received 2 raw_messages.
+2026-07-08 16:48:25,817 [DEBUG] choreographer._brokers._async: Channel read found 1 json objects.
+2026-07-08 16:48:25,817 [DEBUG] choreographer._brokers._async: Received event Page.frameStoppedLoading for A1630202624BAE9AA734056F44AD8CEC targeting <choreographer.protocol.devtools_async.Session object at 0x00000273383976F0>.
+2026-07-08 16:48:25,918 [INFO] kaleido.kaleido: Getting tab from queue (has 1)
+2026-07-08 16:48:25,918 [INFO] kaleido.kaleido: Got CFBE
+2026-07-08 16:48:25,918 [DEBUG] choreographer.protocol.devtools_async: Cmd 'Runtime.callFunctionOn', param keys 'dict_keys(['functionDeclaration', 'arguments', 'returnByValue', 'userGesture', 'awaitPromise', 'executionContextId'])', sessionId 'A1630202624BAE9AA734056F44AD8CEC'
+2026-07-08 16:48:25,919 [DEBUG] choreographer._brokers._async: Broker writing Runtime.callFunctionOn with key ('A1630202624BAE9AA734056F44AD8CEC', 3)
+2026-07-08 16:48:25,919 [DEBUG] choreographer._brokers._async: Created future: ('A1630202624BAE9AA734056F44AD8CEC', 3) <Future pending>
+2026-07-08 16:48:25,919 [DEBUG] choreographer.channels._wire: Serialized: {"id": 3, "meth...ContextId": 1}}, size: 21679
+2026-07-08 16:48:25,919 [DEBUG] choreographer.channels.pipe: Writing message b'{"id": 3, "meth'...b'ontextId": 1}}\x00', size: 21680.
+2026-07-08 16:48:25,920 [DEBUG] choreographer.channels.pipe: ***Wrote 21680/21680***
+2026-07-08 16:48:26,007 [DEBUG] choreographer.channels.pipe: First read in loop: b'{"id":3,"result'...b'style=\\\\\\"vecto'. size: 10000.
+2026-07-08 16:48:26,008 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:26,008 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:26,008 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:26,008 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:26,008 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:26,008 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:26,008 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:26,008 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:26,008 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:26,008 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:26,008 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:26,008 [DEBUG] choreographer.channels.pipe: Total loops: 12, Final size: 102772.
+2026-07-08 16:48:26,009 [DEBUG] choreographer.channels.pipe: Received 2 raw_messages.
+2026-07-08 16:48:26,009 [DEBUG] choreographer._brokers._async: Channel read found 1 json objects.
+2026-07-08 16:48:26,010 [DEBUG] choreographer._brokers._async: Have a response with key ('A1630202624BAE9AA734056F44AD8CEC', 3)
+2026-07-08 16:48:26,010 [DEBUG] choreographer._brokers._async: Found future for key ('A1630202624BAE9AA734056F44AD8CEC', 3)
+2026-07-08 16:48:26,010 [INFO] kaleido.kaleido: Reloading tab CFBE before return.
+2026-07-08 16:48:26,010 [DEBUG] kaleido._kaleido_tab._tab: Reloading tab <choreographer.browser_async.Tab object at 0x000002733848C910> with javascript.
+2026-07-08 16:48:26,010 [DEBUG] choreographer._brokers._async: Session A1630202624BAE9AA734056F44AD8CEC is subscribing to Runtime.executionContextCreated one time.
+2026-07-08 16:48:26,010 [DEBUG] choreographer._brokers._async: Session A1630202624BAE9AA734056F44AD8CEC is subscribing to Page.loadEventFired one time.
+2026-07-08 16:48:26,010 [DEBUG] choreographer.protocol.devtools_async: Cmd 'Page.reload', param keys '', sessionId 'A1630202624BAE9AA734056F44AD8CEC'
+2026-07-08 16:48:26,010 [DEBUG] choreographer._brokers._async: Broker writing Page.reload with key ('A1630202624BAE9AA734056F44AD8CEC', 4)
+2026-07-08 16:48:26,010 [DEBUG] choreographer._brokers._async: Created future: ('A1630202624BAE9AA734056F44AD8CEC', 4) <Future pending>
+2026-07-08 16:48:26,010 [DEBUG] choreographer.channels._wire: Serialized: {"id": 4, "meth...4056F44AD8CEC"}, size: 83
+2026-07-08 16:48:26,011 [DEBUG] choreographer.channels.pipe: Writing message b'{"id": 4, "meth'...b'056F44AD8CEC"}\x00', size: 84.
+2026-07-08 16:48:26,011 [DEBUG] choreographer.channels.pipe: ***Wrote 84/84***
+2026-07-08 16:48:26,013 [DEBUG] choreographer.channels.pipe: First read in loop: b'{"method":"Page'...b'4056F44AD8CEC"}'. size: 288.
+2026-07-08 16:48:26,013 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:26,013 [DEBUG] choreographer.channels.pipe: Total loops: 2, Final size: 430.
+2026-07-08 16:48:26,013 [DEBUG] choreographer.channels.pipe: Received 3 raw_messages.
+2026-07-08 16:48:26,013 [DEBUG] choreographer._brokers._async: Channel read found 2 json objects.
+2026-07-08 16:48:26,013 [DEBUG] choreographer._brokers._async: Received event Page.frameStartedNavigating for A1630202624BAE9AA734056F44AD8CEC targeting <choreographer.protocol.devtools_async.Session object at 0x00000273383976F0>.
+2026-07-08 16:48:26,013 [DEBUG] choreographer._brokers._async: Received event Page.frameStartedLoading for A1630202624BAE9AA734056F44AD8CEC targeting <choreographer.protocol.devtools_async.Session object at 0x00000273383976F0>.
+2026-07-08 16:48:26,014 [DEBUG] choreographer.channels.pipe: First read in loop: b'{"id":4,"result'...b'056F44AD8CEC"}\x00'. size: 68.
+2026-07-08 16:48:26,014 [DEBUG] choreographer.channels.pipe: Total loops: 1, Final size: 68.
+2026-07-08 16:48:26,014 [DEBUG] choreographer.channels.pipe: Received 2 raw_messages.
+2026-07-08 16:48:26,014 [DEBUG] choreographer._brokers._async: Channel read found 1 json objects.
+2026-07-08 16:48:26,014 [DEBUG] choreographer._brokers._async: Have a response with key ('A1630202624BAE9AA734056F44AD8CEC', 4)
+2026-07-08 16:48:26,014 [DEBUG] choreographer._brokers._async: Found future for key ('A1630202624BAE9AA734056F44AD8CEC', 4)
+2026-07-08 16:48:26,015 [DEBUG] choreographer.channels.pipe: First read in loop: b'{"method":"Runt'...b'4056F44AD8CEC"}'. size: 104.
+2026-07-08 16:48:26,015 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:26,015 [DEBUG] choreographer.channels.pipe: Total loops: 2, Final size: 105.
+2026-07-08 16:48:26,015 [DEBUG] choreographer.channels.pipe: Received 2 raw_messages.
+2026-07-08 16:48:26,016 [DEBUG] choreographer._brokers._async: Channel read found 1 json objects.
+2026-07-08 16:48:26,016 [DEBUG] choreographer._brokers._async: Received event Runtime.executionContextsCleared for A1630202624BAE9AA734056F44AD8CEC targeting <choreographer.protocol.devtools_async.Session object at 0x00000273383976F0>.
+2026-07-08 16:48:26,017 [DEBUG] choreographer.channels.pipe: First read in loop: b'{"method":"Runt'...b'4056F44AD8CEC"}'. size: 104.
+2026-07-08 16:48:26,017 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:26,017 [DEBUG] choreographer.channels.pipe: Total loops: 2, Final size: 641.
+2026-07-08 16:48:26,017 [DEBUG] choreographer.channels.pipe: Received 3 raw_messages.
+2026-07-08 16:48:26,018 [DEBUG] choreographer._brokers._async: Channel read found 2 json objects.
+2026-07-08 16:48:26,018 [DEBUG] choreographer._brokers._async: Received event Runtime.executionContextsCleared for A1630202624BAE9AA734056F44AD8CEC targeting <choreographer.protocol.devtools_async.Session object at 0x00000273383976F0>.
+2026-07-08 16:48:26,018 [DEBUG] choreographer._brokers._async: Received event Page.frameNavigated for A1630202624BAE9AA734056F44AD8CEC targeting <choreographer.protocol.devtools_async.Session object at 0x00000273383976F0>.
+2026-07-08 16:48:26,021 [DEBUG] choreographer.channels.pipe: First read in loop: b'{"method":"Runt'...b'4056F44AD8CEC"}'. size: 295.
+2026-07-08 16:48:26,021 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:26,022 [DEBUG] choreographer.channels.pipe: Total loops: 2, Final size: 296.
+2026-07-08 16:48:26,022 [DEBUG] choreographer.channels.pipe: Received 2 raw_messages.
+2026-07-08 16:48:26,022 [DEBUG] choreographer._brokers._async: Channel read found 1 json objects.
+2026-07-08 16:48:26,022 [DEBUG] choreographer._brokers._async: Received event Runtime.executionContextCreated for A1630202624BAE9AA734056F44AD8CEC targeting <choreographer.protocol.devtools_async.Session object at 0x00000273383976F0>.
+2026-07-08 16:48:26,067 [DEBUG] choreographer.channels.pipe: First read in loop: b'{"method":"Page'...b'4056F44AD8CEC"}'. size: 123.
+2026-07-08 16:48:26,067 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:26,067 [DEBUG] choreographer.channels.pipe: Total loops: 2, Final size: 383.
+2026-07-08 16:48:26,067 [DEBUG] choreographer.channels.pipe: Received 4 raw_messages.
+2026-07-08 16:48:26,067 [DEBUG] choreographer._brokers._async: Channel read found 3 json objects.
+2026-07-08 16:48:26,068 [DEBUG] choreographer._brokers._async: Received event Page.domContentEventFired for A1630202624BAE9AA734056F44AD8CEC targeting <choreographer.protocol.devtools_async.Session object at 0x00000273383976F0>.
+2026-07-08 16:48:26,068 [DEBUG] choreographer._brokers._async: Received event Page.loadEventFired for A1630202624BAE9AA734056F44AD8CEC targeting <choreographer.protocol.devtools_async.Session object at 0x00000273383976F0>.
+2026-07-08 16:48:26,068 [DEBUG] choreographer._brokers._async: Received event Page.frameStoppedLoading for A1630202624BAE9AA734056F44AD8CEC targeting <choreographer.protocol.devtools_async.Session object at 0x00000273383976F0>.
+2026-07-08 16:48:26,068 [INFO] kaleido.kaleido: Putting tab CFBE back (queue size: 0).
+2026-07-08 16:48:26,068 [DEBUG] kaleido.kaleido: CFBE put back.
+2026-07-08 16:48:26,069 [INFO] kaleido.kaleido: Waiting for all cleanups to finish.
+2026-07-08 16:48:26,069 [INFO] kaleido.kaleido: Exiting Kaleido.
+2026-07-08 16:48:26,069 [DEBUG] kaleido.kaleido: Cleaning up <choreographer.utils._tmpfile.TmpDirectory object at 0x000002733839FED0>
+2026-07-08 16:48:26,071 [INFO] choreographer.utils._tmpfile: TemporaryDirectory.cleanup() worked.
+2026-07-08 16:48:26,071 [INFO] choreographer.utils._tmpfile: shutil.rmtree worked.
+2026-07-08 16:48:26,071 [INFO] choreographer.browser_async: Closing browser.
+2026-07-08 16:48:26,072 [DEBUG] choreographer.browser_async: Cancelling watchdog.
+2026-07-08 16:48:26,072 [DEBUG] choreographer.browser_async: Starting browser close methods.
+2026-07-08 16:48:26,072 [DEBUG] choreographer.browser_async: Trying Browser.close
+2026-07-08 16:48:26,072 [DEBUG] choreographer.protocol.devtools_async: Cmd 'Browser.close', param keys '', sessionId ''
+2026-07-08 16:48:26,072 [DEBUG] choreographer._brokers._async: Broker writing Browser.close with key ('', 2)
+2026-07-08 16:48:26,072 [DEBUG] choreographer._brokers._async: Created future: ('', 2) <Future pending>
+2026-07-08 16:48:26,072 [DEBUG] choreographer.browser_async: Watchdog full shutdown (in finally:)
+2026-07-08 16:48:26,073 [DEBUG] choreographer.channels._wire: Serialized: {"id": 2, "meth...Browser.close"}, size: 36
+2026-07-08 16:48:26,073 [DEBUG] choreographer.channels.pipe: Writing message b'{"id": 2, "meth'...b'rowser.close"}\x00', size: 37.
+2026-07-08 16:48:26,073 [DEBUG] choreographer.channels.pipe: ***Wrote 37/37***
+2026-07-08 16:48:26,073 [DEBUG] choreographer.channels.pipe: First read in loop: b'{"id":2,"result'...b':2,"result":{}}'. size: 20.
+2026-07-08 16:48:26,073 [DEBUG] choreographer.channels.pipe: Partial message from browser received.
+2026-07-08 16:48:26,074 [DEBUG] choreographer.channels.pipe: Total loops: 2, Final size: 21.
+2026-07-08 16:48:26,074 [DEBUG] choreographer.channels.pipe: Received 2 raw_messages.
+2026-07-08 16:48:26,074 [DEBUG] choreographer._brokers._async: Channel read found 1 json objects.
+2026-07-08 16:48:26,074 [DEBUG] choreographer._brokers._async: Have a response with key ('', 2)
+2026-07-08 16:48:26,074 [DEBUG] choreographer._brokers._async: Found future for key ('', 2)
+2026-07-08 16:48:26,100 [DEBUG] choreographer._brokers._async: Error in readloop. Will post a close() task.
+2026-07-08 16:48:26,101 [DEBUG] choreographer._brokers._async: PipeClosedError caught
+2026-07-08 16:48:26,101 [DEBUG] kaleido.kaleido: Cleaning up <choreographer.utils._tmpfile.TmpDirectory object at 0x000002733839FED0>
+2026-07-08 16:48:26,101 [INFO] choreographer.utils._tmpfile: TemporaryDirectory.cleanup() worked.
+2026-07-08 16:48:26,101 [INFO] choreographer.utils._tmpfile: shutil.rmtree worked.
+2026-07-08 16:48:26,101 [INFO] choreographer.browser_async: Closing browser.
+2026-07-08 16:48:26,102 [DEBUG] choreographer.browser_async: Cancelling watchdog.
+2026-07-08 16:48:26,102 [INFO] kaleido.kaleido: Cancelling tasks.
+2026-07-08 16:48:26,102 [INFO] kaleido.kaleido: Exiting Kaleido/Choreo.
+2026-07-08 16:48:26,184 [DEBUG] choreographer.browser_async: Browser close methods finished.
+2026-07-08 16:48:26,184 [DEBUG] choreographer._brokers._async: Cancelling message futures
+2026-07-08 16:48:26,185 [DEBUG] choreographer._brokers._async: Cancelling read task
+2026-07-08 16:48:26,185 [DEBUG] choreographer._brokers._async: Cancelling subscription-futures
+2026-07-08 16:48:26,185 [DEBUG] choreographer._brokers._async: Cancelling background tasks
+2026-07-08 16:48:26,185 [DEBUG] choreographer.browser_async: Broker cleaned up.
+2026-07-08 16:48:26,185 [DEBUG] choreographer.browser_async: Logging pipe closed.
+2026-07-08 16:48:26,185 [DEBUG] choreographer.browser_async: Browser channel closed.
+2026-07-08 16:48:26,248 [INFO] choreographer.utils._tmpfile: TemporaryDirectory.cleanup() worked.
+2026-07-08 16:48:26,248 [INFO] choreographer.utils._tmpfile: shutil.rmtree worked.
+2026-07-08 16:48:26,249 [DEBUG] choreographer.browser_async: Browser implementation cleaned up.
+2026-07-08 16:48:26,249 [INFO] kaleido.kaleido: Cancelling tasks.
+2026-07-08 16:48:26,249 [INFO] kaleido.kaleido: Exiting Kaleido/Choreo.
+2026-07-08 16:48:26,257 [INFO] choreographer.utils._tmpfile: TemporaryDirectory.cleanup() worked.
+2026-07-08 16:48:26,257 [INFO] choreographer.utils._tmpfile: shutil.rmtree worked.
+2026-07-08 16:48:26,554 [INFO] choreographer.utils._tmpfile: TemporaryDirectory.cleanup() worked.
+2026-07-08 16:48:26,555 [INFO] choreographer.utils._tmpfile: shutil.rmtree worked.
