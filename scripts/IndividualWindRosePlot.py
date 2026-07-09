@@ -4,10 +4,20 @@ logger = logging.getLogger(__name__)
 
 import plotly.express as px
 from scripts.Initial import Initializer, spd_labels, dir_labels
+station_names = {
+    "AN": "Annapolis",
+    "SR": "Sting Ray",
+    "PL": "Point Lookout",
+    "BH": "Baltimore Harbor",
+    "GR": "Gooses Reef",
+    "YS": "York Spit"
+}
 
 class WindPlotIndividual(Initializer):
     def buildFig(self, results, sd=None, ed=None):
         logger.info(f"Starting plot for station {self.station}")
+
+        full_station_name = station_names.get(self.station, self.station)
 
         title_sd = sd if sd else self.sd
         title_ed = ed if ed else self.ed
@@ -26,7 +36,7 @@ class WindPlotIndividual(Initializer):
                 "spd_bin": spd_labels
             },
             color_discrete_sequence=["#AED6F1", "#2E86C1", "#1A5276", "#E67E22", "#C0392B"],
-            title=f"Wind Rose — CBIBS Station {self.station}<br>"
+            title=f"Wind Rose — CBIBS Station {full_station_name}<br>"
                   f"<sup>{title_sd[:10]} to {title_ed[:10]}</sup>",
             labels={
                 "spd_bin": "Wind Speed (kt)",
